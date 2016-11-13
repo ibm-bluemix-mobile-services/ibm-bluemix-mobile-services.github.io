@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Logger Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/Logger" class="dashAnchor"></a>
+    <a title="Logger Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">BMSAnalytics Docs</a> (67% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">BMSAnalytics Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        Logger Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Analytics.html">Analytics</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BMSAnalytics.html">BMSAnalytics</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BMSLogger.html">BMSLogger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Logger.html">Logger</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/BMSAnalyticsError.html">BMSAnalyticsError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/DeviceEvent.html">DeviceEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LogLevel.html">LogLevel</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Logger</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">Logger</span></code></pre>
+
+                </div>
+              </div>
+            <p>A logging framework that can print messages to the console, store them locally on the device, and send them to a remote Mobile Analytics Service. With each log message, additional information is gathered such as the file, function, and line where the log was called, as well as the severity of the message.</p>
+
+<p>Multiple <code>Logger</code> instances can be created with different names using the <code>logger(name:)</code> method.</p>
+
+<p>When logging, choose the log method that matches the severity of the message. For example, use <code>debug(message:)</code> for fine-grained information and <code>fatal(message:)</code> for severe errors that may lead to application crashes. To limit which logs get printed to the console and stored on the device, set the <code>logLevelFilter</code> property.</p>
+
+<p>To enable logs to be stored locally on the device, set the <code>logStoreEnabled</code> property to <code>true</code>. Logs are added to the log file until the file size is greater than the <code>maxLogStoreSize</code> property. At this point, the first half of the stored logs will be deleted to make room for new log data.</p>
+
+<p>To send logs to the Mobile Analytics Service, call the <code>send()</code> method. When the log data is successfully uploaded, the logs will be deleted from local storage.</p>
+
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>The <code>Logger</code> class sets an uncaught exception handler to log application crashes. If you wish to set your own exception handler, do so <strong>before</strong> calling <code><a href="../Classes/Logger.html#/s:ZFC15BMSAnalyticsAPI6Logger6loggerFT4nameSS_S0_">Logger.logger(name:)</a></code>, or the <code>Logger</code> exception handler will be overwritten.</p>
+
+</div>
+
+<div class="aside aside-important">
+    <p class="aside-title">Important</p>
+    <p>The <code><a href="../Classes/BMSAnalytics.html">BMSAnalytics</a></code> framework is required for log messages to be stored and sent to a Mobile Analytics Service. If this framework is not available, the <code>Logger</code> class can only print messages to the console.</p>
+
+</div>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Properties%20(API)"></a>
+                <a name="//apple_ref/swift/Section/Properties (API)" class="dashAnchor"></a>
+                <a href="#/Properties%20(API)">
+                  <h3 class="section-name">Properties (API)</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC15BMSAnalyticsAPI6Logger4nameSS"></a>
+                    <a name="//apple_ref/swift/Property/name" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC15BMSAnalyticsAPI6Logger4nameSS">name</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The name that identifies this Logger instance.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvC15BMSAnalyticsAPI6Logger14logLevelFilterOS_8LogLevel"></a>
+                    <a name="//apple_ref/swift/Variable/logLevelFilter" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvC15BMSAnalyticsAPI6Logger14logLevelFilterOS_8LogLevel">logLevelFilter</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Logs below this severity level will be ignored completely.</p>
+
+<p>The default value is <code>LogLevel.Debug</code>.</p>
+
+<p>Set the value to <code>LogLevel.None</code> to turn off all logging.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">logLevelFilter</span><span class="p">:</span> <span class="kt"><a href="../Enums/LogLevel.html">LogLevel</a></span> <span class="o">=</span> <span class="kt"><a href="../Enums/LogLevel.html">LogLevel</a></span><span class="o">.</span><span class="n">debug</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvC15BMSAnalyticsAPI6Logger29isInternalDebugLoggingEnabledSb"></a>
+                    <a name="//apple_ref/swift/Variable/isInternalDebugLoggingEnabled" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvC15BMSAnalyticsAPI6Logger29isInternalDebugLoggingEnabledSb">isInternalDebugLoggingEnabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If set to <code>true</code>, the internal BMSCore debug logs will be displayed on the console.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">isInternalDebugLoggingEnabled</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvC15BMSAnalyticsAPI6Logger19isLogStorageEnabledSb"></a>
+                    <a name="//apple_ref/swift/Variable/isLogStorageEnabled" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvC15BMSAnalyticsAPI6Logger19isLogStorageEnabledSb">isLogStorageEnabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Determines whether logs get stored locally on the device.
+Must be set to <code>true</code> to be able to send logs to the Mobile Analytics Service.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">isLogStorageEnabled</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvC15BMSAnalyticsAPI6Logger15maxLogStoreSizeVs6UInt64"></a>
+                    <a name="//apple_ref/swift/Variable/maxLogStoreSize" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvC15BMSAnalyticsAPI6Logger15maxLogStoreSizeVs6UInt64">maxLogStoreSize</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The maximum file size (in bytes) for log storage.
+Both the Analytics and Logger log files are limited by <code>maxLogStoreSize</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">maxLogStoreSize</span><span class="p">:</span> <span class="kt">UInt64</span> <span class="o">=</span> <span class="mi">100000</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvC15BMSAnalyticsAPI6Logger27isUncaughtExceptionDetectedSb"></a>
+                    <a name="//apple_ref/swift/Variable/isUncaughtExceptionDetected" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvC15BMSAnalyticsAPI6Logger27isUncaughtExceptionDetectedSb">isUncaughtExceptionDetected</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>True if the app crashed recently due to an uncaught exception.
+This property will be set back to <code>false</code> if the logs are sent to the server.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">isUncaughtExceptionDetected</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Initializers"></a>
+                <a name="//apple_ref/swift/Section/Initializers" class="dashAnchor"></a>
+                <a href="#/Initializers">
+                  <h3 class="section-name">Initializers</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC15BMSAnalyticsAPI6Logger6loggerFT4nameSS_S0_"></a>
+                    <a name="//apple_ref/swift/Method/logger(name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC15BMSAnalyticsAPI6Logger6loggerFT4nameSS_S0_">logger(name:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a Logger instance that will be identified by the supplied name.
+If a Logger instance with that name was already created, the existing instance will be returned.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">logger</span><span class="p">(</span><span class="n"><a href="../Classes/Logger.html#/s:vC15BMSAnalyticsAPI6Logger4nameSS">name</a></span> <span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Logger</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name that identifies this Logger instance.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A Logger instance.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Methods%20(API)"></a>
+                <a name="//apple_ref/swift/Section/Methods (API)" class="dashAnchor"></a>
+                <a href="#/Methods%20(API)">
+                  <h3 class="section-name">Methods (API)</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC15BMSAnalyticsAPI6Logger5debugFT7messageSS4fileSS8functionSS4lineSi_T_"></a>
+                    <a name="//apple_ref/swift/Method/debug(message:file:function:line:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC15BMSAnalyticsAPI6Logger5debugFT7messageSS4fileSS8functionSS4lineSi_T_">debug(message:file:function:line:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Log at the Debug LogLevel.</p>
+
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Do not supply values for the <code>file</code>, <code>function</code>, or <code>line</code> parameters. These parameters take default values to automatically record the file, function, and line in which this method was called.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">debug</span><span class="p">(</span><span class="nv">message</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">file</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="err">#</span><span class="n">file</span><span class="p">,</span> <span class="nv">function</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="err">#</span><span class="n">function</span><span class="p">,</span> <span class="nv">line</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="err">#</span><span class="n">line</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>message</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The message to log.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC15BMSAnalyticsAPI6Logger4infoFT7messageSS4fileSS8functionSS4lineSi_T_"></a>
+                    <a name="//apple_ref/swift/Method/info(message:file:function:line:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC15BMSAnalyticsAPI6Logger4infoFT7messageSS4fileSS8functionSS4lineSi_T_">info(message:file:function:line:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Log at the Info LogLevel.</p>
+
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Do not supply values for the <code>file</code>, <code>function</code>, or <code>line</code> parameters. These parameters take default values to automatically record the file, function, and line in which this method was called.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">info</span><span class="p">(</span><span class="nv">message</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">file</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="err">#</span><span class="n">file</span><span class="p">,</span> <span class="nv">function</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="err">#</span><span class="n">function</span><span class="p">,</span> <span class="nv">line</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="err">#</span><span class="n">line</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>message</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The message to log.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC15BMSAnalyticsAPI6Logger4warnFT7messageSS4fileSS8functionSS4lineSi_T_"></a>
+                    <a name="//apple_ref/swift/Method/warn(message:file:function:line:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC15BMSAnalyticsAPI6Logger4warnFT7messageSS4fileSS8functionSS4lineSi_T_">warn(message:file:function:line:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Log at the Warn LogLevel.</p>
+
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Do not supply values for the <code>file</code>, <code>function</code>, or <code>line</code> parameters. These parameters take default values to automatically record the file, function, and line in which this method was called.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">warn</span><span class="p">(</span><span class="nv">message</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">file</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="err">#</span><span class="n">file</span><span class="p">,</span> <span class="nv">function</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="err">#</span><span class="n">function</span><span class="p">,</span> <span class="nv">line</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="err">#</span><span class="n">line</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>message</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The message to log.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC15BMSAnalyticsAPI6Logger5errorFT7messageSS4fileSS8functionSS4lineSi_T_"></a>
+                    <a name="//apple_ref/swift/Method/error(message:file:function:line:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC15BMSAnalyticsAPI6Logger5errorFT7messageSS4fileSS8functionSS4lineSi_T_">error(message:file:function:line:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Log at the Error LogLevel.</p>
+
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Do not supply values for the <code>file</code>, <code>function</code>, or <code>line</code> parameters. These parameters take default values to automatically record the file, function, and line in which this method was called.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">error</span><span class="p">(</span><span class="nv">message</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">file</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="err">#</span><span class="n">file</span><span class="p">,</span> <span class="nv">function</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="err">#</span><span class="n">function</span><span class="p">,</span> <span class="nv">line</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="err">#</span><span class="n">line</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>message</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The message to log.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC15BMSAnalyticsAPI6Logger5fatalFT7messageSS4fileSS8functionSS4lineSi_T_"></a>
+                    <a name="//apple_ref/swift/Method/fatal(message:file:function:line:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC15BMSAnalyticsAPI6Logger5fatalFT7messageSS4fileSS8functionSS4lineSi_T_">fatal(message:file:function:line:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Log at the Fatal LogLevel.</p>
+
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Do not supply values for the <code>file</code>, <code>function</code>, or <code>line</code> parameters. These parameters take default values to automatically record the file, function, and line in which this method was called.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">fatal</span><span class="p">(</span><span class="nv">message</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">file</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="err">#</span><span class="n">file</span><span class="p">,</span> <span class="nv">function</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="err">#</span><span class="n">function</span><span class="p">,</span> <span class="nv">line</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="err">#</span><span class="n">line</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>message</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The message to log.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics" target="_blank" rel="external">IBM Bluemix Services Mobile SDK</a>. All rights reserved. (Last updated: 2016-11-13)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Analytics Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/Analytics" class="dashAnchor"></a>
+    <a title="Analytics Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">BMSAnalytics Docs</a> (67% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">BMSAnalytics Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        Analytics Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Analytics.html">Analytics</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BMSAnalytics.html">BMSAnalytics</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BMSLogger.html">BMSLogger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Logger.html">Logger</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/BMSAnalyticsError.html">BMSAnalyticsError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/DeviceEvent.html">DeviceEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LogLevel.html">LogLevel</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Analytics</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">Analytics</span></code></pre>
+
+                </div>
+              </div>
+            <p>Records analytics data and sends it to the Mobile Analytics Service.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Properties%20(API)"></a>
+                <a name="//apple_ref/swift/Section/Properties (API)" class="dashAnchor"></a>
+                <a href="#/Properties%20(API)">
+                  <h3 class="section-name">Properties (API)</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvC15BMSAnalyticsAPI9Analytics9isEnabledSb"></a>
+                    <a name="//apple_ref/swift/Variable/isEnabled" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvC15BMSAnalyticsAPI9Analytics9isEnabledSb">isEnabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Determines whether analytics logs will be persisted to file.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">isEnabled</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvC15BMSAnalyticsAPI9Analytics12userIdentityGSqSS_"></a>
+                    <a name="//apple_ref/swift/Variable/userIdentity" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvC15BMSAnalyticsAPI9Analytics12userIdentityGSqSS_">userIdentity</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Identifies the current application user.
+To reset the userId, set the value to nil.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">userIdentity</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Methods%20(API)"></a>
+                <a name="//apple_ref/swift/Section/Methods (API)" class="dashAnchor"></a>
+                <a href="#/Methods%20(API)">
+                  <h3 class="section-name">Methods (API)</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC15BMSAnalyticsAPI9Analytics3logFT8metadataGVs10DictionarySSP__4fileSS8functionSS4lineSi_T_"></a>
+                    <a name="//apple_ref/swift/Method/log(metadata:file:function:line:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC15BMSAnalyticsAPI9Analytics3logFT8metadataGVs10DictionarySSP__4fileSS8functionSS4lineSi_T_">log(metadata:file:function:line:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Record analytics data.</p>
+
+<p>Analytics logs are added to the log file until the file size is greater than the <code>maxLogStoreSize</code> property. At this point, the first half of the stored logs will be deleted to make room for new log data.</p>
+
+<p>When ready, use the <code>send()</code> method to send the recorded data to the Mobile Analytics Service.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">log</span><span class="p">(</span><span class="nv">metadata</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">],</span> <span class="nv">file</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="err">#</span><span class="n">file</span><span class="p">,</span> <span class="nv">function</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="err">#</span><span class="n">function</span><span class="p">,</span> <span class="nv">line</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="err">#</span><span class="n">line</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>metadata</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The analytics data</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics" target="_blank" rel="external">IBM Bluemix Services Mobile SDK</a>. All rights reserved. (Last updated: 2016-11-13)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

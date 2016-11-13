@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BMSAnalytics  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="BMSAnalytics  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">BMSAnalytics Docs</a> (67% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">BMSAnalytics Reference</a>
+        <img id="carat" src="img/carat.png" />
+        BMSAnalytics  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/Analytics.html">Analytics</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/BMSAnalytics.html">BMSAnalytics</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/BMSLogger.html">BMSLogger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Logger.html">Logger</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/BMSAnalyticsError.html">BMSAnalyticsError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/DeviceEvent.html">DeviceEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/LogLevel.html">LogLevel</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <a href='#bmsanalytics' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='bmsanalytics'>BMSAnalytics</h1>
+
+<p><a href="https://travis-ci.org/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics"><img src="https://travis-ci.org/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics.svg?branch=master" alt="Build Status"></a>
+<a href="http://cocoadocs.org/docsets/BMSAnalytics"><img src="https://img.shields.io/cocoapods/p/BMSAnalytics.svg?style=flat" alt="Platform"></a>
+<a href="https://img.shields.io/cocoapods/v/BMSAnalytics.svg"><img src="https://img.shields.io/cocoapods/v/BMSAnalytics.svg" alt="CocoaPods Compatible"></a>
+<a href="https://bluemix.net"><img src="https://img.shields.io/badge/bluemix-powered-blue.svg" alt=""></a></p>
+
+<p>BMSAnalytics is the analytics and logger component of the Swift SDKs for <a href="https://console.ng.bluemix.net/docs/mobile/services.html">IBM Bluemix Mobile Services</a>.</p>
+<a href='#table-of-contents' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='table-of-contents'>Table of Contents</h2>
+
+<ul>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#requirements">Requirements</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#example-usage">Example Usage</a></li>
+<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/releases">Release Notes</a></li>
+<li><a href="#license">License</a></li>
+</ul>
+<a href='#summary' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='summary'>Summary</h2>
+
+<p>BMSAnalytics is the client SDK for the Mobile Analytics service on Bluemix. This service provides insight into how your apps are performing and how they are being used. With BMSAnalytics, you can gather information about your app&rsquo;s usage such as unique users, app lifecycle duration, roundtrip time of network requests, crashes, and any additional information or events that you choose to log.</p>
+
+<p>This SDK is also available for <a href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-analytics">Android</a> and <a href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core">Cordova</a>.</p>
+
+<p>Read the <a href="https://console.ng.bluemix.net/docs/services/mobileanalytics/index.html">official documentation</a> for more information about getting started with Mobile Analytics.</p>
+<a href='#requirements' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='requirements'>Requirements</h2>
+
+<ul>
+<li>iOS 8.0+ / watchOS 2.0+</li>
+<li>Xcode 7.3, 8.0</li>
+<li>Swift 2.2 - 3.0</li>
+<li>Cocoapods or Carthage</li>
+</ul>
+<a href='#installation' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='installation'>Installation</h2>
+
+<p>The Bluemix Mobile Services Swift SDKs can be installed with either <a href="http://cocoapods.org/">Cocoapods</a> or <a href="https://github.com/Carthage/Carthage">Carthage</a>.</p>
+<a href='#cocoapods' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='cocoapods'>Cocoapods</h3>
+
+<p>To install BMSAnalytics using Cocoapods, add it to your Podfile. If your project does not have a Podfile yet, use the <code>pod init</code> command.</p>
+<pre class="highlight ruby"><code><span class="n">use_frameworks!</span>
+
+<span class="n">target</span> <span class="s1">'MyApp'</span> <span class="k">do</span>
+    <span class="n">pod</span> <span class="s1">'BMSAnalytics'</span>
+<span class="k">end</span>
+</code></pre>
+
+<p>Then run the <code>pod install</code> command, and open the generated <code>.xcworkspace</code> file. To update to a newer release of BMSAnalytics, use <code>pod update BMSAnalytics</code>.</p>
+
+<p>For more information on using Cocoapods, refer to the <a href="https://guides.cocoapods.org/using/index.html">Cocoapods Guides</a>.</p>
+<a href='#xcode-8' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='xcode-8'>Xcode 8</h4>
+
+<p>When installing with Cocoapods in Xcode 8, make sure you have installed Cocoapods <a href="https://github.com/CocoaPods/CocoaPods/releases">1.1.0</a> or later. You can get the latest version of Cocoapods using the command <code>sudo gem install cocoapods</code>.</p>
+
+<p>If you receive a prompt saying <q>Convert to Current Swift Syntax?</q> when opening your project in Xcode 8 (following the installation of BMSAnalytics), <strong>do not</strong> convert BMSAnalytics, BMSCore, or BMSAnalyticsAPI.</p>
+<a href='#carthage' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='carthage'>Carthage</h3>
+
+<p>To install BMSAnalytics with Carthage, follow the instructions <a href="https://github.com/Carthage/Carthage#getting-started">here</a>.</p>
+
+<p>Add this line to your Cartfile: </p>
+<pre class="highlight plaintext"><code>github "ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics"
+</code></pre>
+
+<p>Then run the <code>carthage update</code> command. Once the build is finished, add <code>BMSAnalytics.framework</code>, <code>BMSCore.framework</code> and <code>BMSAnalyticsAPI.framework</code> to your project (step 3 in the link above). </p>
+<a href='#xcode-8' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='xcode-8'>Xcode 8</h4>
+
+<p>For apps built with Swift 2.3, use the command <code>carthage update --toolchain com.apple.dt.toolchain.Swift_2_3</code>. Otherwise, use <code>carthage update</code>.</p>
+<a href='#example-usage' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='example-usage'>Example Usage</h2>
+
+<ul>
+<li><a href="#import-the-modules">Import the modules</a></li>
+<li><a href="#initialize">Initialize</a></li>
+<li><a href="#configure-logger-and-analytics">Configure Logger and Analytics</a></li>
+<li><a href="#set-the-app-users-identity">Set the app user&rsquo;s identity</a></li>
+<li><a href="#log-some-information">Log some information</a></li>
+<li><a href="#send-the-data-to-the-server">Send the data to the server</a></li>
+<li><a href="#disable-logging-output-for-production-applications">Disable logging output</a></li>
+</ul>
+
+<blockquote>
+<p>View the complete API reference <a href="http://cocoadocs.org/docsets/BMSAnalytics">here</a> and <a href="http://cocoadocs.org/docsets/BMSAnalyticsAPI">here</a>.</p>
+</blockquote>
+
+<p>&ndash;</p>
+<a href='#import-the-modules' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='import-the-modules'>Import the modules</h3>
+<pre class="highlight plaintext"><code>import BMSCore
+import BMSAnalytics
+</code></pre>
+
+<p>&ndash;</p>
+<a href='#initialize' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='initialize'>Initialize</h3>
+
+<p>Initialize <code>BMSClient</code> and <code>Analytics</code>. This is typically done at the beginning of the app&rsquo;s lifecycle, such as the <code>application(_:didFinishLaunchingWithOptions:)</code> method in the <code>AppDelegate.swift</code>.</p>
+<pre class="highlight plaintext"><code>BMSClient.sharedInstance.initialize(bluemixRegion: BMSClient.Region.usSouth)
+
+Analytics.initialize(appName: "My App", apiKey: "1234", hasUserContext: true, deviceEvents: .lifecycle, .network)
+</code></pre>
+
+<p>&ndash;</p>
+<a href='#configure-logger-and-analytics' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='configure-logger-and-analytics'>Configure Logger and Analytics</h3>
+
+<p>Enable logger and analytics, and set the <code>Logger.logLevelFilter</code> to the level of severity you want to record. This is typically done at the beginning of the app&rsquo;s lifecycle, such as the <code>application(_:didFinishLaunchingWithOptions:)</code> method in the <code>AppDelegate.swift</code>.</p>
+<pre class="highlight plaintext"><code>Analytics.isEnabled = true
+Logger.isLogStorageEnabled = true
+Logger.isInternalDebugLoggingEnabled = true
+Logger.logLevelFilter = LogLevel.debug
+</code></pre>
+
+<p>&ndash;</p>
+<a href='#set-the-app-user-39-s-identity' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='set-the-app-user-39-s-identity'>Set the app user&rsquo;s identity</h3>
+
+<p>If your app&rsquo;s users log in with a username, you can track each user with <code>Analytics.userIdentity</code>. To use this feature, you must have set the <code>hasUserContext</code> parameter to <code>true</code> in the <code>Analytics.initialize()</code> method first. If you set <code>hasUserContext</code> to <code>false</code>, BMSAnalytics will automatically record user identities, treating each device as one unique user.</p>
+<pre class="highlight plaintext"><code>Analytics.userIdentity = "John Doe"
+</code></pre>
+
+<p>&ndash;</p>
+<a href='#log-some-information' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='log-some-information'>Log some information</h3>
+
+<p>Create a Logger instance and log messages anywhere in your application, using an appropriate severity level.</p>
+<pre class="highlight plaintext"><code>let logger = Logger.logger(name: "My Logger")
+
+logger.debug(message: "Fine level information, typically for debugging purposes.")
+logger.info(message: "Some useful information regarding the application's state.")
+logger.warn(message: "Something may have gone wrong.")
+logger.error(message: "Something has definitely gone wrong!")
+logger.fatal(message: "CATASTROPHE!")
+
+// The metadata can be any JSON object
+Analytics.log(metadata: ["event": "something significant that occurred"])
+</code></pre>
+
+<blockquote>
+<p>By default the Bluemix Mobile Service SDK internal debug logging will not be printed to Xcode console. If you want to see BMS debug logs, set the <code>Logger.isInternalDebugLoggingEnabled</code> property to <code>true</code>. </p>
+</blockquote>
+
+<p>&ndash;</p>
+<a href='#send-the-data-to-the-server' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='send-the-data-to-the-server'>Send the data to the server</h3>
+
+<p>Send all recorded logs and analytics data to the Mobile Analytics service. This is typically done at the beginning of the app&rsquo;s lifecycle, such as the <code>application(_:didFinishLaunchingWithOptions:)</code> method in the <code>AppDelegate.swift</code>.</p>
+<pre class="highlight plaintext"><code>Logger.send(completionHandler: { (response: Response?, error: Error?) in
+    if let response = response {
+        print("Status code: \(response.statusCode)")
+        print("Response: \(response.responseText)")
+    }
+    if let error = error {
+        logger.error(message: "Failed to send logs. Error: \(error)")
+    }
+})
+
+Analytics.send(completionHandler: { (response: Response?, error: Error?) in
+    if let response = response {
+        print("Status code: \(response.statusCode)")
+        print("Response: \(response.responseText)")
+    }
+    if let error = error {
+        logger.error(message: "Failed to send analytics. Error: \(error)")
+    }
+})
+</code></pre>
+
+<p>&ndash;</p>
+<a href='#disable-logging-output-for-production-applications' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='disable-logging-output-for-production-applications'>Disable logging output for production applications</h3>
+
+<p>By default, the Logger class will print its logs to Xcode console. If is advised to disable Logger output for applications built in release mode. In order to do so add a debug flag named <code>RELEASE_BUILD</code> to your release build configuration. One way of doing so is adding <code>-D RELEASE_BUILD</code> to the <code>Other Swift Flags</code> section of the project build configuration.</p>
+<a href='#license' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='license'>License</h2>
+
+<p>Copyright 2016 IBM Corp.</p>
+
+<p>Licensed under the Apache License, Version 2.0 (the <q>License</q>);
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at</p>
+
+<p><a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></p>
+
+<p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an <q>AS IS</q> BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics" target="_blank" rel="external">IBM Bluemix Services Mobile SDK</a>. All rights reserved. (Last updated: 2016-11-13)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
