@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BMSCore  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="BMSCore  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">BMSCore Docs</a> (61% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">BMSCore Reference</a>
+        <img id="carat" src="img/carat.png" />
+        BMSCore  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/BMSClient.html">BMSClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/BMSClient/Region.html">– Region</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/BaseRequest.html">BaseRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Request.html">Request</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Response.html">Response</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums.html#/s:O7BMSCore12BMSCoreError">BMSCoreError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums.html#/s:O7BMSCore10HttpMethod">HttpMethod</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/BMSURLSession.html">BMSURLSession</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Typealiases.html">Typealiases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:7BMSCore20BMSCompletionHandler">BMSCompletionHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:7BMSCore28BMSDataTaskCompletionHandler">BMSDataTaskCompletionHandler</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <a href='#bmscore' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='bmscore'>BMSCore</h1>
+
+<p><a href="https://travis-ci.org/ibm-bluemix-mobile-services/bms-clientsdk-swift-core"><img src="https://travis-ci.org/ibm-bluemix-mobile-services/bms-clientsdk-swift-core.svg?branch=master" alt="Build Status"></a>
+<a href="http://cocoadocs.org/docsets/BMSCore"><img src="https://img.shields.io/cocoapods/p/BMSCore.svg?style=flat" alt="Platform"></a>
+<a href="https://img.shields.io/cocoapods/v/BMSCore.svg"><img src="https://img.shields.io/cocoapods/v/BMSCore.svg" alt="CocoaPods Compatible"></a>
+<a href="https://bluemix.net"><img src="https://img.shields.io/badge/bluemix-powered-blue.svg" alt=""></a></p>
+
+<p>BMSCore is the core component of the Swift SDKs for <a href="https://console.ng.bluemix.net/docs/mobile/services.html">IBM Bluemix Mobile Services</a>.</p>
+<a href='#table-of-contents' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='table-of-contents'>Table of Contents</h2>
+
+<ul>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#requirements">Requirements</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#example-usage">Example Usage</a></li>
+<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core/releases">Release Notes</a></li>
+<li><a href="#license">License</a></li>
+</ul>
+<a href='#summary' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='summary'>Summary</h2>
+
+<p>BMSCore provides the HTTP infrastructure that the other Bluemix Mobile Services (BMS) client SDKs use to communicate with their corresponding Bluemix services. These other SDKs include <a href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics">BMSAnalytics</a>, <a href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push">BMSPush</a>, <a href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security">BMSSecurity</a>, and <a href="https://github.com/ibm-bluemix-mobile-services/bluemix-objectstorage-clientsdk-swift">BluemixObjectStorage</a>. </p>
+
+<p>You can also use this SDK to make network requests to any resource using <code>BMSURLSession</code>. This API is a wrapper around the native Swift <a href="https://developer.apple.com/reference/foundation/urlsession">URLSession</a> that currently supports data tasks and upload tasks. <code>BMSURLSession</code> becomes more powerful if you have other BMS SDKs installed in your app. With <a href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security">BMSSecurity</a>, you can make network requests to backends protected by <a href="https://console.ng.bluemix.net/docs/services/mobileaccess/index.html">Mobile Client Access</a>. With <a href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics">BMSAnalytics</a>, analytics data will automatically be gathered (if you opt in) for all requests made with <code>BMSURLSession</code>, which can then be sent to a <a href="https://console.ng.bluemix.net/docs/services/mobileanalytics/index.html">Mobile Analytics</a> service.</p>
+
+<p>BMSCore is also available for <a href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core">Android</a> and <a href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core">Cordova</a>. </p>
+<a href='#requirements' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='requirements'>Requirements</h2>
+
+<ul>
+<li>iOS 8.0+ / watchOS 2.0+</li>
+<li>Xcode 7.3, 8.0</li>
+<li>Swift 2.2 - 3.0</li>
+<li>Cocoapods or Carthage</li>
+</ul>
+<a href='#installation' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='installation'>Installation</h2>
+
+<p>The Bluemix Mobile Services Swift SDKs can be installed with either <a href="http://cocoapods.org/">Cocoapods</a> or <a href="https://github.com/Carthage/Carthage">Carthage</a>.</p>
+<a href='#cocoapods' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='cocoapods'>Cocoapods</h3>
+
+<p>To install BMSCore using Cocoapods, add it to your Podfile. If your project does not have a Podfile yet, use the <code>pod init</code> command.</p>
+<pre class="highlight ruby"><code><span class="n">use_frameworks!</span>
+
+<span class="n">target</span> <span class="s1">'MyApp'</span> <span class="k">do</span>
+    <span class="n">pod</span> <span class="s1">'BMSCore'</span>
+<span class="k">end</span>
+</code></pre>
+
+<p>Then run the <code>pod install</code> command, and open the generated <code>.xcworkspace</code> file. To update to a newer release of BMSCore, use <code>pod update BMSCore</code>.</p>
+
+<p>For more information on using Cocoapods, refer to the <a href="https://guides.cocoapods.org/using/index.html">Cocoapods Guides</a>.</p>
+<a href='#xcode-8' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='xcode-8'>Xcode 8</h4>
+
+<p>When installing with Cocoapods in Xcode 8, make sure you have installed Cocoapods <a href="https://github.com/CocoaPods/CocoaPods/releases">1.1.0</a> or later. You can get the latest version of Cocoapods using the command <code>sudo gem install cocoapods</code>.</p>
+
+<p>If you receive a prompt saying <q>Convert to Current Swift Syntax?</q> when opening your project in Xcode 8 (following the installation of BMSCore), <strong>do not</strong> convert BMSCore or BMSAnalyticsAPI.</p>
+<a href='#carthage' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='carthage'>Carthage</h3>
+
+<p>To install BMSCore with Carthage, follow the instructions <a href="https://github.com/Carthage/Carthage#getting-started">here</a>.</p>
+
+<p>Add this line to your Cartfile: </p>
+<pre class="highlight plaintext"><code>github "ibm-bluemix-mobile-services/bms-clientsdk-swift-core"
+</code></pre>
+
+<p>Then run the <code>carthage update</code> command. Once the build is finished, add <code>BMSCore.framework</code> and <code>BMSAnalyticsAPI.framework</code> to your project (step 3 in the link above). </p>
+<a href='#xcode-8' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='xcode-8'>Xcode 8</h4>
+
+<p>For apps built with Swift 2.3, use the command <code>carthage update --toolchain com.apple.dt.toolchain.Swift_2_3</code>. Otherwise, use <code>carthage update</code>.</p>
+<a href='#example-usage' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='example-usage'>Example Usage</h2>
+
+<ul>
+<li><a href="#import-the-module">Import the module</a></li>
+<li><a href="#initialize-the-client">Initialize the client</a></li>
+<li><a href="#make-a-network-request">Make a network request</a>
+
+<ul>
+<li><a href="#data-task">Data task</a></li>
+<li><a href="#upload-task">Upload task</a></li>
+</ul></li>
+</ul>
+
+<blockquote>
+<p>View the complete API reference <a href="http://cocoadocs.org/docsets/BMSCore">here</a>.</p>
+</blockquote>
+
+<p>&ndash;</p>
+<a href='#import-the-module' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='import-the-module'>Import the module</h3>
+<pre class="highlight plaintext"><code>import BMSCore
+</code></pre>
+
+<p>&ndash;</p>
+<a href='#initialize-the-client' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='initialize-the-client'>Initialize the client</h3>
+
+<p>Initializing <code>BMSClient</code> is only required when using <code>BMSCore</code> with other BMS SDKs.</p>
+<pre class="highlight plaintext"><code>BMSClient.sharedInstance.initialize(bluemixRegion: BMSClient.Region.usSouth)
+</code></pre>
+
+<p>&ndash;</p>
+<a href='#make-a-network-request' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='make-a-network-request'>Make a network request</h3>
+<a href='#data-task' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='data-task'>Data task</h4>
+
+<p>With <code>BMSURLSession</code>, you can create data tasks to send and receive data.</p>
+
+<p>The example belows show how to create and send a data task, using a completion handler to parse the response.</p>
+
+<p><strong>Note</strong>: If you are also using the <a href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics">BMSAnalytics</a> framework to gather data on these network requests, be sure to call <code>.resume()</code> immediately after creating the data task as shown in the examples below.</p>
+<a href='#swift-3' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h5 id='swift-3'>Swift 3</h5>
+<pre class="highlight plaintext"><code>var request = URLRequest(url: URL(string: "http://httpbin.org/get")!)
+request.httpMethod = "GET"
+request.setValue("value", forHTTPHeaderField: "key")
+
+let urlSession = BMSURLSession(configuration: .default, delegate: nil, delegateQueue: nil)
+urlSession.dataTask(with: request) { (data: Data?, response: URLResponse?, error: Error?) in
+
+    if let httpResponse = response as? HTTPURLResponse {
+        print("Status code: \(httpResponse.statusCode)")
+    }
+    if data != nil, let responseString = String(data: data!, encoding: .utf8) {
+        print("Response data: \(responseString)")
+    }
+    if let error = error {
+        print("Error: \(error)")
+    }
+}.resume()
+</code></pre>
+<a href='#swift-2' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h5 id='swift-2'>Swift 2</h5>
+<pre class="highlight plaintext"><code>let request = NSMutableURLRequest(URL: NSURL(string: "http://httpbin.org/get")!)
+request.HTTPMethod = "GET"
+request.setValue("value", forHTTPHeaderField: "key")
+
+let urlSession = BMSURLSession(configuration: .defaultSessionConfiguration(), delegate: nil, delegateQueue: nil)
+urlSession.dataTaskWithRequest(request) { (data: NSData?, response: NSURLResponse?, error: NSError?) in
+
+    if let httpResponse = response as? NSHTTPURLResponse {
+        print("Status code: \(httpResponse.statusCode)")
+    }
+    if data != nil, let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding) {
+        print("Response data: \(responseString)")
+    }
+    if let error = error {
+        print("Error: \(error)")
+    }
+}.resume()
+</code></pre>
+
+<p>&ndash;</p>
+
+<p>As an alternative to using completion handlers, you can create your own <a href="https://developer.apple.com/reference/foundation/urlsessiondelegate">URLSessionDelegate</a> for more control over handling the response. </p>
+<a href='#swift-3' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h5 id='swift-3'>Swift 3</h5>
+<pre class="highlight plaintext"><code>var request = URLRequest(url: URL(string: "http://httpbin.org/get")!)
+request.httpMethod = "GET"
+request.setValue("value", forHTTPHeaderField: "key")
+
+let urlSession = BMSURLSession(configuration: .default, delegate: URLSessionDelegateExample(), delegateQueue: nil)
+urlSession.dataTask(with: request).resume()
+</code></pre>
+<pre class="highlight plaintext"><code>class URLSessionDelegateExample: NSObject, URLSessionDataDelegate {
+
+    func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
+
+        if let error = error {
+            print("Error: \(error)\n")
+        }
+    }
+
+    func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive response: URLResponse, completionHandler: @escaping (URLSession.ResponseDisposition) -&gt; Void) {
+
+        if let httpResponse = response as? HTTPURLResponse {
+            print("Status code: \(httpResponse.statusCode)")
+        }
+        // Required when connecting with an MCA-protected backend
+        completionHandler(URLSession.ResponseDisposition.allow)
+    }
+
+    func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive data: Data) {
+
+        if let responseString = String(data: data, encoding: .utf8) {
+            print("Response data: \(responseString)")
+        }
+    }
+}
+</code></pre>
+<a href='#swift-2' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h5 id='swift-2'>Swift 2</h5>
+<pre class="highlight plaintext"><code>let request = NSMutableURLRequest(URL: NSURL(string: "http://httpbin.org/get")!)
+request.HTTPMethod = "GET"
+request.setValue("value", forHTTPHeaderField: "key")
+
+let urlSession = BMSURLSession(configuration: .defaultSessionConfiguration(), delegate: NSURLSessionDelegateExample(), delegateQueue: nil)
+urlSession.dataTaskWithRequest(request).resume()
+</code></pre>
+<pre class="highlight plaintext"><code>class NSURLSessionDelegateExample: NSObject, NSURLSessionDataDelegate {
+
+    internal func URLSession(session: NSURLSession, task: NSURLSessionTask, didCompleteWithError error: NSError?) {
+
+        if let error = error {
+            print("Error: \(error)\n")
+        }
+    }
+
+    internal func URLSession(session: NSURLSession, dataTask: NSURLSessionDataTask, didReceiveResponse response: NSURLResponse, completionHandler: (NSURLSessionResponseDisposition) -&gt; Void) {
+
+        if let httpResponse = response as? NSHTTPURLResponse {
+            print("Status code: \(httpResponse.statusCode)")
+        }
+        // Required when connecting with an MCA-protected backend
+        completionHandler(NSURLSessionResponseDisposition.Allow)
+    }
+
+    internal func URLSession(session: NSURLSession, dataTask: NSURLSessionDataTask, didReceiveData data: NSData) {
+
+        if let responseString = String(data: data, encoding: NSUTF8StringEncoding) {
+            print("Response data: \(responseString)")
+        }
+    }
+}
+</code></pre>
+
+<p>&ndash;</p>
+<a href='#upload-task' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='upload-task'>Upload task</h4>
+
+<p>Upload tasks are data tasks that make it easier to upload data or files. With upload tasks, you can monitor the progress of each upload, and continue the upload in the background when the app is not running.</p>
+
+<p>The examples below show how to upload a file, using a completion handler to parse the response.</p>
+
+<p><strong>Note</strong>: If you are also using the <a href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics">BMSAnalytics</a> framework to gather data on these network requests, be sure to call <code>.resume()</code> immediately after creating the data task as shown in the examples below.</p>
+<a href='#swift-3' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h5 id='swift-3'>Swift 3</h5>
+<pre class="highlight plaintext"><code>let file = Bundle.main.url(forResource: "MyPicture", withExtension: "jpg")!
+
+var request = URLRequest(url: URL(string: "https://httpbin.org/post")!)
+request.httpMethod = "POST"
+request.setValue("value", forHTTPHeaderField: "key")
+
+let urlSession = BMSURLSession(configuration: .default, delegate: nil, delegateQueue: nil)
+urlSession.uploadTask(with: request, fromFile: file, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) in
+
+    if let httpResponse = response as? HTTPURLResponse {
+        print("Status code: \(httpResponse.statusCode)")
+    }
+    if let error = error {
+        print("Error: \(error)")
+    }
+}).resume()
+</code></pre>
+<a href='#swift-2' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h5 id='swift-2'>Swift 2</h5>
+<pre class="highlight plaintext"><code>let file = NSBundle.mainBundle().URLForResource("MyPicture", withExtension: "jpg")!
+
+let request = NSMutableURLRequest(URL: NSURL(string: "https://httpbin.org/post")!)
+request.HTTPMethod = "POST"
+request.setValue("value", forHTTPHeaderField: "key")
+
+let urlSession = BMSURLSession(configuration: .defaultSessionConfiguration(), delegate: nil, delegateQueue: nil)
+urlSession.uploadTaskWithRequest(request, fromFile: file, completionHandler: { (data: NSData?, response: NSURLResponse?, error: NSError?) in
+
+    if let httpResponse = response as? NSHTTPURLResponse {
+        print("Status code: \(httpResponse.statusCode)")
+    }
+    if let error = error {
+        print("Error: \(error)")
+    }
+}).resume()
+</code></pre>
+
+<p>&ndash;</p>
+
+<p>As an alternative to using completion handlers, you can create your own <a href="https://developer.apple.com/reference/foundation/urlsessiondelegate">URLSessionDelegate</a> for more control over handling the response. </p>
+<a href='#swift-3' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h5 id='swift-3'>Swift 3</h5>
+<pre class="highlight plaintext"><code>let file = Bundle.main.url(forResource: "MyPicture", withExtension: "jpg")!
+
+var request = URLRequest(url: URL(string: "https://httpbin.org/post")!)
+request.httpMethod = "POST"
+request.setValue("value", forHTTPHeaderField: "key")
+
+let urlSession = BMSURLSession(configuration: .default, delegate: URLSessionDelegateExample(), delegateQueue: nil)
+urlSession.uploadTask(with: request, fromFile: file).resume()
+</code></pre>
+<pre class="highlight plaintext"><code>class URLSessionDelegateExample: NSObject, URLSessionDataDelegate {
+
+    func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
+
+        if let error = error {
+            print("Error: \(error)\n")
+        }
+    }
+
+    func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive response: URLResponse, completionHandler: @escaping (URLSession.ResponseDisposition) -&gt; Void) {
+
+        if let httpResponse = response as? HTTPURLResponse {
+            print("Status code: \(httpResponse.statusCode)")
+        }
+        // Required when connecting with an MCA-protected backend
+        completionHandler(URLSession.ResponseDisposition.allow)
+    }
+
+    func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive data: Data) {
+
+        if let responseString = String(data: data, encoding: .utf8) {
+            print("Response data: \(responseString)")
+        }
+    }
+
+    func urlSession(_ session: URLSession, task: URLSessionTask, didSendBodyData bytesSent: Int64, totalBytesSent: Int64, totalBytesExpectedToSend: Int64) {
+
+        DispatchQueue.main.async {
+            let currentProgress = Float(totalBytesSent) / Float(totalBytesExpectedToSend) * 100
+            print("Upload progress = \(currentProgress)%")
+        }
+    }
+}
+</code></pre>
+<a href='#swift-2' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h5 id='swift-2'>Swift 2</h5>
+<pre class="highlight plaintext"><code>let file = NSBundle.mainBundle().URLForResource("MyPicture", withExtension: "jpg")!
+
+let request = NSMutableURLRequest(URL: NSURL(string: "https://httpbin.org/post")!)
+request.HTTPMethod = "POST"
+request.setValue("value", forHTTPHeaderField: "key")
+
+let urlSession = BMSURLSession(configuration: .defaultSessionConfiguration(), delegate: NSURLSessionDelegateExample(), delegateQueue: nil)
+urlSession.uploadTaskWithRequest(request, fromFile: file).resume()
+</code></pre>
+<pre class="highlight plaintext"><code>class NSURLSessionDelegateExample: NSObject, NSURLSessionDataDelegate {
+
+    func URLSession(session: NSURLSession, task: NSURLSessionTask, didCompleteWithError error: NSError?) {
+
+        if let error = error {
+            print("Error: \(error)\n")
+        }
+    }
+
+    internal func URLSession(session: NSURLSession, dataTask: NSURLSessionDataTask, didReceiveResponse response: NSURLResponse, completionHandler: (NSURLSessionResponseDisposition) -&gt; Void) {
+
+        if let httpResponse = response as? NSHTTPURLResponse {
+            print("Status code: \(httpResponse.statusCode)")
+        }
+
+        // Required when connecting with an MCA-protected backend
+        completionHandler(NSURLSessionResponseDisposition.Allow)
+    }
+
+    internal func URLSession(session: NSURLSession, dataTask: NSURLSessionDataTask, didReceiveData data: NSData) {
+
+        if let responseString = String(data: data, encoding: NSUTF8StringEncoding) {
+            print("Response data: \(responseString)")
+        }
+    }
+
+    internal func URLSession(session: NSURLSession, task: NSURLSessionTask, didSendBodyData bytesSent: Int64, totalBytesSent: Int64, totalBytesExpectedToSend: Int64) {
+
+        dispatch_async(dispatch_get_main_queue()) {
+            let currentProgress = Float(totalBytesSent) / Float(totalBytesExpectedToSend) * 100
+            print("Upload progress = \(currentProgress)%")
+        }
+    }
+}
+</code></pre>
+<a href='#license' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='license'>License</h2>
+
+<p>Copyright 2016 IBM Corp.</p>
+
+<p>Licensed under the Apache License, Version 2.0 (the <q>License</q>);
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at</p>
+
+<p><a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></p>
+
+<p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an <q>AS IS</q> BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core" target="_blank" rel="external">IBM Bluemix Services Mobile SDK</a>. All rights reserved. (Last updated: 2016-11-13)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

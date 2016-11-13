@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BMSClient Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/BMSClient" class="dashAnchor"></a>
+    <a title="BMSClient Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">BMSCore Docs</a> (61% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">BMSCore Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        BMSClient Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/BMSClient.html">BMSClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BMSClient/Region.html">– Region</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BaseRequest.html">BaseRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Request.html">Request</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Response.html">Response</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums.html#/s:O7BMSCore12BMSCoreError">BMSCoreError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums.html#/s:O7BMSCore10HttpMethod">HttpMethod</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/BMSURLSession.html">BMSURLSession</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Typealiases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:7BMSCore20BMSCompletionHandler">BMSCompletionHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:7BMSCore28BMSDataTaskCompletionHandler">BMSDataTaskCompletionHandler</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>BMSClient</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">BMSClient</span></code></pre>
+
+                </div>
+              </div>
+            <p>A singleton that serves as an entry point to Bluemix client-server communication.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Constants"></a>
+                <a name="//apple_ref/swift/Section/Constants" class="dashAnchor"></a>
+                <a href="#/Constants">
+                  <h3 class="section-name">Constants</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:VC7BMSCore9BMSClient6Region"></a>
+                    <a name="//apple_ref/swift/Struct/Region" class="dashAnchor"></a>
+                    <a class="token" href="#/s:VC7BMSCore9BMSClient6Region">Region</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The region where your Bluemix service is hosted.</p>
+
+                        <a href="../Classes/BMSClient/Region.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Region</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Properties%20(API)"></a>
+                <a name="//apple_ref/swift/Section/Properties (API)" class="dashAnchor"></a>
+                <a href="#/Properties%20(API)">
+                  <h3 class="section-name">Properties (API)</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvC7BMSCore9BMSClient14sharedInstanceS0_"></a>
+                    <a name="//apple_ref/swift/Variable/sharedInstance" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvC7BMSCore9BMSClient14sharedInstanceS0_">sharedInstance</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The singleton that is used for all <code>BMSClient</code> activity.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">sharedInstance</span> <span class="o">=</span> <span class="kt">BMSClient</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC7BMSCore9BMSClient15bluemixAppRouteGSqSS_"></a>
+                    <a name="//apple_ref/swift/Property/bluemixAppRoute" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC7BMSCore9BMSClient15bluemixAppRouteGSqSS_">bluemixAppRoute</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specifies the base Bluemix application backend URL.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">bluemixAppRoute</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC7BMSCore9BMSClient14bluemixAppGUIDGSqSS_"></a>
+                    <a name="//apple_ref/swift/Property/bluemixAppGUID" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC7BMSCore9BMSClient14bluemixAppGUIDGSqSS_">bluemixAppGUID</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specifies the Bluemix application backend identifier.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">bluemixAppGUID</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC7BMSCore9BMSClient14requestTimeoutSd"></a>
+                    <a name="//apple_ref/swift/Property/requestTimeout" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC7BMSCore9BMSClient14requestTimeoutSd">requestTimeout</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specifies the allowed timeout (in seconds) for all <code>BMSClient</code> network requests.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">requestTimeout</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">20.0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Initializers"></a>
+                <a name="//apple_ref/swift/Section/Initializers" class="dashAnchor"></a>
+                <a href="#/Initializers">
+                  <h3 class="section-name">Initializers</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC7BMSCore9BMSClient10initializeFt15bluemixAppRouteGSqSS_14bluemixAppGUIDGSqSS_13bluemixRegionGSaSS__T_"></a>
+                    <a name="//apple_ref/swift/Method/initialize(bluemixAppRoute:bluemixAppGUID:bluemixRegion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC7BMSCore9BMSClient10initializeFt15bluemixAppRouteGSqSS_14bluemixAppGUIDGSqSS_13bluemixRegionGSaSS__T_">initialize(bluemixAppRoute:bluemixAppGUID:bluemixRegion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The required intializer for the <code>BMSClient</code> class.</p>
+
+<p>Call this method on <code><a href="../Classes/BMSClient.html#/s:ZvC7BMSCore9BMSClient14sharedInstanceS0_">BMSClient.sharedInstance</a></code>.</p>
+
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>The <code>backendAppRoute</code> and <code>backendAppGUID</code> parameters are not required; they are only used for making network requests to the Bluemix server using the <code><a href="../Classes/Request.html">Request</a></code> class.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">initialize</span><span class="p">(</span><span class="nv">bluemixAppRoute</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">bluemixAppGUID</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">bluemixRegion</span><span class="p">:</span> <span class="kt">String</span><span class="o">...</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>backendAppRoute</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>(Optional) The base URL for the authorization server.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>backendAppGUID</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>(Optional) The GUID of the Bluemix application.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>bluemixRegion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The region where your Bluemix application is hosted. Use one of the <code>BMSClient.Region</code> constants.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core" target="_blank" rel="external">IBM Bluemix Services Mobile SDK</a>. All rights reserved. (Last updated: 2016-11-13)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
