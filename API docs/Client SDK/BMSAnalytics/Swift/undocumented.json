@@ -99,10 +99,17 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/Source/Analytics/BMSAnalytics.swift",
+      "line": 116,
+      "symbol": "BMSAnalytics",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/Source/Logger/BMSLogger.swift",
-      "line": 296,
-      "symbol": "BMSLogger.logToFile(message:level:loggerName:calledFile:calledFunction:calledLineNumber:additionalMetadata:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "line": 194,
+      "symbol": "BMSLogger",
+      "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     }
   ],
