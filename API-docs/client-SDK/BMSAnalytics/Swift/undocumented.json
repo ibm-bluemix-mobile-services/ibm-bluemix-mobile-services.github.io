@@ -9,91 +9,42 @@
     },
     {
       "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/Pods/BMSAnalyticsAPI/Source/Analytics.swift",
-      "line": 80,
+      "line": 86,
       "symbol": "Analytics.delegate",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/Pods/BMSAnalyticsAPI/Source/Analytics.swift",
-      "line": 82,
+      "line": 88,
       "symbol": "Analytics.logger",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/Pods/BMSAnalyticsAPI/Source/Logger.swift",
-      "line": 34,
-      "symbol": "LogLevel.analytics",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/Pods/BMSAnalyticsAPI/Source/Logger.swift",
-      "line": 34,
-      "symbol": "LogLevel.debug",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/Pods/BMSAnalyticsAPI/Source/Logger.swift",
-      "line": 34,
-      "symbol": "LogLevel.error",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/Pods/BMSAnalyticsAPI/Source/Logger.swift",
-      "line": 34,
-      "symbol": "LogLevel.fatal",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/Pods/BMSAnalyticsAPI/Source/Logger.swift",
-      "line": 34,
-      "symbol": "LogLevel.info",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/Pods/BMSAnalyticsAPI/Source/Logger.swift",
-      "line": 34,
-      "symbol": "LogLevel.none",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/Pods/BMSAnalyticsAPI/Source/Logger.swift",
-      "line": 34,
-      "symbol": "LogLevel.warn",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/Pods/BMSAnalyticsAPI/Source/Logger.swift",
-      "line": 66,
+      "line": 84,
       "symbol": "LoggerDelegate",
       "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/Pods/BMSAnalyticsAPI/Source/Logger.swift",
-      "line": 135,
+      "line": 154,
       "symbol": "Logger.delegate",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/Pods/BMSAnalyticsAPI/Source/Logger.swift",
-      "line": 141,
+      "line": 160,
       "symbol": "Logger.bmsLoggerPrefix",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/Pods/BMSAnalyticsAPI/Source/Logger.swift",
-      "line": 269,
+      "line": 285,
       "symbol": "Logger.printLog(message:loggerName:level:calledFunction:calledFile:calledLineNumber:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"

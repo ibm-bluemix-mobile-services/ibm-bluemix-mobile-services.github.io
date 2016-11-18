@@ -14,7 +14,8 @@
     <a title="Analytics Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">BMSAnalytics Docs</a> (60% documented)</p>
+        <p><a href="../index.html">BMSAnalytics Docs</a> (78% documented)</p>
+        <p class="header-right"><a href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -28,27 +29,32 @@
       <nav class="sidebar">
         <ul class="nav-groups">
           <li class="nav-group-name">
-            <a href="../Classes.html">Classes</a>
+            <a href="../Logger.html">Logger</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Logger.html">Logger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LogLevel.html">LogLevel</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Analytics.html">Analytics</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Classes/Analytics.html">Analytics</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/Logger.html">Logger</a>
+                <a href="../Enums/DeviceEvent.html">DeviceEvent</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Enums.html">Enums</a>
+            <a href="../Error.html">Error</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Enums/BMSAnalyticsError.html">BMSAnalyticsError</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/DeviceEvent.html">DeviceEvent</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/LogLevel.html">LogLevel</a>
               </li>
             </ul>
           </li>
@@ -64,16 +70,22 @@
 
                 </div>
               </div>
-            <p>Records analytics data and sends it to the Mobile Analytics Service.</p>
+            <p>Records analytics data and sends it to the <a href="https://console.ng.bluemix.net/docs/services/mobileanalytics/mobileanalytics_overview.html">Mobile Analytics service</a>.</p>
+
+<p>To subscribe to automated analytics recording, pass the <code><a href="../Enums/DeviceEvent.html">DeviceEvent</a></code> options that you want recorded in <code>initialize(appName:apiKey:hasUserContext:deviceEvents:)</code>.</p>
+
+<p>Custom events can be recorded with <code>log(metadata:)</code>. You can also define the current application user with <code>userIdentity</code> using, for example, the user&rsquo;s login information.</p>
+
+<p>When you are ready to send all of the recorded data to the Mobile Analytics service, use <code>send(completionHandler:)</code>.</p>
 
           </section>
           <section class="section task-group-section">
             <div class="task-group">
               <div class="task-name-container">
-                <a name="/Properties%20(API)"></a>
-                <a name="//apple_ref/swift/Section/Properties (API)" class="dashAnchor"></a>
-                <a href="#/Properties%20(API)">
-                  <h3 class="section-name">Properties (API)</h3>
+                <a name="/Properties"></a>
+                <a name="//apple_ref/swift/Section/Properties" class="dashAnchor"></a>
+                <a href="#/Properties">
+                  <h3 class="section-name">Properties</h3>
                 </a>
               </div>
               <ul>
@@ -90,7 +102,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Determines whether analytics logs will be persisted to file.</p>
+                        <p>Determines whether analytics data will be recorded.</p>
 
                       </div>
                       <div class="declaration">
@@ -118,7 +130,7 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Identifies the current application user.
-To reset the userId, set the value to nil.</p>
+To reset the <code>userIdentity</code>, set the value to nil.</p>
 
                       </div>
                       <div class="declaration">
@@ -136,10 +148,10 @@ To reset the userId, set the value to nil.</p>
             </div>
             <div class="task-group">
               <div class="task-name-container">
-                <a name="/Methods%20(API)"></a>
-                <a name="//apple_ref/swift/Section/Methods (API)" class="dashAnchor"></a>
-                <a href="#/Methods%20(API)">
-                  <h3 class="section-name">Methods (API)</h3>
+                <a name="/Methods"></a>
+                <a name="//apple_ref/swift/Section/Methods" class="dashAnchor"></a>
+                <a href="#/Methods">
+                  <h3 class="section-name">Methods</h3>
                 </a>
               </div>
               <ul>
@@ -158,9 +170,15 @@ To reset the userId, set the value to nil.</p>
                       <div class="abstract">
                         <p>Record analytics data.</p>
 
-<p>Analytics logs are added to the log file until the file size is greater than the <code>maxLogStoreSize</code> property. At this point, the first half of the stored logs will be deleted to make room for new log data.</p>
+<p>Analytics logs are added to the log file until the file size is greater than <code><a href="../Classes/Logger.html#/s:ZvC15BMSAnalyticsAPI6Logger15maxLogStoreSizeVs6UInt64">Logger.maxLogStoreSize</a></code>. At this point, the first half of the stored logs will be deleted to make room for new log data.</p>
 
-<p>When ready, use the <code>send()</code> method to send the recorded data to the Mobile Analytics Service.</p>
+<p>When ready, use <code>send(completionHandler:)</code> to send the recorded data to the Mobile Analytics service.</p>
+
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Do not supply values for the <code>file</code>, <code>function</code>, or <code>line</code> parameters. These parameters take default values to automatically record the file, function, and line in which this method was called.</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -199,7 +217,7 @@ To reset the userId, set the value to nil.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics" target="_blank" rel="external">IBM Bluemix Services Mobile SDK</a>. All rights reserved. (Last updated: 2016-11-15)</p>
+          <p>&copy; 2016 <a class="link" href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics" target="_blank" rel="external">IBM</a>. All rights reserved. (Last updated: 2016-11-18)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

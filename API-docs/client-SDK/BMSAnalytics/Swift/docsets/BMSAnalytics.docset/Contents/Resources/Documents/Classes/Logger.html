@@ -14,7 +14,8 @@
     <a title="Logger Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">BMSAnalytics Docs</a> (60% documented)</p>
+        <p><a href="../index.html">BMSAnalytics Docs</a> (78% documented)</p>
+        <p class="header-right"><a href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -28,27 +29,32 @@
       <nav class="sidebar">
         <ul class="nav-groups">
           <li class="nav-group-name">
-            <a href="../Classes.html">Classes</a>
+            <a href="../Logger.html">Logger</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Logger.html">Logger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LogLevel.html">LogLevel</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Analytics.html">Analytics</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Classes/Analytics.html">Analytics</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/Logger.html">Logger</a>
+                <a href="../Enums/DeviceEvent.html">DeviceEvent</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Enums.html">Enums</a>
+            <a href="../Error.html">Error</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Enums/BMSAnalyticsError.html">BMSAnalyticsError</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/DeviceEvent.html">DeviceEvent</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/LogLevel.html">LogLevel</a>
               </li>
             </ul>
           </li>
@@ -64,25 +70,19 @@
 
                 </div>
               </div>
-            <p>A logging framework that can print messages to the console, store them locally on the device, and send them to a remote Mobile Analytics Service. With each log message, additional information is gathered such as the file, function, and line where the log was called, as well as the severity of the message.</p>
+            <p>A logging framework that can print messages to the console, store them locally on the device, and send them to the <a href="https://console.ng.bluemix.net/docs/services/mobileanalytics/mobileanalytics_overview.html">Mobile Analytics service</a>. With each log message, additional information is gathered such as the file, function, and line where the log was created, as well as the severity of the message.</p>
 
-<p>Multiple <code>Logger</code> instances can be created with different names using the <code>logger(name:)</code> method.</p>
+<p>Multiple <code>Logger</code> instances can be created with different names using <code>logger(name:)</code>.</p>
 
-<p>When logging, choose the log method that matches the severity of the message. For example, use <code>debug(message:)</code> for fine-grained information and <code>fatal(message:)</code> for severe errors that may lead to application crashes. To limit which logs get printed to the console and stored on the device, set the <code>logLevelFilter</code> property.</p>
+<p>When logging, choose the log method that matches the severity of the message. For example, use <code>debug(message:)</code> for fine-detail information and <code>error(message:)</code> for unintended failures. To limit which logs get printed to the console and stored on the device, set the <code>logLevelFilter</code> property.</p>
 
-<p>To enable logs to be stored locally on the device, set the <code>logStoreEnabled</code> property to <code>true</code>. Logs are added to the log file until the file size is greater than the <code>maxLogStoreSize</code> property. At this point, the first half of the stored logs will be deleted to make room for new log data.</p>
+<p>To enable logs to be stored locally on the device, set <code>isLogStorageEnabled</code> to <code>true</code>. Logs are added to the log file until the file size is greater than the <code>maxLogStoreSize</code>. At this point, the first half of the stored logs will be deleted to make room for new log data.</p>
 
-<p>To send logs to the Mobile Analytics Service, call the <code>send()</code> method. When the log data is successfully uploaded, the logs will be deleted from local storage.</p>
+<p>To send logs to the Mobile Analytics service, use <code>send(completionHandler:)</code>. When the log data is successfully uploaded, the logs will be deleted from local storage.</p>
 
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
-    <p>The <code>Logger</code> class sets an uncaught exception handler to log application crashes. If you wish to set your own exception handler, do so <strong>before</strong> calling <code><a href="../Classes/Logger.html#/s:ZFC15BMSAnalyticsAPI6Logger6loggerFT4nameSS_S0_">Logger.logger(name:)</a></code>, or the <code>Logger</code> exception handler will be overwritten.</p>
-
-</div>
-
-<div class="aside aside-important">
-    <p class="aside-title">Important</p>
-    <p>The <code>BMSAnalytics</code> framework is required for log messages to be stored and sent to a Mobile Analytics Service. If this framework is not available, the <code>Logger</code> class can only print messages to the console.</p>
+    The <code>Logger</code> class sets an uncaught exception handler to log application crashes. If you wish to set your own exception handler, do so <strong>before</strong> calling <code>logger(name:)</code>, or the <code>Logger</code> exception handler will be overwritten.
 
 </div>
 
@@ -90,10 +90,10 @@
           <section class="section task-group-section">
             <div class="task-group">
               <div class="task-name-container">
-                <a name="/Properties%20(API)"></a>
-                <a name="//apple_ref/swift/Section/Properties (API)" class="dashAnchor"></a>
-                <a href="#/Properties%20(API)">
-                  <h3 class="section-name">Properties (API)</h3>
+                <a name="/Properties"></a>
+                <a name="//apple_ref/swift/Section/Properties" class="dashAnchor"></a>
+                <a href="#/Properties">
+                  <h3 class="section-name">Properties</h3>
                 </a>
               </div>
               <ul>
@@ -110,7 +110,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The name that identifies this Logger instance.</p>
+                        <p>The name that identifies this <code>Logger</code> instance.</p>
 
                       </div>
                       <div class="declaration">
@@ -137,11 +137,12 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Logs below this severity level will be ignored completely.</p>
+                        <p>Logs below this severity level will be ignored, so they will not be recorded or printed to the console.
+For example, setting the value to <code>.warn</code> will record fatal, error, and warn logs, but not info or debug logs.</p>
 
-<p>The default value is <code>LogLevel.Debug</code>.</p>
+<p>The default value is <code><a href="../Enums/LogLevel.html#/s:FO15BMSAnalyticsAPI8LogLevel5debugFMS0_S0_">LogLevel.debug</a></code>.</p>
 
-<p>Set the value to <code>LogLevel.None</code> to turn off all logging.</p>
+<p>Set the value to <code><a href="../Enums/LogLevel.html#/s:FO15BMSAnalyticsAPI8LogLevel4noneFMS0_S0_">LogLevel.none</a></code> to turn off all logging.</p>
 
                       </div>
                       <div class="declaration">
@@ -168,7 +169,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>If set to <code>true</code>, the internal BMSCore debug logs will be displayed on the console.</p>
+                        <p>If set to <code>true</code>, debug logs from Bluemix Mobile Services frameworks will be displayed on the console.
+This is useful if you need to debug an issue that you believe is related to Bluemix Mobile Services.</p>
 
                       </div>
                       <div class="declaration">
@@ -196,7 +198,7 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Determines whether logs get stored locally on the device.
-Must be set to <code>true</code> to be able to send logs to the Mobile Analytics Service.</p>
+Must be set to <code>true</code> to be able to later send logs to the Mobile Analytics service.</p>
 
                       </div>
                       <div class="declaration">
@@ -224,7 +226,7 @@ Must be set to <code>true</code> to be able to send logs to the Mobile Analytics
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The maximum file size (in bytes) for log storage.
-Both the Analytics and Logger log files are limited by <code>maxLogStoreSize</code>.</p>
+Logs from <code>Logger</code> and logs from <code><a href="../Classes/Analytics.html">Analytics</a></code> are stored in separate files, both of which are limited by <code>maxLogStoreSize</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -251,8 +253,9 @@ Both the Analytics and Logger log files are limited by <code>maxLogStoreSize</co
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>True if the app crashed recently due to an uncaught exception.
-This property will be set back to <code>false</code> if the logs are sent to the server.</p>
+                        <p><code>True</code> if the app crashed recently due to an uncaught exception.
+<code>BMSAnalytics</code> automatically records uncaught exceptions, so there is no need to change the value of this property manually.
+It will be set back to <code>false</code> after analytics logs are sent to the server with <code>Analytics.send(completionHandler:)</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -270,10 +273,10 @@ This property will be set back to <code>false</code> if the logs are sent to the
             </div>
             <div class="task-group">
               <div class="task-name-container">
-                <a name="/Initializers"></a>
-                <a name="//apple_ref/swift/Section/Initializers" class="dashAnchor"></a>
-                <a href="#/Initializers">
-                  <h3 class="section-name">Initializers</h3>
+                <a name="/Methods"></a>
+                <a name="//apple_ref/swift/Section/Methods" class="dashAnchor"></a>
+                <a href="#/Methods">
+                  <h3 class="section-name">Methods</h3>
                 </a>
               </div>
               <ul>
@@ -330,17 +333,6 @@ If a Logger instance with that name was already created, the existing instance w
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <div class="task-name-container">
-                <a name="/Methods%20(API)"></a>
-                <a name="//apple_ref/swift/Section/Methods (API)" class="dashAnchor"></a>
-                <a href="#/Methods%20(API)">
-                  <h3 class="section-name">Methods (API)</h3>
-                </a>
-              </div>
-              <ul>
                 <li class="item">
                   <div>
                     <code>
@@ -354,7 +346,7 @@ If a Logger instance with that name was already created, the existing instance w
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Log at the Debug LogLevel.</p>
+                        <p>Log at the debug <code><a href="../Enums/LogLevel.html">LogLevel</a></code>.</p>
 
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
@@ -407,7 +399,7 @@ If a Logger instance with that name was already created, the existing instance w
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Log at the Info LogLevel.</p>
+                        <p>Log at the info <code><a href="../Enums/LogLevel.html">LogLevel</a></code>.</p>
 
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
@@ -460,7 +452,7 @@ If a Logger instance with that name was already created, the existing instance w
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Log at the Warn LogLevel.</p>
+                        <p>Log at the warn <code><a href="../Enums/LogLevel.html">LogLevel</a></code>.</p>
 
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
@@ -513,7 +505,7 @@ If a Logger instance with that name was already created, the existing instance w
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Log at the Error LogLevel.</p>
+                        <p>Log at the error <code><a href="../Enums/LogLevel.html">LogLevel</a></code>.</p>
 
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
@@ -566,7 +558,7 @@ If a Logger instance with that name was already created, the existing instance w
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Log at the Fatal LogLevel.</p>
+                        <p>Log at the fatal <code><a href="../Enums/LogLevel.html">LogLevel</a></code>.</p>
 
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
@@ -611,7 +603,7 @@ If a Logger instance with that name was already created, the existing instance w
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics" target="_blank" rel="external">IBM Bluemix Services Mobile SDK</a>. All rights reserved. (Last updated: 2016-11-15)</p>
+          <p>&copy; 2016 <a class="link" href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics" target="_blank" rel="external">IBM</a>. All rights reserved. (Last updated: 2016-11-18)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

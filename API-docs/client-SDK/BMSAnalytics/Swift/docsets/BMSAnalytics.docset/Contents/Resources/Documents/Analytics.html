@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Classes  Reference</title>
+    <title>Analytics  Reference</title>
     <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,44 +10,50 @@
     
   </head>
   <body>
-    <a title="Classes  Reference"></a>
+    <a title="Analytics  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">BMSAnalytics Docs</a> (60% documented)</p>
+        <p><a href="index.html">BMSAnalytics Docs</a> (78% documented)</p>
+        <p class="header-right"><a href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
     <div class="content-wrapper">
       <p id="breadcrumbs">
         <a href="index.html">BMSAnalytics Reference</a>
         <img id="carat" src="img/carat.png" />
-        Classes  Reference
+        Analytics  Reference
       </p>
     </div>
     <div class="content-wrapper">
       <nav class="sidebar">
         <ul class="nav-groups">
           <li class="nav-group-name">
-            <a href="Classes.html">Classes</a>
+            <a href="Logger.html">Logger</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/Logger.html">Logger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/LogLevel.html">LogLevel</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Analytics.html">Analytics</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Classes/Analytics.html">Analytics</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/Logger.html">Logger</a>
+                <a href="Enums/DeviceEvent.html">DeviceEvent</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Enums.html">Enums</a>
+            <a href="Error.html">Error</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Enums/BMSAnalyticsError.html">BMSAnalyticsError</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/DeviceEvent.html">DeviceEvent</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/LogLevel.html">LogLevel</a>
               </li>
             </ul>
           </li>
@@ -56,9 +62,8 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>Classes</h1>
-            <p>The following classes are available globally.</p>
-
+            <h1>Analytics</h1>
+            
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -83,7 +88,13 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Records analytics data and sends it to the Mobile Analytics Service.</p>
+                        <p>Records analytics data and sends it to the <a href="https://console.ng.bluemix.net/docs/services/mobileanalytics/mobileanalytics_overview.html">Mobile Analytics service</a>.</p>
+
+<p>To subscribe to automated analytics recording, pass the <code><a href="Enums/DeviceEvent.html">DeviceEvent</a></code> options that you want recorded in <code>initialize(appName:apiKey:hasUserContext:deviceEvents:)</code>.</p>
+
+<p>Custom events can be recorded with <code>log(metadata:)</code>. You can also define the current application user with <code>userIdentity</code> using, for example, the user&rsquo;s login information.</p>
+
+<p>When you are ready to send all of the recorded data to the Mobile Analytics service, use <code>send(completionHandler:)</code>.</p>
 
                         <a href="Classes/Analytics.html" class="slightly-smaller">See more</a>
                       </div>
@@ -102,19 +113,19 @@
             </div>
             <div class="task-group">
               <div class="task-name-container">
-                <a name="/Logger"></a>
-                <a name="//apple_ref/swift/Section/Logger" class="dashAnchor"></a>
-                <a href="#/Logger">
-                  <h3 class="section-name">Logger</h3>
+                <a name="/DeviceEvent"></a>
+                <a name="//apple_ref/swift/Section/DeviceEvent" class="dashAnchor"></a>
+                <a href="#/DeviceEvent">
+                  <h3 class="section-name">DeviceEvent</h3>
                 </a>
               </div>
               <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:C15BMSAnalyticsAPI6Logger"></a>
-                    <a name="//apple_ref/swift/Class/Logger" class="dashAnchor"></a>
-                    <a class="token" href="#/s:C15BMSAnalyticsAPI6Logger">Logger</a>
+                    <a name="/s:O15BMSAnalyticsAPI11DeviceEvent"></a>
+                    <a name="//apple_ref/swift/Enum/DeviceEvent" class="dashAnchor"></a>
+                    <a class="token" href="#/s:O15BMSAnalyticsAPI11DeviceEvent">DeviceEvent</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -122,35 +133,21 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A logging framework that can print messages to the console, store them locally on the device, and send them to a remote Mobile Analytics Service. With each log message, additional information is gathered such as the file, function, and line where the log was called, as well as the severity of the message.</p>
-
-<p>Multiple <code>Logger</code> instances can be created with different names using the <code>logger(name:)</code> method.</p>
-
-<p>When logging, choose the log method that matches the severity of the message. For example, use <code>debug(message:)</code> for fine-grained information and <code>fatal(message:)</code> for severe errors that may lead to application crashes. To limit which logs get printed to the console and stored on the device, set the <code>logLevelFilter</code> property.</p>
-
-<p>To enable logs to be stored locally on the device, set the <code>logStoreEnabled</code> property to <code>true</code>. Logs are added to the log file until the file size is greater than the <code>maxLogStoreSize</code> property. At this point, the first half of the stored logs will be deleted to make room for new log data.</p>
-
-<p>To send logs to the Mobile Analytics Service, call the <code>send()</code> method. When the log data is successfully uploaded, the logs will be deleted from local storage.</p>
+                        <p>The set of device events that the <code><a href="Classes/Analytics.html">Analytics</a></code> class will listen for. Whenever an event of the specified type occurs, analytics data for that event will be recorded.</p>
 
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
-    <p>The <code>Logger</code> class sets an uncaught exception handler to log application crashes. If you wish to set your own exception handler, do so <strong>before</strong> calling <code><a href="Classes/Logger.html#/s:ZFC15BMSAnalyticsAPI6Logger6loggerFT4nameSS_S0_">Logger.logger(name:)</a></code>, or the <code>Logger</code> exception handler will be overwritten.</p>
+    Register DeviceEvents in <code>Analytics.initialize(appName:apiKey:hasUserContext:deviceEvents:)</code>.
 
 </div>
 
-<div class="aside aside-important">
-    <p class="aside-title">Important</p>
-    <p>The <code>BMSAnalytics</code> framework is required for log messages to be stored and sent to a Mobile Analytics Service. If this framework is not available, the <code>Logger</code> class can only print messages to the console.</p>
-
-</div>
-
-                        <a href="Classes/Logger.html" class="slightly-smaller">See more</a>
+                        <a href="Enums/DeviceEvent.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">Logger</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">DeviceEvent</span></code></pre>
 
                         </div>
                       </div>
@@ -162,7 +159,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics" target="_blank" rel="external">IBM Bluemix Services Mobile SDK</a>. All rights reserved. (Last updated: 2016-11-15)</p>
+          <p>&copy; 2016 <a class="link" href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics" target="_blank" rel="external">IBM</a>. All rights reserved. (Last updated: 2016-11-18)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

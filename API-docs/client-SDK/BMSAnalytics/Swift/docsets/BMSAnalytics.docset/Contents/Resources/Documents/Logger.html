@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Enums  Reference</title>
+    <title>Logger  Reference</title>
     <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,44 +10,50 @@
     
   </head>
   <body>
-    <a title="Enums  Reference"></a>
+    <a title="Logger  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">BMSAnalytics Docs</a> (60% documented)</p>
+        <p><a href="index.html">BMSAnalytics Docs</a> (78% documented)</p>
+        <p class="header-right"><a href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
     <div class="content-wrapper">
       <p id="breadcrumbs">
         <a href="index.html">BMSAnalytics Reference</a>
         <img id="carat" src="img/carat.png" />
-        Enums  Reference
+        Logger  Reference
       </p>
     </div>
     <div class="content-wrapper">
       <nav class="sidebar">
         <ul class="nav-groups">
           <li class="nav-group-name">
-            <a href="Classes.html">Classes</a>
+            <a href="Logger.html">Logger</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/Logger.html">Logger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/LogLevel.html">LogLevel</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Analytics.html">Analytics</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Classes/Analytics.html">Analytics</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/Logger.html">Logger</a>
+                <a href="Enums/DeviceEvent.html">DeviceEvent</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Enums.html">Enums</a>
+            <a href="Error.html">Error</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Enums/BMSAnalyticsError.html">BMSAnalyticsError</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/DeviceEvent.html">DeviceEvent</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/LogLevel.html">LogLevel</a>
               </li>
             </ul>
           </li>
@@ -56,26 +62,25 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>Enums</h1>
-            <p>The following enums are available globally.</p>
-
+            <h1>Logger</h1>
+            
           </section>
           <section class="section task-group-section">
             <div class="task-group">
               <div class="task-name-container">
-                <a name="/DeviceEvent"></a>
-                <a name="//apple_ref/swift/Section/DeviceEvent" class="dashAnchor"></a>
-                <a href="#/DeviceEvent">
-                  <h3 class="section-name">DeviceEvent</h3>
+                <a name="/Logger"></a>
+                <a name="//apple_ref/swift/Section/Logger" class="dashAnchor"></a>
+                <a href="#/Logger">
+                  <h3 class="section-name">Logger</h3>
                 </a>
               </div>
               <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:O15BMSAnalyticsAPI11DeviceEvent"></a>
-                    <a name="//apple_ref/swift/Enum/DeviceEvent" class="dashAnchor"></a>
-                    <a class="token" href="#/s:O15BMSAnalyticsAPI11DeviceEvent">DeviceEvent</a>
+                    <a name="/s:C15BMSAnalyticsAPI6Logger"></a>
+                    <a name="//apple_ref/swift/Class/Logger" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C15BMSAnalyticsAPI6Logger">Logger</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -83,21 +88,29 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Set of device events that the <code><a href="Classes/Analytics.html">Analytics</a></code> class will listen for. Whenever an event of the specified type occurs, analytics data for that event will be recorded.</p>
+                        <p>A logging framework that can print messages to the console, store them locally on the device, and send them to the <a href="https://console.ng.bluemix.net/docs/services/mobileanalytics/mobileanalytics_overview.html">Mobile Analytics service</a>. With each log message, additional information is gathered such as the file, function, and line where the log was created, as well as the severity of the message.</p>
+
+<p>Multiple <code>Logger</code> instances can be created with different names using <code>logger(name:)</code>.</p>
+
+<p>When logging, choose the log method that matches the severity of the message. For example, use <code>debug(message:)</code> for fine-detail information and <code>error(message:)</code> for unintended failures. To limit which logs get printed to the console and stored on the device, set the <code>logLevelFilter</code> property.</p>
+
+<p>To enable logs to be stored locally on the device, set <code>isLogStorageEnabled</code> to <code>true</code>. Logs are added to the log file until the file size is greater than the <code>maxLogStoreSize</code>. At this point, the first half of the stored logs will be deleted to make room for new log data.</p>
+
+<p>To send logs to the Mobile Analytics service, use <code>send(completionHandler:)</code>. When the log data is successfully uploaded, the logs will be deleted from local storage.</p>
 
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
-    Register DeviceEvents in the <code>Analytics.initialize()</code> method.
+    The <code>Logger</code> class sets an uncaught exception handler to log application crashes. If you wish to set your own exception handler, do so <strong>before</strong> calling <code>logger(name:)</code>, or the <code>Logger</code> exception handler will be overwritten.
 
 </div>
 
-                        <a href="Enums/DeviceEvent.html" class="slightly-smaller">See more</a>
+                        <a href="Classes/Logger.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">DeviceEvent</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">Logger</span></code></pre>
 
                         </div>
                       </div>
@@ -130,11 +143,11 @@
                       <div class="abstract">
                         <p>The severity of the log message.</p>
 
-<p>Used to set the <code>logLevelFilter</code> property.</p>
+<p>When setting <code><a href="Classes/Logger.html#/s:ZvC15BMSAnalyticsAPI6Logger14logLevelFilterOS_8LogLevel">Logger.logLevelFilter</a></code>, the LogLevels, ordered from most restrictive to least, are: <code>none</code>, <code>analytics</code>, <code>fatal</code>, <code>error</code>, <code>warn</code>, <code>info</code>, and <code>debug</code>.</p>
 
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
-    Set <code><a href="Classes/Logger.html#/s:ZvC15BMSAnalyticsAPI6Logger14logLevelFilterOS_8LogLevel">Logger.logLevelFilter</a></code> to <code>LogLevel.none</code> to prohibit any logs from being recorded. Do not use <code>LogLevel.analytics</code>; it is only meant to be used internally by the <code>BMSAnalytics</code> framework.
+    Set <code><a href="Classes/Logger.html#/s:ZvC15BMSAnalyticsAPI6Logger14logLevelFilterOS_8LogLevel">Logger.logLevelFilter</a></code> to <code>.none</code> to prohibit logs from being recorded.
 
 </div>
 
@@ -153,49 +166,10 @@
                 </li>
               </ul>
             </div>
-            <div class="task-group">
-              <div class="task-name-container">
-                <a name="/Swift%203"></a>
-                <a name="//apple_ref/swift/Section/Swift 3" class="dashAnchor"></a>
-                <a href="#/Swift%203">
-                  <h3 class="section-name">Swift 3</h3>
-                </a>
-              </div>
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:O12BMSAnalytics17BMSAnalyticsError"></a>
-                    <a name="//apple_ref/swift/Enum/BMSAnalyticsError" class="dashAnchor"></a>
-                    <a class="token" href="#/s:O12BMSAnalytics17BMSAnalyticsError">BMSAnalyticsError</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>These error codes indicate a failure that occurred within the BMSAnalytics framework.</p>
-
-                        <a href="Enums/BMSAnalyticsError.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">BMSAnalyticsError</span><span class="p">:</span> <span class="kt">Error</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics" target="_blank" rel="external">IBM Bluemix Services Mobile SDK</a>. All rights reserved. (Last updated: 2016-11-15)</p>
+          <p>&copy; 2016 <a class="link" href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics" target="_blank" rel="external">IBM</a>. All rights reserved. (Last updated: 2016-11-18)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
