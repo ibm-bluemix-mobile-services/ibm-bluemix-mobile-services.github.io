@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Classes  Reference</title>
+    <title>Network Requests  Reference</title>
     <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,30 +10,39 @@
     
   </head>
   <body>
-    <a title="Classes  Reference"></a>
+    <a title="Network Requests  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">BMSCore Docs</a> (61% documented)</p>
+        <p><a href="index.html">BMSCore Docs</a> (77% documented)</p>
+        <p class="header-right"><a href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
     <div class="content-wrapper">
       <p id="breadcrumbs">
         <a href="index.html">BMSCore Reference</a>
         <img id="carat" src="img/carat.png" />
-        Classes  Reference
+        Network Requests  Reference
       </p>
     </div>
     <div class="content-wrapper">
       <nav class="sidebar">
         <ul class="nav-groups">
           <li class="nav-group-name">
-            <a href="Classes.html">Classes</a>
+            <a href="Client.html">Client</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Classes/BMSClient.html">BMSClient</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/BMSClient/Region.html">– Region</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Network Requests.html">Network Requests</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/BMSURLSession.html">BMSURLSession</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/BaseRequest.html">BaseRequest</a>
@@ -42,37 +51,29 @@
                 <a href="Classes/Request.html">Request</a>
               </li>
               <li class="nav-group-task">
+                <a href="Enums/HttpMethod.html">HttpMethod</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/Response.html">Response</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Enums.html">Enums</a>
+            <a href="Completion Handlers.html">Completion Handlers</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Enums.html#/s:O7BMSCore12BMSCoreError">BMSCoreError</a>
+                <a href="Completion Handlers.html#/s:7BMSCore28BMSDataTaskCompletionHandler">BMSDataTaskCompletionHandler</a>
               </li>
               <li class="nav-group-task">
-                <a href="Enums.html#/s:O7BMSCore10HttpMethod">HttpMethod</a>
+                <a href="Completion Handlers.html#/s:7BMSCore20BMSCompletionHandler">BMSCompletionHandler</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Structs.html">Structs</a>
+            <a href="Error.html">Error</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Structs/BMSURLSession.html">BMSURLSession</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a href="Typealiases.html">Typealiases</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="Typealiases.html#/s:7BMSCore20BMSCompletionHandler">BMSCompletionHandler</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Typealiases.html#/s:7BMSCore28BMSDataTaskCompletionHandler">BMSDataTaskCompletionHandler</a>
+                <a href="Enums/BMSCoreError.html">BMSCoreError</a>
               </li>
             </ul>
           </li>
@@ -81,11 +82,53 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>Classes</h1>
-            <p>The following classes are available globally.</p>
-
+            <h1>Network Requests</h1>
+            
           </section>
           <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Swift%203"></a>
+                <a name="//apple_ref/swift/Section/Swift 3" class="dashAnchor"></a>
+                <a href="#/Swift%203">
+                  <h3 class="section-name">Swift 3</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:V7BMSCore13BMSURLSession"></a>
+                    <a name="//apple_ref/swift/Struct/BMSURLSession" class="dashAnchor"></a>
+                    <a class="token" href="#/s:V7BMSCore13BMSURLSession">BMSURLSession</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A wrapper around Swift&rsquo;s <a href="https://developer.apple.com/reference/foundation/urlsession">URLSession</a> API that incorporates
+Bluemix Mobile Services. Use <code>BMSURLSession</code> to gather <a href="https://console.ng.bluemix.net/docs/services/mobileanalytics/mobileanalytics_overview.html">Mobile Analytics</a> data on your network requests
+and/or to access backends that are protected by <a href="https://console.ng.bluemix.net/docs/services/mobileaccess/overview.html">Mobile Client Access</a>.</p>
+
+<p>Currently, <code>BMSURLSession</code> only supports <a href="https://developer.apple.com/reference/foundation/urlsessiondatatask">URLSessionDataTask</a> and <a href="https://developer.apple.com/reference/foundation/urlsessionuploadtask">URLSessionUploadTask</a>.</p>
+
+                        <a href="Structs/BMSURLSession.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">BMSURLSession</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
             <div class="task-group">
               <div class="task-name-container">
                 <a name="/BMSCompletionHandler"></a>
@@ -110,9 +153,13 @@
                       <div class="abstract">
                         <p>Sends HTTP network requests. </p>
 
-<p>Analytics data is automatically gathered for all requests initiated by this class.</p>
+<p>When building a BaseRequest object, all components of the HTTP request must be provided in the initializer, except for the <code>requestBody</code>, which can be supplied as Data when sending the request via <code>send(requestBody:completionHandler:)</code>.</p>
 
-<p>When building a BaseRequest object, all components of the HTTP request must be provided in the initializer, except for the <code>requestBody</code>, which can be supplied as Data when sending the request via the <code>send()</code> method.</p>
+<div class="aside aside-important">
+    <p class="aside-title">Important</p>
+    It is recommended to use the <code><a href="Classes/Request.html">Request</a></code> class instead of <code>BaseRequest</code>.
+
+</div>
 
                         <a href="Classes/BaseRequest.html" class="slightly-smaller">See more</a>
                       </div>
@@ -121,45 +168,6 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">BaseRequest</span><span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">URLSessionTaskDelegate</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <div class="task-name-container">
-                <a name="/Swift%203"></a>
-                <a name="//apple_ref/swift/Section/Swift 3" class="dashAnchor"></a>
-                <a href="#/Swift%203">
-                  <h3 class="section-name">Swift 3</h3>
-                </a>
-              </div>
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:C7BMSCore9BMSClient"></a>
-                    <a name="//apple_ref/swift/Class/BMSClient" class="dashAnchor"></a>
-                    <a class="token" href="#/s:C7BMSCore9BMSClient">BMSClient</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A singleton that serves as an entry point to Bluemix client-server communication.</p>
-
-                        <a href="Classes/BMSClient.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">BMSClient</span></code></pre>
 
                         </div>
                       </div>
@@ -190,11 +198,9 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Sends HTTP network requests.</p>
+                        <p>Sends HTTP network requests. It is recommended to use this class instead of <code><a href="Classes/BaseRequest.html">BaseRequest</a></code>.</p>
 
-<p>Analytics data is automatically gathered for all requests initiated by this class.</p>
-
-<p>When building a Request object, all components of the HTTP request must be provided in the initializer, except for the <code>requestBody</code>, which can be supplied as Data when sending the request via the <code>send()</code> method.</p>
+<p>For more information on <code>Request</code>, see the documentation for <code><a href="Classes/BaseRequest.html">BaseRequest</a></code>.</p>
 
                         <a href="Classes/Request.html" class="slightly-smaller">See more</a>
                       </div>
@@ -216,6 +222,45 @@
                 <a name="/Swift%2033"></a>
                 <a name="//apple_ref/swift/Section/Swift 3" class="dashAnchor"></a>
                 <a href="#/Swift%2033">
+                  <h3 class="section-name">Swift 3</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:O7BMSCore10HttpMethod"></a>
+                    <a name="//apple_ref/swift/Enum/HttpMethod" class="dashAnchor"></a>
+                    <a class="token" href="#/s:O7BMSCore10HttpMethod">HttpMethod</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The HTTP method to be used in the <code><a href="Classes/Request.html">Request</a></code> class initializer.</p>
+
+                        <a href="Enums/HttpMethod.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">HttpMethod</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Swift%2034"></a>
+                <a name="//apple_ref/swift/Section/Swift 3" class="dashAnchor"></a>
+                <a href="#/Swift%2034">
                   <h3 class="section-name">Swift 3</h3>
                 </a>
               </div>
@@ -253,7 +298,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core" target="_blank" rel="external">IBM Bluemix Services Mobile SDK</a>. All rights reserved. (Last updated: 2016-11-15)</p>
+          <p>&copy; 2016 <a class="link" href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core" target="_blank" rel="external">IBM</a>. All rights reserved. (Last updated: 2016-11-18)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

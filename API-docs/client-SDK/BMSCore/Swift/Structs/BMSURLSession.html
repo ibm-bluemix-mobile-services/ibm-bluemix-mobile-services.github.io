@@ -14,7 +14,8 @@
     <a title="BMSURLSession Struct Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">BMSCore Docs</a> (61% documented)</p>
+        <p><a href="../index.html">BMSCore Docs</a> (77% documented)</p>
+        <p class="header-right"><a href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -28,13 +29,21 @@
       <nav class="sidebar">
         <ul class="nav-groups">
           <li class="nav-group-name">
-            <a href="../Classes.html">Classes</a>
+            <a href="../Client.html">Client</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Classes/BMSClient.html">BMSClient</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/BMSClient/Region.html">– Region</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Network Requests.html">Network Requests</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/BMSURLSession.html">BMSURLSession</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/BaseRequest.html">BaseRequest</a>
@@ -43,37 +52,29 @@
                 <a href="../Classes/Request.html">Request</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Enums/HttpMethod.html">HttpMethod</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/Response.html">Response</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Enums.html">Enums</a>
+            <a href="../Completion Handlers.html">Completion Handlers</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Enums.html#/s:O7BMSCore12BMSCoreError">BMSCoreError</a>
+                <a href="../Completion Handlers.html#/s:7BMSCore28BMSDataTaskCompletionHandler">BMSDataTaskCompletionHandler</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums.html#/s:O7BMSCore10HttpMethod">HttpMethod</a>
+                <a href="../Completion Handlers.html#/s:7BMSCore20BMSCompletionHandler">BMSCompletionHandler</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Structs.html">Structs</a>
+            <a href="../Error.html">Error</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Structs/BMSURLSession.html">BMSURLSession</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a href="../Typealiases.html">Typealiases</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Typealiases.html#/s:7BMSCore20BMSCompletionHandler">BMSCompletionHandler</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Typealiases.html#/s:7BMSCore28BMSDataTaskCompletionHandler">BMSDataTaskCompletionHandler</a>
+                <a href="../Enums/BMSCoreError.html">BMSCoreError</a>
               </li>
             </ul>
           </li>
@@ -89,13 +90,11 @@
 
                 </div>
               </div>
-            <p>A wrapper around Swift&rsquo;s <code>URLSession</code> API that incorporates
-Bluemix Mobile Services. Use this API to gather analytics data on your network requests
-and/or to access backends that are protected by Mobile Client Access.</p>
+            <p>A wrapper around Swift&rsquo;s <a href="https://developer.apple.com/reference/foundation/urlsession">URLSession</a> API that incorporates
+Bluemix Mobile Services. Use <code>BMSURLSession</code> to gather <a href="https://console.ng.bluemix.net/docs/services/mobileanalytics/mobileanalytics_overview.html">Mobile Analytics</a> data on your network requests
+and/or to access backends that are protected by <a href="https://console.ng.bluemix.net/docs/services/mobileaccess/overview.html">Mobile Client Access</a>.</p>
 
-<p>Currently, <code>BMSURLSession</code> only supports <code>URLSessionDataTask</code> and <code>URLSessionUploadTask</code>.</p>
-
-<p>For more information, refer to the documentation for <code>NSURLSession</code> in the Swift <code>Foundation</code> framework.</p>
+<p>Currently, <code>BMSURLSession</code> only supports <a href="https://developer.apple.com/reference/foundation/urlsessiondatatask">URLSessionDataTask</a> and <a href="https://developer.apple.com/reference/foundation/urlsessionuploadtask">URLSessionUploadTask</a>.</p>
 
           </section>
           <section class="section task-group-section">
@@ -270,7 +269,7 @@ and/or to access backends that are protected by Mobile Client Access.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">dataTask</span><span class="p">(</span><span class="n">with</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:7BMSCore28BMSDataTaskCompletionHandler">BMSDataTaskCompletionHandler</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">URLSessionDataTask</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">dataTask</span><span class="p">(</span><span class="n">with</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Completion Handlers.html#/s:7BMSCore28BMSDataTaskCompletionHandler">BMSDataTaskCompletionHandler</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">URLSessionDataTask</span></code></pre>
 
                         </div>
                       </div>
@@ -422,7 +421,7 @@ and/or to access backends that are protected by Mobile Client Access.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">uploadTask</span><span class="p">(</span><span class="n">with</span> <span class="nv">request</span><span class="p">:</span> <span class="kt">URLRequest</span><span class="p">,</span> <span class="n">from</span> <span class="nv">bodyData</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:7BMSCore28BMSDataTaskCompletionHandler">BMSDataTaskCompletionHandler</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">URLSessionUploadTask</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">uploadTask</span><span class="p">(</span><span class="n">with</span> <span class="nv">request</span><span class="p">:</span> <span class="kt">URLRequest</span><span class="p">,</span> <span class="n">from</span> <span class="nv">bodyData</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Completion Handlers.html#/s:7BMSCore28BMSDataTaskCompletionHandler">BMSDataTaskCompletionHandler</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">URLSessionUploadTask</span></code></pre>
 
                         </div>
                       </div>
@@ -576,7 +575,7 @@ and/or to access backends that are protected by Mobile Client Access.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">uploadTask</span><span class="p">(</span><span class="n">with</span> <span class="nv">request</span><span class="p">:</span> <span class="kt">URLRequest</span><span class="p">,</span> <span class="n">fromFile</span> <span class="nv">fileURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:7BMSCore28BMSDataTaskCompletionHandler">BMSDataTaskCompletionHandler</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">URLSessionUploadTask</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">uploadTask</span><span class="p">(</span><span class="n">with</span> <span class="nv">request</span><span class="p">:</span> <span class="kt">URLRequest</span><span class="p">,</span> <span class="n">fromFile</span> <span class="nv">fileURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Completion Handlers.html#/s:7BMSCore28BMSDataTaskCompletionHandler">BMSDataTaskCompletionHandler</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">URLSessionUploadTask</span></code></pre>
 
                         </div>
                       </div>
@@ -639,7 +638,7 @@ and/or to access backends that are protected by Mobile Client Access.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core" target="_blank" rel="external">IBM Bluemix Services Mobile SDK</a>. All rights reserved. (Last updated: 2016-11-15)</p>
+          <p>&copy; 2016 <a class="link" href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core" target="_blank" rel="external">IBM</a>. All rights reserved. (Last updated: 2016-11-18)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

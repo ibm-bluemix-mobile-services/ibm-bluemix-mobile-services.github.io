@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Typealiases  Reference</title>
+    <title>Completion Handlers  Reference</title>
     <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,30 +10,39 @@
     
   </head>
   <body>
-    <a title="Typealiases  Reference"></a>
+    <a title="Completion Handlers  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">BMSCore Docs</a> (61% documented)</p>
+        <p><a href="index.html">BMSCore Docs</a> (77% documented)</p>
+        <p class="header-right"><a href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
     <div class="content-wrapper">
       <p id="breadcrumbs">
         <a href="index.html">BMSCore Reference</a>
         <img id="carat" src="img/carat.png" />
-        Typealiases  Reference
+        Completion Handlers  Reference
       </p>
     </div>
     <div class="content-wrapper">
       <nav class="sidebar">
         <ul class="nav-groups">
           <li class="nav-group-name">
-            <a href="Classes.html">Classes</a>
+            <a href="Client.html">Client</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Classes/BMSClient.html">BMSClient</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/BMSClient/Region.html">– Region</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Network Requests.html">Network Requests</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/BMSURLSession.html">BMSURLSession</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/BaseRequest.html">BaseRequest</a>
@@ -42,37 +51,29 @@
                 <a href="Classes/Request.html">Request</a>
               </li>
               <li class="nav-group-task">
+                <a href="Enums/HttpMethod.html">HttpMethod</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/Response.html">Response</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Enums.html">Enums</a>
+            <a href="Completion Handlers.html">Completion Handlers</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Enums.html#/s:O7BMSCore12BMSCoreError">BMSCoreError</a>
+                <a href="Completion Handlers.html#/s:7BMSCore28BMSDataTaskCompletionHandler">BMSDataTaskCompletionHandler</a>
               </li>
               <li class="nav-group-task">
-                <a href="Enums.html#/s:O7BMSCore10HttpMethod">HttpMethod</a>
+                <a href="Completion Handlers.html#/s:7BMSCore20BMSCompletionHandler">BMSCompletionHandler</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Structs.html">Structs</a>
+            <a href="Error.html">Error</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Structs/BMSURLSession.html">BMSURLSession</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a href="Typealiases.html">Typealiases</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="Typealiases.html#/s:7BMSCore20BMSCompletionHandler">BMSCompletionHandler</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Typealiases.html#/s:7BMSCore28BMSDataTaskCompletionHandler">BMSDataTaskCompletionHandler</a>
+                <a href="Enums/BMSCoreError.html">BMSCoreError</a>
               </li>
             </ul>
           </li>
@@ -81,9 +82,8 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>Typealiases</h1>
-            <p>The following typealiases are available globally.</p>
-
+            <h1>Completion Handlers</h1>
+            
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -98,9 +98,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7BMSCore20BMSCompletionHandler"></a>
-                    <a name="//apple_ref/swift/Alias/BMSCompletionHandler" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7BMSCore20BMSCompletionHandler">BMSCompletionHandler</a>
+                    <a name="/s:7BMSCore28BMSDataTaskCompletionHandler"></a>
+                    <a name="//apple_ref/swift/Alias/BMSDataTaskCompletionHandler" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7BMSCore28BMSDataTaskCompletionHandler">BMSDataTaskCompletionHandler</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -108,14 +108,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The type of callback sent with BMS network requests.</p>
+                        <p>Callback for data tasks created with <code><a href="Structs/BMSURLSession.html">BMSURLSession</a></code>.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">BMSCompletionHandler</span> <span class="o">=</span> <span class="p">(</span><span class="kt"><a href="Classes/Response.html">Response</a></span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">BMSDataTaskCompletionHandler</span> <span class="o">=</span> <span class="p">(</span><span class="kt">Data</span><span class="p">?,</span> <span class="kt">URLResponse</span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
 
                         </div>
                       </div>
@@ -136,9 +136,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7BMSCore28BMSDataTaskCompletionHandler"></a>
-                    <a name="//apple_ref/swift/Alias/BMSDataTaskCompletionHandler" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7BMSCore28BMSDataTaskCompletionHandler">BMSDataTaskCompletionHandler</a>
+                    <a name="/s:7BMSCore20BMSCompletionHandler"></a>
+                    <a name="//apple_ref/swift/Alias/BMSCompletionHandler" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7BMSCore20BMSCompletionHandler">BMSCompletionHandler</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -146,14 +146,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Callback for data tasks created with BMSURLSession.</p>
+                        <p>Callback for network requests made with <code><a href="Classes/Request.html">Request</a></code>.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">BMSDataTaskCompletionHandler</span> <span class="o">=</span> <span class="p">(</span><span class="kt">Data</span><span class="p">?,</span> <span class="kt">URLResponse</span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">BMSCompletionHandler</span> <span class="o">=</span> <span class="p">(</span><span class="kt"><a href="Classes/Response.html">Response</a></span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
 
                         </div>
                       </div>
@@ -165,7 +165,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core" target="_blank" rel="external">IBM Bluemix Services Mobile SDK</a>. All rights reserved. (Last updated: 2016-11-15)</p>
+          <p>&copy; 2016 <a class="link" href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core" target="_blank" rel="external">IBM</a>. All rights reserved. (Last updated: 2016-11-18)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
