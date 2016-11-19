@@ -14,7 +14,7 @@
     <a title="Analytics Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">BMSAnalytics Docs</a> (78% documented)</p>
+        <p><a href="../index.html">BMSAnalytics Docs</a> (80% documented)</p>
         <p class="header-right"><a href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -172,7 +172,7 @@ To reset the <code>userIdentity</code>, set the value to nil.</p>
 
 <p>Analytics logs are added to the log file until the file size is greater than <code><a href="../Classes/Logger.html#/s:ZvC15BMSAnalyticsAPI6Logger15maxLogStoreSizeVs6UInt64">Logger.maxLogStoreSize</a></code>. At this point, the first half of the stored logs will be deleted to make room for new log data.</p>
 
-<p>When ready, use <code>send(completionHandler:)</code> to send the recorded data to the Mobile Analytics service.</p>
+<p>When ready, use <code><a href="../Classes/Analytics.html#/s:ZFE12BMSAnalyticsC15BMSAnalyticsAPI9Analytics4sendERR">send(completionHandler:)</a></code> to send the recorded data to the Mobile Analytics service.</p>
 
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
@@ -214,10 +214,155 @@ To reset the <code>userIdentity</code>, set the value to nil.</p>
                 </li>
               </ul>
             </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFE12BMSAnalyticsC15BMSAnalyticsAPI9Analytics10initializeFt7appNameGSqSS_6apiKeyGSqSS_14hasUserContextSb12deviceEventsGSaOS0_11DeviceEvent__T_"></a>
+                    <a name="//apple_ref/swift/Method/initialize(appName:apiKey:hasUserContext:deviceEvents:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFE12BMSAnalyticsC15BMSAnalyticsAPI9Analytics10initializeFt7appNameGSqSS_6apiKeyGSqSS_14hasUserContextSb12deviceEventsGSaOS0_11DeviceEvent__T_">initialize(appName:apiKey:hasUserContext:deviceEvents:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The required initializer for the <code>Analytics</code> class when communicating with a Mobile Analytics service.</p>
+
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>This method must be called after initializing <code>BMSClient</code> with <code>BMSClient.sharedInstance.initialize(bluemixRegion:)</code> from the <code>BMSCore</code> framework, and before calling <code><a href="../Classes/Analytics.html#/s:ZFE12BMSAnalyticsC15BMSAnalyticsAPI9Analytics4sendERR">send(completionHandler:)</a></code> or <code><a href="../Classes/Logger.html#/s:ZFE12BMSAnalyticsC15BMSAnalyticsAPI6Logger4sendERR">Logger.send(completionHandler:)</a></code>.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">initialize</span><span class="p">(</span><span class="nv">appName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">apiKey</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">hasUserContext</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="nv">deviceEvents</span><span class="p">:</span> <span class="kt"><a href="../Enums/DeviceEvent.html">DeviceEvent</a></span><span class="o">...</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>appName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The application name. Should be consistent across platforms (e.g. Android and iOS).</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>apiKey</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A unique ID used to authenticate with the Mobile Analytics service.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>hasUserContext</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>If <code>false</code>, user identities will be automatically recorded using the device on which the app is installed. If you want to define user identities yourself using <code>Analytics.userIdentity</code>, set this parameter to <code>true</code>.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>deviceEvents</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Device events that will be recorded automatically by the <code>Analytics</code> class.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFE12BMSAnalyticsC15BMSAnalyticsAPI9Analytics4sendERR"></a>
+                    <a name="//apple_ref/swift/Method/send(completionHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFE12BMSAnalyticsC15BMSAnalyticsAPI9Analytics4sendERR">send(completionHandler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Send the accumulated analytics logs to the Mobile Analytics service.</p>
+
+<p>Analytics logs can only be sent if the BMSClient was initialized with <code>BMSClient.sharedInstance.initialize(bluemixRegion:)</code> from the <code>BMSCore</code> framework.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">send</span><span class="p">(</span><span class="n">completionHandler</span> <span class="nv">userCallback</span><span class="p">:</span> <span class="kt">BMSCompletionHandler</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Optional callback containing the results of the send request.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics" target="_blank" rel="external">IBM</a>. All rights reserved. (Last updated: 2016-11-18)</p>
+          <p>&copy; 2016 <a class="link" href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics" target="_blank" rel="external">IBM</a>. All rights reserved. (Last updated: 2016-11-19)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
