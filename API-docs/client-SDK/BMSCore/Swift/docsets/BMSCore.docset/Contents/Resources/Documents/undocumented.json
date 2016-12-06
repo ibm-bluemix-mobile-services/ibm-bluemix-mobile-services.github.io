@@ -22,6 +22,13 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-core/Source/Network Requests/BMSURLSession.swift",
+      "line": 43,
+      "symbol": "BMSURLSession.isBMSAuthorizationRequest",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-core/Source/Network Requests/BaseRequest.swift",
       "line": 71,
       "symbol": "BaseRequest.contentType",
@@ -30,28 +37,35 @@
     },
     {
       "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-core/Source/Network Requests/BaseRequest.swift",
-      "line": 107,
+      "line": 108,
       "symbol": "BaseRequest.networkSession",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-core/Source/Network Requests/BaseRequest.swift",
-      "line": 111,
+      "line": 113,
+      "symbol": "BaseRequest.urlSession",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-core/Source/Network Requests/BaseRequest.swift",
+      "line": 117,
       "symbol": "BaseRequest.trackingId",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-core/Source/Network Requests/BaseRequest.swift",
-      "line": 116,
+      "line": 122,
       "symbol": "BaseRequest.requestAnalyticsData",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-core/Source/Network Requests/BaseRequest.swift",
-      "line": 313,
+      "line": 306,
       "symbol": "BaseRequest.urlSession(_:task:willPerformHTTPRedirection:newRequest:completionHandler:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
