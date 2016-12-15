@@ -50,8 +50,15 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/Pods/BMSAnalyticsAPI/Source/RequestMetadata.swift",
+      "line": 28,
+      "symbol": "RequestMetadata",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/Source/Analytics/BMSAnalytics.swift",
-      "line": 116,
+      "line": 132,
       "symbol": "BMSAnalytics",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
