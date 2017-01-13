@@ -136,7 +136,8 @@
 <li><a href="#initialize">Initialize</a></li>
 <li><a href="#configure-logger-and-analytics">Configure Logger and Analytics</a></li>
 <li><a href="#set-the-app-users-identity">Set the app user&rsquo;s identity</a></li>
-<li><a href="#log-some-information">Log some information</a></li>
+<li><a href="#log-the-users-current-location">Log the user&rsquo;s current location</a></li>
+<li><a href="#log-some-other-information">Log some other information</a></li>
 <li><a href="#send-the-data-to-the-server">Send the data to the server</a></li>
 <li><a href="#disable-logging-output-for-production-applications">Disable logging output</a></li>
 </ul>
@@ -154,10 +155,10 @@ import BMSAnalytics
 <p>&ndash;</p>
 <a href='#initialize' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='initialize'>Initialize</h3>
 
-<p>Initialize <code>BMSClient</code> and <code>Analytics</code>. This is typically done at the beginning of the app&rsquo;s lifecycle, such as the <code>application(_:didFinishLaunchingWithOptions:)</code> method in the <code>AppDelegate.swift</code>.</p>
+<p>Initialize <code>BMSClient</code> and <code>Analytics</code>. This is typically done at the beginning of the app&rsquo;s lifecycle, such as the <code>application(_:didFinishLaunchingWithOptions:)</code> method in the <code>AppDelegate.swift</code>. </p>
 <pre class="highlight plaintext"><code>BMSClient.sharedInstance.initialize(bluemixRegion: BMSClient.Region.usSouth)
 
-Analytics.initialize(appName: "My App", apiKey: "1234", hasUserContext: true, deviceEvents: .lifecycle, .network)
+Analytics.initialize(appName: "My App", apiKey: "1234", hasUserContext: true, collectLocation: true, deviceEvents: .lifecycle, .network)
 </code></pre>
 
 <p>&ndash;</p>
@@ -173,12 +174,19 @@ Logger.logLevelFilter = LogLevel.debug
 <p>&ndash;</p>
 <a href='#set-the-app-user-39-s-identity' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='set-the-app-user-39-s-identity'>Set the app user&rsquo;s identity</h3>
 
-<p>If your app&rsquo;s users log in with a username, you can track each user with <code>Analytics.userIdentity</code>. To use this feature, you must have set the <code>hasUserContext</code> parameter to <code>true</code> in the <code>Analytics.initialize()</code> method first. If you set <code>hasUserContext</code> to <code>false</code>, BMSAnalytics will automatically record user identities, treating each device as one unique user.</p>
+<p>If your app&rsquo;s users log in with a username, you can track each user with <code>Analytics.userIdentity</code>. To use this feature, you must have set the <code>hasUserContext</code> parameter to <code>true</code> in the <code>Analytics.initialize()</code> method first, as shown in the <a href="#initialize">Initialize</a> section.. If you set <code>hasUserContext</code> to <code>false</code>, BMSAnalytics will automatically record user identities anonymously by treating each device as one unique user.</p>
 <pre class="highlight plaintext"><code>Analytics.userIdentity = "John Doe"
 </code></pre>
 
 <p>&ndash;</p>
-<a href='#log-some-information' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='log-some-information'>Log some information</h3>
+<a href='#log-the-user-39-s-current-location' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='log-the-user-39-s-current-location'>Log the user&rsquo;s current location</h3>
+
+<p>Before using this feature, you first need to <code>import CoreLocation</code> and get permission from the user to monitor their location using the <a href="https://developer.apple.com/reference/corelocation/cllocationmanager/1620562-requestwheninuseauthorization">requestWhenInUseAuthorization()</a> method from <a href="https://developer.apple.com/reference/corelocation/cllocationmanager">CLLocationManager</a>.</p>
+
+<p>To have <code>BMSAnalytics</code> automatically record the user&rsquo;s location, set the <code>collectLocation</code> parameter to <code>true</code> in the <code>Analytics.initialize()</code> method, as shown in the <a href="#initialize">Initialize</a> section. Once this parameter is set, you can log the user&rsquo;s current location yourself at any time while the app is in an active state by calling <code>Analytics.logLocation()</code>. </p>
+
+<p>&ndash;</p>
+<a href='#log-some-other-information' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='log-some-other-information'>Log some other information</h3>
 
 <p>Create a Logger instance and log messages anywhere in your application, using an appropriate severity level.</p>
 <pre class="highlight plaintext"><code>let logger = Logger.logger(name: "My Logger")
@@ -226,6 +234,8 @@ Analytics.send(completionHandler: { (response: Response?, error: Error?) in
 <a href='#disable-logging-output-for-production-applications' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='disable-logging-output-for-production-applications'>Disable logging output for production applications</h3>
 
 <p>By default, the Logger class will print its logs to Xcode console. If is advised to disable Logger output for applications built in release mode. In order to do so add a debug flag named <code>RELEASE_BUILD</code> to your release build configuration. One way of doing so is adding <code>-D RELEASE_BUILD</code> to the <code>Other Swift Flags</code> section of the project build configuration.</p>
+
+<hr>
 <a href='#license' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='license'>License</h2>
 
 <p>Copyright 2016 IBM Corp.</p>
@@ -245,7 +255,7 @@ limitations under the License.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics" target="_blank" rel="external">IBM</a>. All rights reserved. (Last updated: 2016-12-15)</p>
+          <p>&copy; 2017 <a class="link" href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics" target="_blank" rel="external">IBM</a>. All rights reserved. (Last updated: 2017-01-13)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
