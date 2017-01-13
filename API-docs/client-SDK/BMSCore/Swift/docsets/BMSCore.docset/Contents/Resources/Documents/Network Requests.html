@@ -13,7 +13,7 @@
     <a title="Network Requests  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">BMSCore Docs</a> (78% documented)</p>
+        <p><a href="index.html">BMSCore Docs</a> (80% documented)</p>
         <p class="header-right"><a href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -51,10 +51,21 @@
                 <a href="Network Requests.html#/s:C7BMSCore7Request">Request</a>
               </li>
               <li class="nav-group-task">
-                <a href="Enums/HttpMethod.html">HttpMethod</a>
+                <a href="Classes/Response.html">Response</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/Response.html">Response</a>
+                <a href="Enums/HttpMethod.html">HttpMethod</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Network Monitoring.html">Network Monitoring</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/NetworkMonitor.html">NetworkMonitor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/NetworkConnection.html">NetworkConnection</a>
               </li>
             </ul>
           </li>
@@ -74,22 +85,6 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Enums/BMSCoreError.html">BMSCoreError</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a href="Other Classes.html">Other Classes</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="Classes/NetworkMonitor.html">NetworkMonitor</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a href="Other Enums.html">Other Enums</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="Enums/NetworkConnection.html">NetworkConnection</a>
               </li>
             </ul>
           </li>
@@ -124,9 +119,12 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A wrapper around Swift&rsquo;s <a href="https://developer.apple.com/reference/foundation/urlsession">URLSession</a> API that incorporates
-Bluemix Mobile Services. Use <code>BMSURLSession</code> to gather <a href="https://console.ng.bluemix.net/docs/services/mobileanalytics/mobileanalytics_overview.html">Mobile Analytics</a> data on your network requests
-and/or to access backends that are protected by <a href="https://console.ng.bluemix.net/docs/services/mobileaccess/overview.html">Mobile Client Access</a>.</p>
+                        <p>Sends HTTP network requests.</p>
+
+<p><code>BMSURLSession</code> is an alternative to <code><a href="Classes/BaseRequest.html">BaseRequest</a></code> that provides more flexibility and control over requests and their responses.</p>
+
+<p>It is built as a wrapper around Swift&rsquo;s <a href="https://developer.apple.com/reference/foundation/urlsession">URLSession</a> API that incorporates Bluemix Mobile Services. 
+It automatically gathers <a href="https://console.ng.bluemix.net/docs/services/mobileanalytics/mobileanalytics_overview.html">Mobile Analytics</a> data on each network request, and can be used to access backends that are protected by <a href="https://console.ng.bluemix.net/docs/services/mobileaccess/overview.html">Mobile Client Access</a>.</p>
 
 <p>Currently, <code>BMSURLSession</code> only supports <a href="https://developer.apple.com/reference/foundation/urlsessiondatatask">URLSessionDataTask</a> and <a href="https://developer.apple.com/reference/foundation/urlsessionuploadtask">URLSessionUploadTask</a>.</p>
 
@@ -167,13 +165,15 @@ and/or to access backends that are protected by <a href="https://console.ng.blue
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Sends HTTP network requests. </p>
+                        <p>Sends HTTP network requests.</p>
+
+<p><code>BaseRequest</code> is a simpler alternative to <code><a href="Structs/BMSURLSession.html">BMSURLSession</a></code> that requires no familiarity with Swift&rsquo;s <a href="https://developer.apple.com/reference/foundation/urlsession">URLSession</a> API.</p>
 
 <p>When building a BaseRequest object, all components of the HTTP request must be provided in the initializer, except for the <code>requestBody</code>, which can be supplied as Data when sending the request via <code>send(requestBody:completionHandler:)</code>.</p>
 
 <div class="aside aside-important">
     <p class="aside-title">Important</p>
-    It is recommended to use the <code><a href="Network Requests.html#/s:C7BMSCore7Request">Request</a></code> class instead of <code>BaseRequest</code>.
+    It is recommended to use the <code><a href="Network Requests.html#/s:C7BMSCore7Request">Request</a></code> class instead of <code>BaseRequest</code>, since it will replace <code>BaseRequest</code> in the future.
 
 </div>
 
@@ -216,7 +216,7 @@ and/or to access backends that are protected by <a href="https://console.ng.blue
                       <div class="abstract">
                         <p>Sends HTTP network requests.</p>
 
-<p>For more information on <code>Request</code>, see the documentation for <code><a href="Classes/BaseRequest.html">BaseRequest</a></code>.</p>
+<p><code>Request</code> is functionally equivalent to <code><a href="Classes/BaseRequest.html">BaseRequest</a></code>. For more information on how to use <code>Request</code>, see the documentation for <code><a href="Classes/BaseRequest.html">BaseRequest</a></code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -244,9 +244,9 @@ and/or to access backends that are protected by <a href="https://console.ng.blue
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:O7BMSCore10HttpMethod"></a>
-                    <a name="//apple_ref/swift/Enum/HttpMethod" class="dashAnchor"></a>
-                    <a class="token" href="#/s:O7BMSCore10HttpMethod">HttpMethod</a>
+                    <a name="/s:C7BMSCore8Response"></a>
+                    <a name="//apple_ref/swift/Class/Response" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C7BMSCore8Response">Response</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -254,15 +254,15 @@ and/or to access backends that are protected by <a href="https://console.ng.blue
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The HTTP method to be used in the <code><a href="Network Requests.html#/s:C7BMSCore7Request">Request</a></code> class initializer.</p>
+                        <p>Contains useful response data from an HTTP request made by the <code><a href="Network Requests.html#/s:C7BMSCore7Request">Request</a></code> class.</p>
 
-                        <a href="Enums/HttpMethod.html" class="slightly-smaller">See more</a>
+                        <a href="Classes/Response.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">HttpMethod</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">Response</span></code></pre>
 
                         </div>
                       </div>
@@ -283,9 +283,9 @@ and/or to access backends that are protected by <a href="https://console.ng.blue
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:C7BMSCore8Response"></a>
-                    <a name="//apple_ref/swift/Class/Response" class="dashAnchor"></a>
-                    <a class="token" href="#/s:C7BMSCore8Response">Response</a>
+                    <a name="/s:O7BMSCore10HttpMethod"></a>
+                    <a name="//apple_ref/swift/Enum/HttpMethod" class="dashAnchor"></a>
+                    <a class="token" href="#/s:O7BMSCore10HttpMethod">HttpMethod</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -293,15 +293,15 @@ and/or to access backends that are protected by <a href="https://console.ng.blue
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Contains useful response data from an HTTP request made by the <code><a href="Network Requests.html#/s:C7BMSCore7Request">Request</a></code> class.</p>
+                        <p>The HTTP method to be used in the <code><a href="Network Requests.html#/s:C7BMSCore7Request">Request</a></code> class initializer.</p>
 
-                        <a href="Classes/Response.html" class="slightly-smaller">See more</a>
+                        <a href="Enums/HttpMethod.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">Response</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">HttpMethod</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>

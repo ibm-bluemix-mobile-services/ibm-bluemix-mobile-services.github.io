@@ -14,7 +14,7 @@
     <a title="BaseRequest Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">BMSCore Docs</a> (78% documented)</p>
+        <p><a href="../index.html">BMSCore Docs</a> (80% documented)</p>
         <p class="header-right"><a href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -52,10 +52,21 @@
                 <a href="../Network Requests.html#/s:C7BMSCore7Request">Request</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/HttpMethod.html">HttpMethod</a>
+                <a href="../Classes/Response.html">Response</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/Response.html">Response</a>
+                <a href="../Enums/HttpMethod.html">HttpMethod</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Network Monitoring.html">Network Monitoring</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/NetworkMonitor.html">NetworkMonitor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NetworkConnection.html">NetworkConnection</a>
               </li>
             </ul>
           </li>
@@ -78,22 +89,6 @@
               </li>
             </ul>
           </li>
-          <li class="nav-group-name">
-            <a href="../Other Classes.html">Other Classes</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Classes/NetworkMonitor.html">NetworkMonitor</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a href="../Other Enums.html">Other Enums</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Enums/NetworkConnection.html">NetworkConnection</a>
-              </li>
-            </ul>
-          </li>
         </ul>
       </nav>
       <article class="main-content">
@@ -106,13 +101,15 @@
 
                 </div>
               </div>
-            <p>Sends HTTP network requests. </p>
+            <p>Sends HTTP network requests.</p>
+
+<p><code>BaseRequest</code> is a simpler alternative to <code><a href="../Structs/BMSURLSession.html">BMSURLSession</a></code> that requires no familiarity with Swift&rsquo;s <a href="https://developer.apple.com/reference/foundation/urlsession">URLSession</a> API.</p>
 
 <p>When building a BaseRequest object, all components of the HTTP request must be provided in the initializer, except for the <code>requestBody</code>, which can be supplied as Data when sending the request via <code>send(requestBody:completionHandler:)</code>.</p>
 
 <div class="aside aside-important">
     <p class="aside-title">Important</p>
-    It is recommended to use the <code><a href="../Network Requests.html#/s:C7BMSCore7Request">Request</a></code> class instead of <code>BaseRequest</code>.
+    It is recommended to use the <code><a href="../Network Requests.html#/s:C7BMSCore7Request">Request</a></code> class instead of <code>BaseRequest</code>, since it will replace <code>BaseRequest</code> in the future.
 
 </div>
 
@@ -120,10 +117,10 @@
           <section class="section task-group-section">
             <div class="task-group">
               <div class="task-name-container">
-                <a name="/Properties%20(API)"></a>
-                <a name="//apple_ref/swift/Section/Properties (API)" class="dashAnchor"></a>
-                <a href="#/Properties%20(API)">
-                  <h3 class="section-name">Properties (API)</h3>
+                <a name="/Properties"></a>
+                <a name="//apple_ref/swift/Section/Properties" class="dashAnchor"></a>
+                <a href="#/Properties">
+                  <h3 class="section-name">Properties</h3>
                 </a>
               </div>
               <ul>
@@ -495,10 +492,10 @@
             </div>
             <div class="task-group">
               <div class="task-name-container">
-                <a name="/Methods%20(API)"></a>
-                <a name="//apple_ref/swift/Section/Methods (API)" class="dashAnchor"></a>
-                <a href="#/Methods%20(API)">
-                  <h3 class="section-name">Methods (API)</h3>
+                <a name="/Methods"></a>
+                <a name="//apple_ref/swift/Section/Methods" class="dashAnchor"></a>
+                <a href="#/Methods">
+                  <h3 class="section-name">Methods</h3>
                 </a>
               </div>
               <ul>

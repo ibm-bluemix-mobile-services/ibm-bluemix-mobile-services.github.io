@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Other Enums  Reference</title>
+    <title>Network Monitoring  Reference</title>
     <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,10 +10,10 @@
     
   </head>
   <body>
-    <a title="Other Enums  Reference"></a>
+    <a title="Network Monitoring  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">BMSCore Docs</a> (78% documented)</p>
+        <p><a href="index.html">BMSCore Docs</a> (80% documented)</p>
         <p class="header-right"><a href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -21,7 +21,7 @@
       <p id="breadcrumbs">
         <a href="index.html">BMSCore Reference</a>
         <img id="carat" src="img/carat.png" />
-        Other Enums  Reference
+        Network Monitoring  Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -51,10 +51,21 @@
                 <a href="Network Requests.html#/s:C7BMSCore7Request">Request</a>
               </li>
               <li class="nav-group-task">
-                <a href="Enums/HttpMethod.html">HttpMethod</a>
+                <a href="Classes/Response.html">Response</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/Response.html">Response</a>
+                <a href="Enums/HttpMethod.html">HttpMethod</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Network Monitoring.html">Network Monitoring</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/NetworkMonitor.html">NetworkMonitor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/NetworkConnection.html">NetworkConnection</a>
               </li>
             </ul>
           </li>
@@ -77,30 +88,13 @@
               </li>
             </ul>
           </li>
-          <li class="nav-group-name">
-            <a href="Other Classes.html">Other Classes</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="Classes/NetworkMonitor.html">NetworkMonitor</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a href="Other Enums.html">Other Enums</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="Enums/NetworkConnection.html">NetworkConnection</a>
-              </li>
-            </ul>
-          </li>
         </ul>
       </nav>
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>Other Enums</h1>
-            <p>The following enums are available globally.</p>
-
+            <h1>Network Monitoring</h1>
+            
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -112,6 +106,38 @@
                 </a>
               </div>
               <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:C7BMSCore14NetworkMonitor"></a>
+                    <a name="//apple_ref/swift/Class/NetworkMonitor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C7BMSCore14NetworkMonitor">NetworkMonitor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Use the <code>NetworkMonitor</code> class to determine the current status of the iOS device&rsquo;s connection to the internet.</p>
+
+<p>To get the type of network connection currently available, use <code>currentNetworkConnection</code>. If the <code>currentNetworkConnection</code> is WWAN, you can narrow down the type further with <code>cellularNetworkType</code>, which shows whether the device is using 4G, 3G, or 2G.</p>
+
+<p>To subscribe to network changes, call <code>startMonitoringNetworkChanges()</code> and add an observer to <code>NotificationCenter.default</code> with <code><a href="Classes/NetworkMonitor.html#/s:ZvC7BMSCore14NetworkMonitor30networkChangedNotificationNameVCSo14NSNotification4Name">NetworkMonitor.networkChangedNotificationName</a></code> as the notification name. To turn off these notifications, call <code>stopMonitoringNetworkChanges()</code>.</p>
+
+                        <a href="Classes/NetworkMonitor.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">NetworkMonitor</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
                 <li class="item">
                   <div>
                     <code>

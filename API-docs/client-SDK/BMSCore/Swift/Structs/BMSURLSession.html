@@ -14,7 +14,7 @@
     <a title="BMSURLSession Struct Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">BMSCore Docs</a> (78% documented)</p>
+        <p><a href="../index.html">BMSCore Docs</a> (80% documented)</p>
         <p class="header-right"><a href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -52,10 +52,21 @@
                 <a href="../Network Requests.html#/s:C7BMSCore7Request">Request</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/HttpMethod.html">HttpMethod</a>
+                <a href="../Classes/Response.html">Response</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/Response.html">Response</a>
+                <a href="../Enums/HttpMethod.html">HttpMethod</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Network Monitoring.html">Network Monitoring</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/NetworkMonitor.html">NetworkMonitor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NetworkConnection.html">NetworkConnection</a>
               </li>
             </ul>
           </li>
@@ -78,22 +89,6 @@
               </li>
             </ul>
           </li>
-          <li class="nav-group-name">
-            <a href="../Other Classes.html">Other Classes</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Classes/NetworkMonitor.html">NetworkMonitor</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a href="../Other Enums.html">Other Enums</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Enums/NetworkConnection.html">NetworkConnection</a>
-              </li>
-            </ul>
-          </li>
         </ul>
       </nav>
       <article class="main-content">
@@ -106,15 +101,25 @@
 
                 </div>
               </div>
-            <p>A wrapper around Swift&rsquo;s <a href="https://developer.apple.com/reference/foundation/urlsession">URLSession</a> API that incorporates
-Bluemix Mobile Services. Use <code>BMSURLSession</code> to gather <a href="https://console.ng.bluemix.net/docs/services/mobileanalytics/mobileanalytics_overview.html">Mobile Analytics</a> data on your network requests
-and/or to access backends that are protected by <a href="https://console.ng.bluemix.net/docs/services/mobileaccess/overview.html">Mobile Client Access</a>.</p>
+            <p>Sends HTTP network requests.</p>
+
+<p><code>BMSURLSession</code> is an alternative to <code><a href="../Classes/BaseRequest.html">BaseRequest</a></code> that provides more flexibility and control over requests and their responses.</p>
+
+<p>It is built as a wrapper around Swift&rsquo;s <a href="https://developer.apple.com/reference/foundation/urlsession">URLSession</a> API that incorporates Bluemix Mobile Services. 
+It automatically gathers <a href="https://console.ng.bluemix.net/docs/services/mobileanalytics/mobileanalytics_overview.html">Mobile Analytics</a> data on each network request, and can be used to access backends that are protected by <a href="https://console.ng.bluemix.net/docs/services/mobileaccess/overview.html">Mobile Client Access</a>.</p>
 
 <p>Currently, <code>BMSURLSession</code> only supports <a href="https://developer.apple.com/reference/foundation/urlsessiondatatask">URLSessionDataTask</a> and <a href="https://developer.apple.com/reference/foundation/urlsessionuploadtask">URLSessionUploadTask</a>.</p>
 
           </section>
           <section class="section task-group-section">
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Initializer"></a>
+                <a name="//apple_ref/swift/Section/Initializer" class="dashAnchor"></a>
+                <a href="#/Initializer">
+                  <h3 class="section-name">Initializer</h3>
+                </a>
+              </div>
               <ul>
                 <li class="item">
                   <div>
@@ -209,10 +214,10 @@ and/or to access backends that are protected by <a href="https://console.ng.blue
             </div>
             <div class="task-group">
               <div class="task-name-container">
-                <a name="/Data%20tasks"></a>
-                <a name="//apple_ref/swift/Section/Data tasks" class="dashAnchor"></a>
-                <a href="#/Data%20tasks">
-                  <h3 class="section-name">Data tasks</h3>
+                <a name="/Methods"></a>
+                <a name="//apple_ref/swift/Section/Methods" class="dashAnchor"></a>
+                <a href="#/Methods">
+                  <h3 class="section-name">Methods</h3>
                 </a>
               </div>
               <ul>
@@ -344,17 +349,6 @@ and/or to access backends that are protected by <a href="https://console.ng.blue
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <div class="task-name-container">
-                <a name="/Upload%20tasks"></a>
-                <a name="//apple_ref/swift/Section/Upload tasks" class="dashAnchor"></a>
-                <a href="#/Upload%20tasks">
-                  <h3 class="section-name">Upload tasks</h3>
-                </a>
-              </div>
-              <ul>
                 <li class="item">
                   <div>
                     <code>
