@@ -1,14 +1,14 @@
 {
   "warnings": [
     {
-      "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-core/Source/Network Requests/BMSClient.swift",
+      "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-core/Source/BMSClient.swift",
       "line": 69,
       "symbol": "BMSClient.bluemixRegion",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-core/Source/Network Requests/BMSClient.swift",
+      "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-core/Source/BMSClient.swift",
       "line": 78,
       "symbol": "BMSClient.authorizationManager",
       "symbol_kind": "source.lang.swift.decl.var.instance",
@@ -65,7 +65,7 @@
     },
     {
       "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-core/Source/Network Requests/BaseRequest.swift",
-      "line": 306,
+      "line": 308,
       "symbol": "BaseRequest.urlSession(_:task:willPerformHTTPRedirection:newRequest:completionHandler:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

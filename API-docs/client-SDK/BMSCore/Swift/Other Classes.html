@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Client  Reference</title>
+    <title>Other Classes  Reference</title>
     <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,7 +10,7 @@
     
   </head>
   <body>
-    <a title="Client  Reference"></a>
+    <a title="Other Classes  Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="index.html">BMSCore Docs</a> (78% documented)</p>
@@ -21,7 +21,7 @@
       <p id="breadcrumbs">
         <a href="index.html">BMSCore Reference</a>
         <img id="carat" src="img/carat.png" />
-        Client  Reference
+        Other Classes  Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -98,8 +98,9 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>Client</h1>
-            
+            <h1>Other Classes</h1>
+            <p>The following classes are available globally.</p>
+
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -114,9 +115,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:C7BMSCore9BMSClient"></a>
-                    <a name="//apple_ref/swift/Class/BMSClient" class="dashAnchor"></a>
-                    <a class="token" href="#/s:C7BMSCore9BMSClient">BMSClient</a>
+                    <a name="/s:C7BMSCore14NetworkMonitor"></a>
+                    <a name="//apple_ref/swift/Class/NetworkMonitor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C7BMSCore14NetworkMonitor">NetworkMonitor</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -124,15 +125,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A singleton that serves as the entry point to Bluemix client-server communication.</p>
+                        <p>Use the <code>NetworkMonitor</code> class to determine the current status of the iOS device&rsquo;s connection to the internet.</p>
 
-                        <a href="Classes/BMSClient.html" class="slightly-smaller">See more</a>
+<p>To get the type of network connection currently available, use <code>currentNetworkConnection</code>. If the <code>currentNetworkConnection</code> is WWAN, you can narrow down the type further with <code>cellularNetworkType</code>, which shows whether the device is using 4G, 3G, or 2G.</p>
+
+<p>To subscribe to network changes, call <code>startMonitoringNetworkChanges()</code> and add an observer to <code>NotificationCenter.default</code> with <code><a href="Classes/NetworkMonitor.html#/s:ZvC7BMSCore14NetworkMonitor30networkChangedNotificationNameVCSo14NSNotification4Name">NetworkMonitor.networkChangedNotificationName</a></code> as the notification name. To turn off these notifications, call <code>stopMonitoringNetworkChanges()</code>.</p>
+
+                        <a href="Classes/NetworkMonitor.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">BMSClient</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">NetworkMonitor</span></code></pre>
 
                         </div>
                       </div>

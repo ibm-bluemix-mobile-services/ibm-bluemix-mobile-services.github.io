@@ -14,7 +14,7 @@
     <a title="BaseRequest Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">BMSCore Docs</a> (75% documented)</p>
+        <p><a href="../index.html">BMSCore Docs</a> (78% documented)</p>
         <p class="header-right"><a href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -75,6 +75,22 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Enums/BMSCoreError.html">BMSCoreError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other Classes.html">Other Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/NetworkMonitor.html">NetworkMonitor</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other Enums.html">Other Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/NetworkConnection.html">NetworkConnection</a>
               </li>
             </ul>
           </li>
@@ -342,8 +358,8 @@
                   <div>
                     <code>
                     <a name="/s:FC7BMSCore11BaseRequestcERR"></a>
-                    <a name="//apple_ref/swift/Method/init(url:method:headers:queryParameters:timeout:cachePolicy:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC7BMSCore11BaseRequestcERR">init(url:method:headers:queryParameters:timeout:cachePolicy:)</a>
+                    <a name="//apple_ref/swift/Method/init(url:method:headers:queryParameters:timeout:cachePolicy:autoRetries:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC7BMSCore11BaseRequestcERR">init(url:method:headers:queryParameters:timeout:cachePolicy:autoRetries:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -369,7 +385,8 @@
                <span class="nv">headers</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
                <span class="nv">queryParameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
                <span class="nv">timeout</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="kt"><a href="../Classes/BMSClient.html">BMSClient</a></span><span class="o">.</span><span class="n">sharedInstance</span><span class="o">.</span><span class="n">requestTimeout</span><span class="p">,</span>
-               <span class="nv">cachePolicy</span><span class="p">:</span> <span class="kt">URLRequest</span><span class="o">.</span><span class="kt">CachePolicy</span> <span class="o">=</span> <span class="o">.</span><span class="n">useProtocolCachePolicy</span><span class="p">)</span></code></pre>
+               <span class="nv">cachePolicy</span><span class="p">:</span> <span class="kt">URLRequest</span><span class="o">.</span><span class="kt">CachePolicy</span> <span class="o">=</span> <span class="o">.</span><span class="n">useProtocolCachePolicy</span><span class="p">,</span>
+               <span class="nv">autoRetries</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -451,6 +468,19 @@
                               <td>
                                 <div>
                                   <p>Cache policy to use when sending request.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>autoRetries</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The number of times to retry each request if it fails to send. The conditions for retries are: request timeout, loss of network connectivity, failure to connect to the host, and 504 responses.</p>
 
                                 </div>
                               </td>
@@ -541,7 +571,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core" target="_blank" rel="external">IBM</a>. All rights reserved. (Last updated: 2016-12-06)</p>
+          <p>&copy; 2017 <a class="link" href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core" target="_blank" rel="external">IBM</a>. All rights reserved. (Last updated: 2017-01-13)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

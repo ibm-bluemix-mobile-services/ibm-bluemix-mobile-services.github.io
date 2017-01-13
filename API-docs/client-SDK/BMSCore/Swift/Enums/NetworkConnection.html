@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>BMSCoreError Enum Reference</title>
+    <title>NetworkConnection Enum Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Enum/BMSCoreError" class="dashAnchor"></a>
-    <a title="BMSCoreError Enum Reference"></a>
+    <a name="//apple_ref/swift/Enum/NetworkConnection" class="dashAnchor"></a>
+    <a title="NetworkConnection Enum Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">BMSCore Docs</a> (78% documented)</p>
@@ -22,7 +22,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">BMSCore Reference</a>
         <img id="carat" src="../img/carat.png" />
-        BMSCoreError Enum Reference
+        NetworkConnection Enum Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -99,14 +99,14 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>BMSCoreError</h1>
+            <h1>NetworkConnection</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">BMSCoreError</span><span class="p">:</span> <span class="kt">Error</span></code></pre>
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">NetworkConnection</span></code></pre>
 
                 </div>
               </div>
-            <p>Indicates a failure that occurred within the BMSCore framework.</p>
+            <p>Describes how the device is currently connected to the internet.</p>
 
           </section>
           <section class="section task-group-section">
@@ -115,9 +115,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FO7BMSCore12BMSCoreError12malformedUrlFMS0_S0_"></a>
-                    <a name="//apple_ref/swift/Element/malformedUrl" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FO7BMSCore12BMSCoreError12malformedUrlFMS0_S0_">malformedUrl</a>
+                    <a name="/s:FO7BMSCore17NetworkConnection12noConnectionFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/noConnection" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO7BMSCore17NetworkConnection12noConnectionFMS0_S0_">noConnection</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -125,14 +125,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The URL provided in the <code><a href="../Network Requests.html#/s:C7BMSCore7Request">Request</a></code> initializer is invalid.</p>
+                        <p>The device has no connection to the internet.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="n">malformedUrl</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">noConnection</span></code></pre>
 
                         </div>
                       </div>
@@ -146,9 +146,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FO7BMSCore12BMSCoreError20clientNotInitializedFMS0_S0_"></a>
-                    <a name="//apple_ref/swift/Element/clientNotInitialized" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FO7BMSCore12BMSCoreError20clientNotInitializedFMS0_S0_">clientNotInitialized</a>
+                    <a name="/s:FO7BMSCore17NetworkConnection4WiFiFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/WiFi" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO7BMSCore17NetworkConnection4WiFiFMS0_S0_">WiFi</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -156,14 +156,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Need to call the <code><a href="../Classes/BMSClient.html#/s:FC7BMSCore9BMSClient10initializeFt15bluemixAppRouteGSqSS_14bluemixAppGUIDGSqSS_13bluemixRegionGSaSS__T_">BMSClient.initialize(bluemixAppRoute:bluemixAppGUID:bluemixRegion:)</a></code> method.</p>
+                        <p>The device is connected to a WiFi network.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="n">clientNotInitialized</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">WiFi</span></code></pre>
 
                         </div>
                       </div>
@@ -177,9 +177,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FO7BMSCore12BMSCoreError24serverRespondedWithErrorFMS0_S0_"></a>
-                    <a name="//apple_ref/swift/Element/serverRespondedWithError" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FO7BMSCore12BMSCoreError24serverRespondedWithErrorFMS0_S0_">serverRespondedWithError</a>
+                    <a name="/s:FO7BMSCore17NetworkConnection4WWANFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/WWAN" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO7BMSCore17NetworkConnection4WWANFMS0_S0_">WWAN</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -187,14 +187,45 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The network request failed due to a 4xx or 5xx status code.</p>
+                        <p>The device is using cellular data (i.e. 4G, 3G, or 2G).</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="n">serverRespondedWithError</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">WWAN</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vO7BMSCore17NetworkConnection11descriptionSS"></a>
+                    <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vO7BMSCore17NetworkConnection11descriptionSS">description</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Raw string representation of the <code>NetworkConnection</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>

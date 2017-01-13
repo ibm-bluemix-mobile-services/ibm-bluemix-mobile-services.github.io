@@ -14,7 +14,7 @@
     <a title="BMSURLSession Struct Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">BMSCore Docs</a> (75% documented)</p>
+        <p><a href="../index.html">BMSCore Docs</a> (78% documented)</p>
         <p class="header-right"><a href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -78,6 +78,22 @@
               </li>
             </ul>
           </li>
+          <li class="nav-group-name">
+            <a href="../Other Classes.html">Other Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/NetworkMonitor.html">NetworkMonitor</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other Enums.html">Other Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/NetworkConnection.html">NetworkConnection</a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </nav>
       <article class="main-content">
@@ -86,7 +102,7 @@
             <h1>BMSURLSession</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">BMSURLSession</span></code></pre>
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">BMSURLSession</span><span class="p">:</span> <span class="kt">NetworkSession</span></code></pre>
 
                 </div>
               </div>
@@ -104,8 +120,8 @@ and/or to access backends that are protected by <a href="https://console.ng.blue
                   <div>
                     <code>
                     <a name="/s:FV7BMSCore13BMSURLSessioncERR"></a>
-                    <a name="//apple_ref/swift/Method/init(configuration:delegate:delegateQueue:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FV7BMSCore13BMSURLSessioncERR">init(configuration:delegate:delegateQueue:)</a>
+                    <a name="//apple_ref/swift/Method/init(configuration:delegate:delegateQueue:autoRetries:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FV7BMSCore13BMSURLSessioncERR">init(configuration:delegate:delegateQueue:autoRetries:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -122,7 +138,8 @@ and/or to access backends that are protected by <a href="https://console.ng.blue
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">configuration</span><span class="p">:</span> <span class="kt">URLSessionConfiguration</span> <span class="o">=</span> <span class="o">.</span><span class="k">default</span><span class="p">,</span>
                 <span class="nv">delegate</span><span class="p">:</span> <span class="kt">URLSessionDelegate</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-                <span class="nv">delegateQueue</span><span class="p">:</span> <span class="kt">OperationQueue</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                <span class="nv">delegateQueue</span><span class="p">:</span> <span class="kt">OperationQueue</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                <span class="nv">autoRetries</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -165,6 +182,19 @@ and/or to access backends that are protected by <a href="https://console.ng.blue
                               <td>
                                 <div>
                                   <p>Queue for scheduling the delegate calls and completion handlers.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>autoRetries</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The number of times to retry each request if it fails to send. The conditions for retries are: timeout, loss of network connectivity, failure to connect to the host, and 504 responses.</p>
 
                                 </div>
                               </td>
@@ -638,7 +668,7 @@ and/or to access backends that are protected by <a href="https://console.ng.blue
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core" target="_blank" rel="external">IBM</a>. All rights reserved. (Last updated: 2016-12-06)</p>
+          <p>&copy; 2017 <a class="link" href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core" target="_blank" rel="external">IBM</a>. All rights reserved. (Last updated: 2017-01-13)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
