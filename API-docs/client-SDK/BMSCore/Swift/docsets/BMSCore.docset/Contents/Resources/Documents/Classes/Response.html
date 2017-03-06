@@ -144,9 +144,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vC7BMSCore8Response7headersGSqGVs10DictionaryVs11AnyHashableP___"></a>
+                    <a name="/s:vC7BMSCore8Response7headersERR"></a>
                     <a name="//apple_ref/swift/Property/headers" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC7BMSCore8Response7headersGSqGVs10DictionaryVs11AnyHashableP___">headers</a>
+                    <a class="token" href="#/s:vC7BMSCore8Response7headersERR">headers</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -161,7 +161,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">headers</span><span class="p">:</span> <span class="p">[</span><span class="kt">AnyHashable</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]?</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">headers</span><span class="p">:</span> <span class="p">[</span><span class="kt">NSObject</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">]?</span></code></pre>
 
                         </div>
                       </div>
@@ -210,14 +210,14 @@ Returns nil if there is no body or the body cannot be converted to a <code>Strin
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The body of the response.
-Returns nil if there is no body or if the response is not valid <code>Data</code>.</p>
+Returns nil if there is no body or if the response is not valid <code>NSData</code>.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">responseData</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">responseData</span><span class="p">:</span> <span class="kt">NSData</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -275,14 +275,14 @@ Returns nil if there is no body or if the response is not valid <code>Data</code
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Converts an <code>HTTPURLResponse</code> to a more accessible response object.</p>
+                        <p>Converts an <code>NSHTTPURLResponse</code> to a more accessible <code>Response</code> object.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">responseData</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?,</span> <span class="nv">httpResponse</span><span class="p">:</span> <span class="kt">HTTPURLResponse</span><span class="p">?,</span> <span class="nv">isRedirect</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">responseData</span><span class="p">:</span> <span class="kt">NSData</span><span class="p">?,</span> <span class="nv">httpResponse</span><span class="p">:</span> <span class="kt">NSHTTPURLResponse</span><span class="p">?,</span> <span class="nv">isRedirect</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -311,7 +311,7 @@ Returns nil if there is no body or if the response is not valid <code>Data</code
                               </td>
                               <td>
                                 <div>
-                                  <p>Response object returned from the <code>URLSession</code> request.</p>
+                                  <p>Response object returned from the <code>NSURLSession</code> request.</p>
 
                                 </div>
                               </td>
@@ -340,8 +340,8 @@ Returns nil if there is no body or if the response is not valid <code>Data</code
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2017 <a class="link" href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core" target="_blank" rel="external">IBM</a>. All rights reserved. (Last updated: 2017-01-16)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2017 <a class="link" href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core" target="_blank" rel="external">IBM</a>. All rights reserved. (Last updated: 2017-03-06)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
