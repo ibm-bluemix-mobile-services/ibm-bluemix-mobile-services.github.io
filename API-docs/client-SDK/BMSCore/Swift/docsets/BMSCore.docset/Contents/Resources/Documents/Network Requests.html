@@ -99,10 +99,10 @@
           <section class="section task-group-section">
             <div class="task-group">
               <div class="task-name-container">
-                <a name="/BMSURLSession%20(Swift%202)"></a>
-                <a name="//apple_ref/swift/Section/BMSURLSession (Swift 2)" class="dashAnchor"></a>
-                <a href="#/BMSURLSession%20(Swift%202)">
-                  <h3 class="section-name">BMSURLSession (Swift 2)</h3>
+                <a name="/Swift%203"></a>
+                <a name="//apple_ref/swift/Section/Swift 3" class="dashAnchor"></a>
+                <a href="#/Swift%203">
+                  <h3 class="section-name">Swift 3</h3>
                 </a>
               </div>
               <ul>
@@ -123,10 +123,10 @@
 
 <p><code>BMSURLSession</code> is an alternative to <code><a href="Classes/BaseRequest.html">BaseRequest</a></code> that provides more flexibility and control over requests and their responses.</p>
 
-<p>It is built as a wrapper around Swift&rsquo;s <a href="https://developer.apple.com/reference/foundation/urlsession">NSURLSession</a> API that incorporates Bluemix Mobile Services.
+<p>It is built as a wrapper around Swift&rsquo;s <a href="https://developer.apple.com/reference/foundation/urlsession">URLSession</a> API that incorporates Bluemix Mobile Services. 
 It automatically gathers <a href="https://console.ng.bluemix.net/docs/services/mobileanalytics/mobileanalytics_overview.html">Mobile Analytics</a> data on each network request, and can be used to access backends that are protected by <a href="https://console.ng.bluemix.net/docs/services/mobileaccess/overview.html">Mobile Client Access</a>.</p>
 
-<p>Currently, <code>BMSURLSession</code> only supports <a href="https://developer.apple.com/reference/foundation/urlsessiondatatask">NSURLSessionDataTask</a> and <a href="https://developer.apple.com/reference/foundation/urlsessionuploadtask">NSURLSessionUploadTask</a>.</p>
+<p>Currently, <code>BMSURLSession</code> only supports <a href="https://developer.apple.com/reference/foundation/urlsessiondatatask">URLSessionDataTask</a> and <a href="https://developer.apple.com/reference/foundation/urlsessionuploadtask">URLSessionUploadTask</a>.</p>
 
                         <a href="Structs/BMSURLSession.html" class="slightly-smaller">See more</a>
                       </div>
@@ -167,9 +167,9 @@ It automatically gathers <a href="https://console.ng.bluemix.net/docs/services/m
                       <div class="abstract">
                         <p>Sends HTTP network requests.</p>
 
-<p><code>BaseRequest</code> is a simpler alternative to <code><a href="Structs/BMSURLSession.html">BMSURLSession</a></code> that requires no familiarity with Swift&rsquo;s <a href="https://developer.apple.com/reference/foundation/urlsession">NSURLSession</a> API.</p>
+<p><code>BaseRequest</code> is a simpler alternative to <code><a href="Structs/BMSURLSession.html">BMSURLSession</a></code> that requires no familiarity with Swift&rsquo;s <a href="https://developer.apple.com/reference/foundation/urlsession">URLSession</a> API.</p>
 
-<p>When building a BaseRequest object, all components of the HTTP request must be provided in the initializer, except for the <code>requestBody</code>, which can be supplied as NSData when sending the request via <code>send(requestBody:completionHandler:)</code>.</p>
+<p>When building a BaseRequest object, all components of the HTTP request must be provided in the initializer, except for the <code>requestBody</code>, which can be supplied as Data when sending the request via <code>send(requestBody:completionHandler:)</code>.</p>
 
 <div class="aside aside-important">
     <p class="aside-title">Important</p>
@@ -183,7 +183,7 @@ It automatically gathers <a href="https://console.ng.bluemix.net/docs/services/m
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">BaseRequest</span><span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">NSURLSessionTaskDelegate</span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">BaseRequest</span><span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">URLSessionTaskDelegate</span></code></pre>
 
                         </div>
                       </div>
@@ -194,10 +194,10 @@ It automatically gathers <a href="https://console.ng.bluemix.net/docs/services/m
             </div>
             <div class="task-group">
               <div class="task-name-container">
-                <a name="/Swift%202"></a>
-                <a name="//apple_ref/swift/Section/Swift 2" class="dashAnchor"></a>
-                <a href="#/Swift%202">
-                  <h3 class="section-name">Swift 2</h3>
+                <a name="/Swift%2032"></a>
+                <a name="//apple_ref/swift/Section/Swift 3" class="dashAnchor"></a>
+                <a href="#/Swift%2032">
+                  <h3 class="section-name">Swift 3</h3>
                 </a>
               </div>
               <ul>
@@ -223,7 +223,7 @@ It automatically gathers <a href="https://console.ng.bluemix.net/docs/services/m
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">Request</span><span class="p">:</span> <span class="kt"><a href="Classes/BaseRequest.html">BaseRequest</a></span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">Request</span><span class="p">:</span> <span class="kt"><a href="Classes/BaseRequest.html">BaseRequest</a></span></code></pre>
 
                         </div>
                       </div>
@@ -234,10 +234,10 @@ It automatically gathers <a href="https://console.ng.bluemix.net/docs/services/m
             </div>
             <div class="task-group">
               <div class="task-name-container">
-                <a name="/Swift%2022"></a>
-                <a name="//apple_ref/swift/Section/Swift 2" class="dashAnchor"></a>
-                <a href="#/Swift%2022">
-                  <h3 class="section-name">Swift 2</h3>
+                <a name="/Swift%2033"></a>
+                <a name="//apple_ref/swift/Section/Swift 3" class="dashAnchor"></a>
+                <a href="#/Swift%2033">
+                  <h3 class="section-name">Swift 3</h3>
                 </a>
               </div>
               <ul>
@@ -273,10 +273,10 @@ It automatically gathers <a href="https://console.ng.bluemix.net/docs/services/m
             </div>
             <div class="task-group">
               <div class="task-name-container">
-                <a name="/Swift%2023"></a>
-                <a name="//apple_ref/swift/Section/Swift 2" class="dashAnchor"></a>
-                <a href="#/Swift%2023">
-                  <h3 class="section-name">Swift 2</h3>
+                <a name="/Swift%2034"></a>
+                <a name="//apple_ref/swift/Section/Swift 3" class="dashAnchor"></a>
+                <a href="#/Swift%2034">
+                  <h3 class="section-name">Swift 3</h3>
                 </a>
               </div>
               <ul>

@@ -2,64 +2,64 @@
   "warnings": [
     {
       "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-core/Source/BMSClient.swift",
-      "line": 190,
+      "line": 82,
       "symbol": "BMSClient.authorizationManager",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-core/Source/Network Requests/BMSURLSession.swift",
-      "line": 348,
+      "line": 45,
       "symbol": "BMSURLSession.shouldRecordNetworkMetadata",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-core/Source/Network Requests/BMSURLSession.swift",
-      "line": 351,
+      "line": 48,
       "symbol": "BMSURLSession.isBMSAuthorizationRequest",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-core/Source/Network Requests/BaseRequest.swift",
-      "line": 394,
+      "line": 73,
       "symbol": "BaseRequest.contentType",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-core/Source/Network Requests/BaseRequest.swift",
-      "line": 431,
+      "line": 110,
       "symbol": "BaseRequest.networkSession",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-core/Source/Network Requests/BaseRequest.swift",
-      "line": 436,
+      "line": 115,
       "symbol": "BaseRequest.urlSession",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-core/Source/Network Requests/BaseRequest.swift",
-      "line": 440,
+      "line": 119,
       "symbol": "BaseRequest.trackingId",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-core/Source/Network Requests/BaseRequest.swift",
-      "line": 445,
+      "line": 124,
       "symbol": "BaseRequest.requestAnalyticsData",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-core/Source/Network Requests/BaseRequest.swift",
-      "line": 633,
-      "symbol": "BaseRequest.URLSession(_:task:willPerformHTTPRedirection:newRequest:completionHandler:)",
+      "line": 310,
+      "symbol": "BaseRequest.urlSession(_:task:willPerformHTTPRedirection:newRequest:completionHandler:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -86,21 +86,21 @@
     },
     {
       "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-core/Source/Security/Identity/BaseAppIdentity.swift",
-      "line": 85,
+      "line": 23,
       "symbol": "BaseAppIdentity",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-core/Source/Security/Identity/BaseDeviceIdentity.swift",
-      "line": 115,
+      "line": 26,
       "symbol": "BaseDeviceIdentity",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-core/Source/Security/Identity/BaseUserIdentity.swift",
-      "line": 93,
+      "line": 23,
       "symbol": "BaseUserIdentity",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"

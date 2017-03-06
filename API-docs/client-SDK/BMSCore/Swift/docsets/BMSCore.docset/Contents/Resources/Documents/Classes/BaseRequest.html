@@ -97,15 +97,15 @@
             <h1>BaseRequest</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">BaseRequest</span><span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">NSURLSessionTaskDelegate</span></code></pre>
+                  <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">BaseRequest</span><span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">URLSessionTaskDelegate</span></code></pre>
 
                 </div>
               </div>
             <p>Sends HTTP network requests.</p>
 
-<p><code>BaseRequest</code> is a simpler alternative to <code><a href="../Structs/BMSURLSession.html">BMSURLSession</a></code> that requires no familiarity with Swift&rsquo;s <a href="https://developer.apple.com/reference/foundation/urlsession">NSURLSession</a> API.</p>
+<p><code>BaseRequest</code> is a simpler alternative to <code><a href="../Structs/BMSURLSession.html">BMSURLSession</a></code> that requires no familiarity with Swift&rsquo;s <a href="https://developer.apple.com/reference/foundation/urlsession">URLSession</a> API.</p>
 
-<p>When building a BaseRequest object, all components of the HTTP request must be provided in the initializer, except for the <code>requestBody</code>, which can be supplied as NSData when sending the request via <code>send(requestBody:completionHandler:)</code>.</p>
+<p>When building a BaseRequest object, all components of the HTTP request must be provided in the initializer, except for the <code>requestBody</code>, which can be supplied as Data when sending the request via <code>send(requestBody:completionHandler:)</code>.</p>
 
 <div class="aside aside-important">
     <p class="aside-title">Important</p>
@@ -245,7 +245,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Query parameters to append to the <code>resourceURL</code>.</p>
+                        <p>The query parameters to append to the <code>resourceURL</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -279,7 +279,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">requestBody</span><span class="p">:</span> <span class="kt">NSData</span><span class="p">?</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">requestBody</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -333,7 +333,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">cachePolicy</span><span class="p">:</span> <span class="kt">NSURLRequestCachePolicy</span> <span class="o">=</span> <span class="o">.</span><span class="kt">UseProtocolCachePolicy</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">cachePolicy</span><span class="p">:</span> <span class="kt">URLRequest</span><span class="o">.</span><span class="kt">CachePolicy</span> <span class="o">=</span> <span class="o">.</span><span class="n">useProtocolCachePolicy</span></code></pre>
 
                         </div>
                       </div>
@@ -382,7 +382,7 @@
                <span class="nv">headers</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
                <span class="nv">queryParameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
                <span class="nv">timeout</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="kt"><a href="../Classes/BMSClient.html">BMSClient</a></span><span class="o">.</span><span class="n">sharedInstance</span><span class="o">.</span><span class="n">requestTimeout</span><span class="p">,</span>
-               <span class="nv">cachePolicy</span><span class="p">:</span> <span class="kt">NSURLRequestCachePolicy</span> <span class="o">=</span> <span class="kt">NSURLRequestCachePolicy</span><span class="o">.</span><span class="kt">UseProtocolCachePolicy</span><span class="p">,</span>
+               <span class="nv">cachePolicy</span><span class="p">:</span> <span class="kt">URLRequest</span><span class="o">.</span><span class="kt">CachePolicy</span> <span class="o">=</span> <span class="o">.</span><span class="n">useProtocolCachePolicy</span><span class="p">,</span>
                <span class="nv">autoRetries</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span></code></pre>
 
                         </div>
@@ -523,7 +523,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">send</span><span class="p">(</span><span class="n"><a href="../Classes/BaseRequest.html#/s:vC7BMSCore11BaseRequest11requestBodyERR">requestBody</a></span> <span class="nv">requestBody</span><span class="p">:</span> <span class="kt">NSData</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kt"><a href="../Completion Handlers.html#/s:7BMSCore20BMSCompletionHandler">BMSCompletionHandler</a></span><span class="p">?)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">send</span><span class="p">(</span><span class="nv">requestBody</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kt"><a href="../Completion Handlers.html#/s:7BMSCore20BMSCompletionHandler">BMSCompletionHandler</a></span><span class="p">?)</span></code></pre>
 
                         </div>
                       </div>
