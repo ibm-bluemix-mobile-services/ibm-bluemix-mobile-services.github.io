@@ -1,0 +1,68 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/Source/BMSPushClient.swift",
+      "line": 25,
+      "symbol": "IMFPushErrorvalues",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/Source/BMSPushClient.swift",
+      "line": 70,
+      "symbol": "BMSPushClient.clientSecret",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/Source/BMSPushClient.swift",
+      "line": 71,
+      "symbol": "BMSPushClient.applicationId",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/Source/BMSPushClient.swift",
+      "line": 72,
+      "symbol": "BMSPushClient.bluemixDeviceId",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/Source/BMSPushClient.swift",
+      "line": 75,
+      "symbol": "BMSPushClient.overrideServerHost",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/Source/BMSPushClient.swift",
+      "line": 79,
+      "symbol": "BMSPushClient.notificationOptions",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/Source/BMSPushClient.swift",
+      "line": 820,
+      "symbol": "BMSPushClient.sendMessageDeliveryStatus(messageId:completionHandler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/Source/BMSPushNotificationAction.swift",
+      "line": 24,
+      "symbol": "BMSPushNotificationAction.sharedInstance",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/Source/BMSPushNotificationActionCategory.swift",
+      "line": 22,
+      "symbol": "BMSPushNotificationActionCategory.sharedInstance",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-push"
+}
