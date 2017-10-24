@@ -2,7 +2,7 @@
   "warnings": [
     {
       "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-core/Source/BMSClient.swift",
-      "line": 82,
+      "line": 90,
       "symbol": "BMSClient.authorizationManager",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"

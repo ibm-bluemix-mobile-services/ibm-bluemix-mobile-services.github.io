@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>BMSURLSession Struct Reference</title>
+    <title>BMSURLSession Structure Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -11,7 +11,7 @@
   </head>
   <body>
     <a name="//apple_ref/swift/Struct/BMSURLSession" class="dashAnchor"></a>
-    <a title="BMSURLSession Struct Reference"></a>
+    <a title="BMSURLSession Structure Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">BMSCore Docs</a> (80% documented)</p>
@@ -22,7 +22,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">BMSCore Reference</a>
         <img id="carat" src="../img/carat.png" />
-        BMSURLSession Struct Reference
+        BMSURLSession Structure Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -161,7 +161,6 @@ It automatically gathers <a href="https://console.ng.bluemix.net/docs/services/m
                               <td>
                                 <div>
                                   <p>Defines the behavior of the session.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -174,7 +173,6 @@ It automatically gathers <a href="https://console.ng.bluemix.net/docs/services/m
                               <td>
                                 <div>
                                   <p>Handles session-related events. If nil, use task methods that take completion handlers.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -187,7 +185,6 @@ It automatically gathers <a href="https://console.ng.bluemix.net/docs/services/m
                               <td>
                                 <div>
                                   <p>Queue for scheduling the delegate calls and completion handlers.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -200,7 +197,6 @@ It automatically gathers <a href="https://console.ng.bluemix.net/docs/services/m
                               <td>
                                 <div>
                                   <p>The number of times to retry each request if it fails to send. The conditions for retries are: timeout, loss of network connectivity, failure to connect to the host, and 504 responses.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -260,7 +256,6 @@ It automatically gathers <a href="https://console.ng.bluemix.net/docs/services/m
                               <td>
                                 <div>
                                   <p>The URL to retrieve data from.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -270,7 +265,6 @@ It automatically gathers <a href="https://console.ng.bluemix.net/docs/services/m
                       <div>
                         <h4>Return Value</h4>
                         <p>A data task.</p>
-
                       </div>
                     </section>
                   </div>
@@ -291,7 +285,6 @@ It automatically gathers <a href="https://console.ng.bluemix.net/docs/services/m
                         <p>Creates a task that retrieves the contents of the specified URL, and passes the response to the completion handler.</p>
 
 <p>To start the task, you must call its <code>resume()</code> method.</p>
-
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
     <p>It is not recommended to use this method if the session was created with a delegate.
@@ -321,7 +314,6 @@ It automatically gathers <a href="https://console.ng.bluemix.net/docs/services/m
                               <td>
                                 <div>
                                   <p>The URL to retrieve data from.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -334,7 +326,6 @@ It automatically gathers <a href="https://console.ng.bluemix.net/docs/services/m
                               <td>
                                 <div>
                                   <p>The completion handler to call when the request is complete.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -344,7 +335,6 @@ It automatically gathers <a href="https://console.ng.bluemix.net/docs/services/m
                       <div>
                         <h4>Return Value</h4>
                         <p>A data task.</p>
-
                       </div>
                     </section>
                   </div>
@@ -387,8 +377,8 @@ It automatically gathers <a href="https://console.ng.bluemix.net/docs/services/m
                               </td>
                               <td>
                                 <div>
-                                  <p>An object that provides request-specific information such as the URL and cache policy. The request body is ignored.</p>
-
+                                  <p>An object that provides request-specific information
+                   such as the URL and cache policy. The request body is ignored.</p>
                                 </div>
                               </td>
                             </tr>
@@ -401,7 +391,6 @@ It automatically gathers <a href="https://console.ng.bluemix.net/docs/services/m
                               <td>
                                 <div>
                                   <p>The body data for the request.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -411,7 +400,6 @@ It automatically gathers <a href="https://console.ng.bluemix.net/docs/services/m
                       <div>
                         <h4>Return Value</h4>
                         <p>An upload task.</p>
-
                       </div>
                     </section>
                   </div>
@@ -432,7 +420,6 @@ It automatically gathers <a href="https://console.ng.bluemix.net/docs/services/m
                         <p>Creates a task that uploads data to the URL specified in the request object.</p>
 
 <p>To start the task, you must call its <code>resume()</code> method.</p>
-
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
     <p>It is not recommended to use this method if the session was created with a delegate.
@@ -461,8 +448,8 @@ It automatically gathers <a href="https://console.ng.bluemix.net/docs/services/m
                               </td>
                               <td>
                                 <div>
-                                  <p>An object that provides request-specific information such as the URL and cache policy. The request body is ignored.</p>
-
+                                  <p>An object that provides request-specific information
+                            such as the URL and cache policy. The request body is ignored.</p>
                                 </div>
                               </td>
                             </tr>
@@ -475,7 +462,6 @@ It automatically gathers <a href="https://console.ng.bluemix.net/docs/services/m
                               <td>
                                 <div>
                                   <p>The body data for the request.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -488,7 +474,6 @@ It automatically gathers <a href="https://console.ng.bluemix.net/docs/services/m
                               <td>
                                 <div>
                                   <p>The completion handler to call when the request is complete.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -498,7 +483,6 @@ It automatically gathers <a href="https://console.ng.bluemix.net/docs/services/m
                       <div>
                         <h4>Return Value</h4>
                         <p>An upload task.</p>
-
                       </div>
                     </section>
                   </div>
@@ -541,8 +525,8 @@ It automatically gathers <a href="https://console.ng.bluemix.net/docs/services/m
                               </td>
                               <td>
                                 <div>
-                                  <p>An object that provides request-specific information such as the URL and cache policy. The request body is ignored.</p>
-
+                                  <p>An object that provides request-specific information
+                  such as the URL and cache policy. The request body is ignored.</p>
                                 </div>
                               </td>
                             </tr>
@@ -555,7 +539,6 @@ It automatically gathers <a href="https://console.ng.bluemix.net/docs/services/m
                               <td>
                                 <div>
                                   <p>The location of the file to upload.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -565,7 +548,6 @@ It automatically gathers <a href="https://console.ng.bluemix.net/docs/services/m
                       <div>
                         <h4>Return Value</h4>
                         <p>An upload task.</p>
-
                       </div>
                     </section>
                   </div>
@@ -586,7 +568,6 @@ It automatically gathers <a href="https://console.ng.bluemix.net/docs/services/m
                         <p>Creates a task that uploads a file to the URL specified in the request object.</p>
 
 <p>To start the task, you must call its <code>resume()</code> method.</p>
-
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
     <p>It is not recommended to use this method if the session was created with a delegate.
@@ -615,8 +596,8 @@ It automatically gathers <a href="https://console.ng.bluemix.net/docs/services/m
                               </td>
                               <td>
                                 <div>
-                                  <p>An object that provides request-specific information such as the URL and cache policy. The request body is ignored.</p>
-
+                                  <p>An object that provides request-specific information
+                            such as the URL and cache policy. The request body is ignored.</p>
                                 </div>
                               </td>
                             </tr>
@@ -629,7 +610,6 @@ It automatically gathers <a href="https://console.ng.bluemix.net/docs/services/m
                               <td>
                                 <div>
                                   <p>The location of the file to upload.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -642,7 +622,6 @@ It automatically gathers <a href="https://console.ng.bluemix.net/docs/services/m
                               <td>
                                 <div>
                                   <p>The completion handler to call when the request is complete.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -652,7 +631,6 @@ It automatically gathers <a href="https://console.ng.bluemix.net/docs/services/m
                       <div>
                         <h4>Return Value</h4>
                         <p>An upload task.</p>
-
                       </div>
                     </section>
                   </div>
@@ -662,8 +640,8 @@ It automatically gathers <a href="https://console.ng.bluemix.net/docs/services/m
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2017 <a class="link" href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core" target="_blank" rel="external">IBM</a>. All rights reserved. (Last updated: 2017-04-11)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.5</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2017 <a class="link" href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core" target="_blank" rel="external">IBM</a>. All rights reserved. (Last updated: 2017-10-24)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
