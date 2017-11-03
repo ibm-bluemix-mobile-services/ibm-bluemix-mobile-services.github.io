@@ -173,7 +173,6 @@ To reset the <code>userIdentity</code>, set the value to nil.</p>
 <p>Analytics logs are added to the log file until the file size is greater than <code><a href="../Classes/Logger.html#/s:ZvC15BMSAnalyticsAPI6Logger15maxLogStoreSizeVs6UInt64">Logger.maxLogStoreSize</a></code>. At this point, the first half of the stored logs will be deleted to make room for new log data.</p>
 
 <p>When ready, use <code><a href="../Classes/Analytics.html#/s:ZFE12BMSAnalyticsC15BMSAnalyticsAPI9Analytics4sendERR">send(completionHandler:)</a></code> to send the recorded data to the Mobile Analytics service.</p>
-
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
     <p>Do not supply values for the <code>file</code>, <code>function</code>, or <code>line</code> parameters. These parameters take default values to automatically record the file, function, and line in which this method was called.</p>
@@ -202,7 +201,6 @@ To reset the <code>userIdentity</code>, set the value to nil.</p>
                               <td>
                                 <div>
                                   <p>The analytics data</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -232,7 +230,6 @@ To reset the <code>userIdentity</code>, set the value to nil.</p>
                         <p>The required initializer for the <code>Analytics</code> class when communicating with a Mobile Analytics service.</p>
 
 <p>Here you can choose what data you want to have monitored by <code>Analytics</code>, including user identities, user location, app lifecycle events, and network requests.</p>
-
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
     <p>This method must be called after initializing <code>BMSClient</code> with <code>BMSClient.sharedInstance.initialize(bluemixRegion:)</code> from the <code>BMSCore</code> framework, and before calling <code><a href="../Classes/Analytics.html#/s:ZFE12BMSAnalyticsC15BMSAnalyticsAPI9Analytics4sendERR">send(completionHandler:)</a></code> or <code><a href="../Classes/Logger.html#/s:ZFE12BMSAnalyticsC15BMSAnalyticsAPI6Logger4sendERR">Logger.send(completionHandler:)</a></code>.</p>
@@ -261,7 +258,6 @@ To reset the <code>userIdentity</code>, set the value to nil.</p>
                               <td>
                                 <div>
                                   <p>The application name. Should be consistent across platforms (i.e. Android and iOS).</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -274,7 +270,6 @@ To reset the <code>userIdentity</code>, set the value to nil.</p>
                               <td>
                                 <div>
                                   <p>A unique ID used to authenticate with the Mobile Analytics service.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -286,8 +281,8 @@ To reset the <code>userIdentity</code>, set the value to nil.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>If <code>false</code>, user identities will be automatically recorded using the device on which the app is installed. If you want to define user identities yourself using <code>Analytics.userIdentity</code>, set this parameter to <code>true</code>.</p>
-
+                                  <p>If <code>false</code>, user identities will be automatically recorded using
+the device on which the app is installed. If you want to define user identities yourself using <code><a href="../Classes/Analytics.html#/s:ZvC15BMSAnalyticsAPI9Analytics12userIdentityGSqSS_">Analytics.userIdentity</a></code>, set this parameter to <code>true</code>.</p>
                                 </div>
                               </td>
                             </tr>
@@ -299,8 +294,8 @@ To reset the <code>userIdentity</code>, set the value to nil.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>Determines whether Analytics should automatically monitor the user’s current location. Before location can be retrieved, you must first request permission from the user with <code>CLLocationManager</code> <code>requestWhenInUseAuthorization()</code>.</p>
-
+                                  <p>Determines whether Analytics should automatically monitor the user&rsquo;s
+current location. Before location can be retrieved, you must first request permission from the user with <code>CLLocationManager</code> <code>requestWhenInUseAuthorization()</code>.</p>
                                 </div>
                               </td>
                             </tr>
@@ -313,7 +308,6 @@ To reset the <code>userIdentity</code>, set the value to nil.</p>
                               <td>
                                 <div>
                                   <p>Device events that will be recorded automatically by the <code>Analytics</code> class.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -337,7 +331,6 @@ To reset the <code>userIdentity</code>, set the value to nil.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Log the user&rsquo;s current location once. </p>
-
 <div class="aside aside-important">
     <p class="aside-title">Important</p>
     Before calling this method, make sure that you have requested permission to use location services from the user (using <code>CLLocationManager</code> <code>requestWhenInUseAuthorization()</code>), and set the <code>collectLocation</code> parameter to <code>true</code> in the <code><a href="../Classes/Analytics.html#/s:ZFE12BMSAnalyticsC15BMSAnalyticsAPI9Analytics10initializeFt7appNameGSqSS_6apiKeyGSqSS_14hasUserContextSb15collectLocationSb12deviceEventsGSaOS0_11DeviceEvent__T_">Analytics.initialize(appName:apiKey:hasUserContext:collectLocation:deviceEvents:)</a></code> method.
@@ -395,7 +388,6 @@ To reset the <code>userIdentity</code>, set the value to nil.</p>
                               <td>
                                 <div>
                                   <p>Optional callback containing the results of the send request.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -410,8 +402,8 @@ To reset the <code>userIdentity</code>, set the value to nil.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2017 <a class="link" href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics" target="_blank" rel="external">IBM</a>. All rights reserved. (Last updated: 2017-03-17)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2017 <a class="link" href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics" target="_blank" rel="external">IBM</a>. All rights reserved. (Last updated: 2017-11-03)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

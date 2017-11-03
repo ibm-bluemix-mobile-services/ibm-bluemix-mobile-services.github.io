@@ -79,7 +79,6 @@
 <p>To enable logs to be stored locally on the device, set <code>isLogStorageEnabled</code> to <code>true</code>. Logs are added to the log file until the file size is greater than the <code>maxLogStoreSize</code>. At this point, the first half of the stored logs will be deleted to make room for new log data.</p>
 
 <p>To send logs to the Mobile Analytics service, use <code>send(completionHandler:)</code>. When the log data is successfully uploaded, the logs will be deleted from local storage.</p>
-
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
     The <code>Logger</code> class sets an uncaught exception handler to log application crashes. If you wish to set your own exception handler, do so <strong>before</strong> calling <code>logger(name:)</code>, or the <code>Logger</code> exception handler will be overwritten.
@@ -318,7 +317,6 @@ If a Logger instance with that name was already created, the existing instance w
                               <td>
                                 <div>
                                   <p>The name that identifies this Logger instance.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -328,7 +326,6 @@ If a Logger instance with that name was already created, the existing instance w
                       <div>
                         <h4>Return Value</h4>
                         <p>A Logger instance.</p>
-
                       </div>
                     </section>
                   </div>
@@ -347,7 +344,6 @@ If a Logger instance with that name was already created, the existing instance w
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Log at the debug <code><a href="../Enums/LogLevel.html">LogLevel</a></code>.</p>
-
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
     <p>Do not supply values for the <code>file</code>, <code>function</code>, or <code>line</code> parameters. These parameters take default values to automatically record the file, function, and line in which this method was called.</p>
@@ -376,7 +372,6 @@ If a Logger instance with that name was already created, the existing instance w
                               <td>
                                 <div>
                                   <p>The message to log.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -400,7 +395,6 @@ If a Logger instance with that name was already created, the existing instance w
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Log at the info <code><a href="../Enums/LogLevel.html">LogLevel</a></code>.</p>
-
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
     <p>Do not supply values for the <code>file</code>, <code>function</code>, or <code>line</code> parameters. These parameters take default values to automatically record the file, function, and line in which this method was called.</p>
@@ -429,7 +423,6 @@ If a Logger instance with that name was already created, the existing instance w
                               <td>
                                 <div>
                                   <p>The message to log.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -453,7 +446,6 @@ If a Logger instance with that name was already created, the existing instance w
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Log at the warn <code><a href="../Enums/LogLevel.html">LogLevel</a></code>.</p>
-
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
     <p>Do not supply values for the <code>file</code>, <code>function</code>, or <code>line</code> parameters. These parameters take default values to automatically record the file, function, and line in which this method was called.</p>
@@ -482,7 +474,6 @@ If a Logger instance with that name was already created, the existing instance w
                               <td>
                                 <div>
                                   <p>The message to log.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -506,7 +497,6 @@ If a Logger instance with that name was already created, the existing instance w
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Log at the error <code><a href="../Enums/LogLevel.html">LogLevel</a></code>.</p>
-
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
     <p>Do not supply values for the <code>file</code>, <code>function</code>, or <code>line</code> parameters. These parameters take default values to automatically record the file, function, and line in which this method was called.</p>
@@ -535,7 +525,6 @@ If a Logger instance with that name was already created, the existing instance w
                               <td>
                                 <div>
                                   <p>The message to log.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -559,7 +548,6 @@ If a Logger instance with that name was already created, the existing instance w
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Log at the fatal <code><a href="../Enums/LogLevel.html">LogLevel</a></code>.</p>
-
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
     <p>Do not supply values for the <code>file</code>, <code>function</code>, or <code>line</code> parameters. These parameters take default values to automatically record the file, function, and line in which this method was called.</p>
@@ -588,7 +576,6 @@ If a Logger instance with that name was already created, the existing instance w
                               <td>
                                 <div>
                                   <p>The message to log.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -641,7 +628,6 @@ If a Logger instance with that name was already created, the existing instance w
                               <td>
                                 <div>
                                   <p>Optional callback containing the results of the send request.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -656,8 +642,8 @@ If a Logger instance with that name was already created, the existing instance w
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2017 <a class="link" href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics" target="_blank" rel="external">IBM</a>. All rights reserved. (Last updated: 2017-03-17)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2017 <a class="link" href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics" target="_blank" rel="external">IBM</a>. All rights reserved. (Last updated: 2017-11-03)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
