@@ -94,7 +94,7 @@
 <ul>
 <li>iOS 8.0+</li>
 <li>Xcode 7.3, 8.0</li>
-<li>Swift 2.3 - 3.0</li>
+<li>Swift 2.3 - 4.0</li>
 <li>Cocoapods or Carthage</li>
 </ul>
 <h2 id='installation' class='heading'>Installation</h2>
@@ -118,11 +118,11 @@
 <h4 id='swift-2-3' class='heading'>Swift 2.3</h4>
 
 <p>Before running the <code>pod install</code> command, make sure to use Cocoapods version <a href="https://github.com/CocoaPods/CocoaPods/releases/tag/1.1.0.beta.1">1.1.0.beta.1</a>.</p>
-<h4 id='swift-3-0' class='heading'>Swift 3.0</h4>
+<h4 id='swift-3-swift-4' class='heading'>Swift 3/ Swift 4</h4>
 
 <p>Before running the <code>pod install</code> command, make sure to use Cocoapods version <a href="https://github.com/CocoaPods/CocoaPods/releases/tag/1.1.0.beta.1">1.1.0.beta.1</a>.</p>
 
-<p>For apps built with Swift 3.0, you may receive a prompt saying <q>Convert to Current Swift Syntax?</q> when opening your project in Xcode 8 (following the installation of BMSCore) do not convert BMSPush, BMSCore or BMSAnalyticsAPI</p>
+<p>For apps built with Swift 3.0/Swift 4.0, you may receive a prompt saying <q>Convert to Current Swift Syntax?</q> when opening your project in Xcode 8 (following the installation of BMSCore) do not convert BMSPush, BMSCore or BMSAnalyticsAPI</p>
 
 <p>This will installs your dependencies and creates a new Xcode workspace.
 <strong><em>Note:</em></strong> Ensure that you always open the new Xcode workspace, instead of the original Xcode project file:</p>
@@ -148,7 +148,7 @@ import BMSCore
 <h3 id='initializing-the-core-sdk' class='heading'>Initializing the Core SDK</h3>
 <pre class="highlight plaintext"><code>let myBMSClient = BMSClient.sharedInstance
 
-//Swift3
+//Swift 3/Swift 4.0
 
 myBMSClient.initialize(bluemixRegion: "Location where your app Hosted")
 
@@ -171,7 +171,7 @@ myBMSClient.initialize(bluemixRegion: "Location where your app Hosted")
 <p>initialize the <code><a href="Classes/BMSPushClient.html">BMSPushClient</a></code>  using the following code.</p>
 <pre class="highlight plaintext"><code>let push =  BMSPushClient.sharedInstance
 
-//Swift 3
+//Swift 3/ Swift 4.0
 
 push.initializeWithAppGUID(appGUID: "your push appGUID", clientSecret:"your push client secret")
 
@@ -215,7 +215,7 @@ push.delegate = self
 <h3 id='registering-ios-applications-and-devices-with-userid' class='heading'>Registering iOS applications and devices with userId</h3>
 
 <p>For <code>userId</code> based notification, the register method will accept one more parameter - <code>userId</code></p>
-<pre class="highlight plaintext"><code>//Swift3
+<pre class="highlight plaintext"><code>//Swift3/Swift 4.0
 
 func application (_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data){
 
@@ -265,7 +265,7 @@ that are sent for that tag.Call the push service to get subscriptions for a tag.
 <p>Copy the following code snippets into your Swift mobile application to get a list of available tags to which the
 device can subscribe.</p>
 <pre class="highlight plaintext"><code>
-//Swift3
+//Swift3/Swift 4.0
 
 push.retrieveAvailableTagsWithCompletionHandler(completionHandler: { (response, statusCode, error) -&gt; Void in
 
@@ -293,7 +293,7 @@ push.retrieveAvailableTagsWithCompletionHandler({ (response, statusCode, error) 
 </code></pre>
 <h5 id='subscribe-to-available-tags' class='heading'>Subscribe to Available tags</h5>
 <pre class="highlight plaintext"><code>
-//Swift3
+//Swift3/Swift 4.0
 
  push.subscribeToTags(tagsArray: response!, completionHandler: { (response, statusCode, error) -&gt; Void in
 
@@ -321,7 +321,7 @@ push.subscribeToTags(response, completionHandler: { (response, statusCode, error
 </code></pre>
 <h5 id='retrieve-subscribed-tags' class='heading'>Retrieve Subscribed tags</h5>
 <pre class="highlight plaintext"><code>
-//Swift3
+//Swift3/Swift 4.0
  push.retrieveSubscriptionsWithCompletionHandler(completionHandler: { (response, statusCode, error) -&gt; Void in
 
    if error.isEmpty {                                     
@@ -350,7 +350,7 @@ push.retrieveSubscriptionsWithCompletionHandler { (response, statusCode, error) 
 <p>Use the following code snippets to allow your devices to get unsubscribe
 from a tag.</p>
 <pre class="highlight plaintext"><code>
-//Swift3
+//Swift3/Swift 4.0
 push.unsubscribeFromTags(tagsArray: response!, completionHandler: { (response, statusCode, error) -&gt; Void in
 
   if error.isEmpty {
@@ -382,7 +382,7 @@ push.unsubscribeFromTags(response, completionHandler: { (response, statusCode, e
 
 <p>Use the following code snippets to Unregister the device from IBM Cloud Push Notification</p>
 <pre class="highlight plaintext"><code>
-//Swift3
+//Swift3/Swift 4.0
 
 push.unregisterDevice(completionHandler: { (response, statusCode, error) -&gt; Void in
 
@@ -438,7 +438,7 @@ let push = BMSPushClient.sharedInstance.initializeWithAppGUID(appGUID: "APP-GUID
 
 <p>To see the push notification monitoring status for iOS you have add the following code snippets. </p>
 
-<p><strong>Swift 3</strong></p>
+<p><strong>Swift 3/Swift 4.0</strong></p>
 <pre class="highlight plaintext"><code>// Send notification status when app is opened by clicking the notifications
 func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {
 
@@ -596,7 +596,7 @@ limitations under the License.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2017 <a class="link" href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push" target="_blank" rel="external">IBM</a>. All rights reserved. (Last updated: 2017-12-07)</p>
+          <p>&copy; 2017 <a class="link" href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push" target="_blank" rel="external">IBM</a>. All rights reserved. (Last updated: 2017-12-12)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

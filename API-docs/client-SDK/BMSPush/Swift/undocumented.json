@@ -58,7 +58,7 @@
     },
     {
       "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/Source/BMSPushClient.swift",
-      "line": 920,
+      "line": 932,
       "symbol": "BMSPushClient.sendMessageDeliveryStatus(messageId:completionHandler:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
