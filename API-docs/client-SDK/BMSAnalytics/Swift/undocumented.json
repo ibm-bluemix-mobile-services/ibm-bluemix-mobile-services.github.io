@@ -65,7 +65,7 @@
     },
     {
       "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/Source/Logger/BMSLogger.swift",
-      "line": 194,
+      "line": 198,
       "symbol": "BMSLogger",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
