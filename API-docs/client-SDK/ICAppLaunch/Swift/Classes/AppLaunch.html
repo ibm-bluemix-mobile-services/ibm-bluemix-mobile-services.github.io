@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AppLaunch Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/AppLaunch" class="dashAnchor"></a>
+    <a title="AppLaunch Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">AppLaunch Docs</a></p>
+        <p class="header-right"><a href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-applaunch"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">AppLaunch Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        AppLaunch Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Client.html">Client</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AppLaunch.html">AppLaunch</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AppLaunchConfig.html">AppLaunchConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AppLaunchConfig/Builder.html">– Builder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AppLaunchUser.html">AppLaunchUser</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AppLaunchUser/Builder.html">– Builder</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Response.html">Response</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AppLaunchResponse.html">AppLaunchResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AppLaunchFailResponse.html">AppLaunchFailResponse</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enumerators and TypeAlias.html">Enumerators and TypeAlias</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/ICRegion.html">ICRegion</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/RefreshPolicy.html">RefreshPolicy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ErrorCode.html">ErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/AppLaunchError.html">AppLaunchError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enumerators and TypeAlias.html#/s:9AppLaunch0aB17CompletionHandlera">AppLaunchCompletionHandler</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>AppLaunch</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">AppLaunch</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                </div>
+              </div>
+            <p>A singleton that serves as an entry point to IBM Cloud AppLaunch service communication.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Properties"></a>
+                <a name="//apple_ref/swift/Section/Properties" class="dashAnchor"></a>
+                <a href="#/Properties">
+                  <h3 class="section-name">Properties</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@AppLaunch@objc(cs)AppLaunch(cpy)sharedInstance"></a>
+                    <a name="//apple_ref/swift/Variable/sharedInstance" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@AppLaunch@objc(cs)AppLaunch(cpy)sharedInstance">sharedInstance</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This singleton should be used for all <code>AppLaunch</code> activity.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">sharedInstance</span> <span class="o">=</span> <span class="kt">AppLaunch</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Methods"></a>
+                <a name="//apple_ref/swift/Section/Methods" class="dashAnchor"></a>
+                <a href="#/Methods">
+                  <h3 class="section-name">Methods</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9AppLaunchAAC10initializeyAA8ICRegionO6region_SS5appIdSS12clientSecretAA0aB6ConfigC6configAA0aB4UserC4useryAA0aB8ResponseCSg_AA0ab4FailN0CSgtc17completionHandlertF"></a>
+                    <a name="//apple_ref/swift/Method/initialize(region:appId:clientSecret:config:user:completionHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9AppLaunchAAC10initializeyAA8ICRegionO6region_SS5appIdSS12clientSecretAA0aB6ConfigC6configAA0aB4UserC4useryAA0aB8ResponseCSg_AA0ab4FailN0CSgtc17completionHandlertF">initialize(region:appId:clientSecret:config:user:completionHandler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The required initializer for the <code>AppLaunch</code> SDK.</p>
+
+<p>This method will intialize the AppLaunch with credentials, user and configuration details.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">initialize</span><span class="p">(</span><span class="nv">region</span><span class="p">:</span> <span class="kt"><a href="../Enums/ICRegion.html">ICRegion</a></span><span class="p">,</span> <span class="nv">appId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">clientSecret</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">config</span><span class="p">:</span> <span class="kt"><a href="../Classes/AppLaunchConfig.html">AppLaunchConfig</a></span><span class="p">,</span> <span class="nv">user</span><span class="p">:</span> <span class="kt"><a href="../Classes/AppLaunchUser.html">AppLaunchUser</a></span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Enumerators and TypeAlias.html#/s:9AppLaunch0aB17CompletionHandlera">AppLaunchCompletionHandler</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>region</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>IBM Cloud region suffix specifies the location where the AppLaunch service is hosted</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>appId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>app GUID value</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>clientSecret</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>appLaunch client secret value</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>config</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>appLaunch client configuration object</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>user</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>appLaunch client user object</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code><a href="../Enumerators and TypeAlias.html#/s:9AppLaunch0aB17CompletionHandlera">AppLaunchCompletionHandler</a></code> callback function. In the case of a successful intialization, the engagements JSON is returned in the <code><a href="../Classes/AppLaunchResponse.html">AppLaunchResponse</a></code>. In the case of a unsuccessful completion, the error code and the information is returned in the <code><a href="../Classes/AppLaunchFailResponse.html">AppLaunchFailResponse</a></code></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9AppLaunchAAC7destroyyyAA0aB8ResponseCSg_AA0ab4FailD0CSgtc17completionHandler_tF"></a>
+                    <a name="//apple_ref/swift/Method/destroy(completionHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9AppLaunchAAC7destroyyyAA0aB8ResponseCSg_AA0ab4FailD0CSgtc17completionHandler_tF">destroy(completionHandler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This Methode clears the stored service information and unregisters the device from the IBM Cloud AppLaunch service.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">destroy</span><span class="p">(</span><span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Enumerators and TypeAlias.html#/s:9AppLaunch0aB17CompletionHandlera">AppLaunchCompletionHandler</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code><a href="../Enumerators and TypeAlias.html#/s:9AppLaunch0aB17CompletionHandlera">AppLaunchCompletionHandler</a></code> callback function. In the case of a successful completion, the success information is returned in the <code><a href="../Classes/AppLaunchResponse.html">AppLaunchResponse</a></code>. In the case of a unsuccessful completion, the error information is returned in the <code><a href="../Classes/AppLaunchFailResponse.html">AppLaunchFailResponse</a></code></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@AppLaunch@objc(cs)AppLaunch(im)sendMetricsWithCodes:error:"></a>
+                    <a name="//apple_ref/swift/Method/sendMetrics(codes:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@AppLaunch@objc(cs)AppLaunch(im)sendMetricsWithCodes:error:">sendMetrics(codes:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This Methode used to send metrics information to the IBM Cloud AppLaunch service.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p><code><a href="../Enums/AppLaunchError.html#/s:9AppLaunch0aB5ErrorO22applaunchNotIntializedA2CmF">AppLaunchError.applaunchNotIntialized</a></code> error if applaunch service is not initialized</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">sendMetrics</span><span class="p">(</span><span class="nv">codes</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">])</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>code</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>This is the array of metric codes.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@AppLaunch@objc(cs)AppLaunch(im)displayInAppMessagesAndReturnError:"></a>
+                    <a name="//apple_ref/swift/Method/displayInAppMessages()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@AppLaunch@objc(cs)AppLaunch(im)displayInAppMessagesAndReturnError:">displayInAppMessages()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Displays inApp Message if there is any present</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <code><a href="../Enums/AppLaunchError.html#/s:9AppLaunch0aB5ErrorO22applaunchNotIntializedA2CmF">AppLaunchError.applaunchNotIntialized</a></code> error if applaunch service is not initialized
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">displayInAppMessages</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9AppLaunchAAC16isFeatureEnabledSbSS11featureCode_tKF"></a>
+                    <a name="//apple_ref/swift/Method/isFeatureEnabled(featureCode:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9AppLaunchAAC16isFeatureEnabledSbSS11featureCode_tKF">isFeatureEnabled(featureCode:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Checks if the feature is enabled for the app</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p><code><a href="../Enums/AppLaunchError.html#/s:9AppLaunch0aB5ErrorO22applaunchNotIntializedA2CmF">AppLaunchError.applaunchNotIntialized</a></code> error if applaunch service is not initialized</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">isFeatureEnabled</span><span class="p">(</span><span class="nv">featureCode</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Bool value</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@AppLaunch@objc(cs)AppLaunch(im)getPropertyofFeatureWithFeatureCode:propertyCode:error:"></a>
+                    <a name="//apple_ref/swift/Method/getPropertyofFeature(featureCode:propertyCode:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@AppLaunch@objc(cs)AppLaunch(im)getPropertyofFeatureWithFeatureCode:propertyCode:error:">getPropertyofFeature(featureCode:propertyCode:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the value for particular property in a feature</p>
+<li><p>featureCode: feature code</p></li>
+<li><p>propertyCode: property code</p></li>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p><code><a href="../Enums/AppLaunchError.html#/s:9AppLaunch0aB5ErrorO22applaunchNotIntializedA2CmF">AppLaunchError.applaunchNotIntialized</a></code> erorr if applaunch service is not initialized</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getPropertyofFeature</span><span class="p">(</span><span class="nv">featureCode</span><span class="p">:</span> <span class="kt">String</span> <span class="p">,</span> <span class="nv">propertyCode</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>String value of the property or Empty string if property/feature doesn&rsquo;t exist</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-applaunch" target="_blank" rel="external">IBM</a>. All rights reserved. (Last updated: 2018-02-07)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
