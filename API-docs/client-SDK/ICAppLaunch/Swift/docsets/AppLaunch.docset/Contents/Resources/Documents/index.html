@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AppLaunch  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="AppLaunch  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">AppLaunch Docs</a></p>
+        <p class="header-right"><a href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-applaunch"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">AppLaunch Reference</a>
+        <img id="carat" src="img/carat.png" />
+        AppLaunch  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Client.html">Client</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/AppLaunch.html">AppLaunch</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AppLaunchConfig.html">AppLaunchConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AppLaunchConfig/Builder.html">– Builder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AppLaunchUser.html">AppLaunchUser</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AppLaunchUser/Builder.html">– Builder</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Response.html">Response</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/AppLaunchResponse.html">AppLaunchResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AppLaunchFailResponse.html">AppLaunchFailResponse</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enumerators and TypeAlias.html">Enumerators and TypeAlias</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/ICRegion.html">ICRegion</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/RefreshPolicy.html">RefreshPolicy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/ErrorCode.html">ErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/AppLaunchError.html">AppLaunchError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enumerators and TypeAlias.html#/s:9AppLaunch0aB17CompletionHandlera">AppLaunchCompletionHandler</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='ibm-cloud-mobile-services-applaunch-ios-swift-client-sdk' class='heading'>IBM Cloud Mobile Services - AppLaunch iOS Swift Client SDK</h1>
+
+<p><a href="https://travis-ci.org/ibm-bluemix-mobile-services/bms-clientsdk-swift-applaunch"><img src="https://travis-ci.org/ibm-bluemix-mobile-services/bms-clientsdk-swift-applaunch.svg?branch=master" alt="Build Status"></a>
+<a href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-applaunch"><img src="https://img.shields.io/cocoapods/v/IBMAppLaunch.svg" alt="CocoaPods"></a></p>
+
+<p>This Swift SDK for App Launch on IBM Cloud services, provides a library for developers to build mobile applications on iOS devices.</p>
+
+<blockquote>
+<p>App Launch on IBM Cloud services enables the developers to build engaging apps by controlling reach and roll out of App features while measuring the defined metrics.</p>
+</blockquote>
+
+<p>Ensure that you go through <a href="https://console-regional.ng.bluemix.net/docs/services/app-launch/index.html">IBM Cloud App Launch service documentation</a> before you start.</p>
+
+<hr>
+<h2 id='build-status' class='heading'>Build Status</h2>
+
+<table><thead>
+<tr>
+<th style="text-align: center">Master</th>
+<th style="text-align: center">Development</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><a href="https://travis-ci.org/ibm-bluemix-mobile-services/bms-clientsdk-swift-applaunch"><img src="https://travis-ci.org/ibm-bluemix-mobile-services/bms-clientsdk-swift-applaunch.svg?branch=master" alt="Build Status"></a></td>
+<td style="text-align: center"><a href="https://travis-ci.org/ibm-bluemix-mobile-services/bms-clientsdk-swift-applaunch"><img src="https://travis-ci.org/ibm-bluemix-mobile-services/bms-clientsdk-swift-applaunch.svg?branch=development" alt="Build Status"></a></td>
+</tr>
+</tbody></table>
+<h2 id='contents' class='heading'>Contents</h2>
+
+<ul>
+<li><a href="#setup-app-launch-service">Setup App Launch Service</a>
+
+<ul>
+<li><a href="#creating-the-service">Creating the service</a></li>
+<li><a href="#creating-a-feature">Creating a feature</a></li>
+<li><a href="#creating-an-audience">Creating an audience</a></li>
+<li><a href="#creating-an-engagement">Creating an engagement</a></li>
+</ul></li>
+<li><a href="#prerequisites">Prerequisites</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#enabling-ios-applications-to-use-ibm-app-launch">Enabling iOS applications to use IBM App Launch</a>
+
+<ul>
+<li><a href="#import-the-app-launch-sdk-in-your-code">Import the App launch SDK in your code</a></li>
+<li><a href="#initializing-the-appLaunch-sdk">Initializing the AppLaunch SDK</a></li>
+</ul></li>
+<li><a href="#feature-toggle">Feature Toggle</a>
+
+<ul>
+<li><a href="#feature-toggle">Check if feature is enabled</a></li>
+<li><a href="#feature-toggle">Get variable for feature</a></li>
+</ul></li>
+<li><a href="#metrics">Metrics</a>
+
+<ul>
+<li><a href="#send-metrics">Send Metrics</a></li>
+</ul></li>
+<li><a href="#inapp-messages">InApp Messages</a>
+
+<ul>
+<li><a href="#display-inappmessages">Display InApp Messages</a></li>
+</ul></li>
+<li><a href="#destroy">Destroy</a></li>
+<li><a href="#samples-and-videos">Samples and videos</a></li>
+</ul>
+
+<hr>
+<h2 id='setup-app-launch-service' class='heading'>Setup App Launch Service</h2>
+<h3 id='creating-the-service' class='heading'>Creating the service</h3>
+
+<p><img src="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-applaunch/blob/development/Images/create_service.gif" alt="Create feature"></p>
+<h3 id='creating-a-feature' class='heading'>Creating a feature</h3>
+
+<p><img src="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-applaunch/blob/development/Images/create_feature.gif" alt="Create feature"></p>
+<h3 id='creating-an-audience' class='heading'>Creating an audience</h3>
+
+<p><img src="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-applaunch/blob/development/Images/create_audience.gif" alt="Create audience"></p>
+<h3 id='creating-an-engagement' class='heading'>Creating an engagement</h3>
+
+<p><img src="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-applaunch/blob/development/Images/create_engagement.gif" alt="Create engagement"></p>
+<h2 id='prerequisites' class='heading'>Prerequisites</h2>
+
+<ul>
+<li>iOS 10+</li>
+<li>Xcode 9</li>
+<li>Swift 3.2 - 4</li>
+<li>Cocoapods or Carthage</li>
+</ul>
+
+<hr>
+<h2 id='installation' class='heading'>Installation</h2>
+
+<p>The Swift SDKs for IBM Cloud Mobile services are available via <a href="http://cocoapods.org/">Cocoapods</a> and <a href="https://github.com/Carthage/Carthage">Carthage</a>.</p>
+<h3 id='cocoapods' class='heading'>Cocoapods</h3>
+
+<p>To install AppLaunch using Cocoapods, add it to your Podfile:</p>
+<pre class="highlight ruby"><code><span class="n">use_frameworks!</span>
+
+<span class="n">target</span> <span class="s1">'MyApp'</span> <span class="k">do</span>
+    <span class="n">platform</span> <span class="ss">:ios</span><span class="p">,</span> <span class="s1">'9.0'</span>
+    <span class="n">pod</span> <span class="s1">'IBMAppLaunch'</span>
+    <span class="n">pod</span> <span class="s1">'BMSCore'</span><span class="p">,</span> <span class="s1">'~&gt; 2.0'</span>
+    <span class="n">pod</span> <span class="s1">'SwiftyJSON'</span>
+<span class="k">end</span>
+<span class="n">post_install</span> <span class="k">do</span> <span class="o">|</span><span class="n">installer</span><span class="o">|</span>
+    <span class="n">installer</span><span class="p">.</span><span class="nf">pods_project</span><span class="p">.</span><span class="nf">targets</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">target</span><span class="o">|</span>
+        <span class="n">target</span><span class="p">.</span><span class="nf">build_configurations</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
+            <span class="n">config</span><span class="p">.</span><span class="nf">build_settings</span><span class="p">[</span><span class="s1">'SWIFT_VERSION'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'3.2'</span>
+        <span class="k">end</span>
+    <span class="k">end</span>
+<span class="k">end</span>
+</code></pre>
+
+<p>From the Terminal, go to your project folder and install the dependencies with the following command:</p>
+<pre class="highlight plaintext"><code>pod install
+</code></pre>
+<h4 id='swift-3-2' class='heading'>Swift 3.2</h4>
+
+<p>Before running the <code>pod install</code> command, make sure to use Cocoapods version <a href="https://github.com/CocoaPods/CocoaPods/releases/tag/1.1.0.beta.1">1.1.0.beta.1</a>.</p>
+
+<p>Apps built with Swift 3.2 may receive a message <q>Convert to Current Swift Syntax?</q> while opening the project on Xcode 9, make sure you do not convert AppLaunch or BMSCore.</p>
+
+<p>This will installs your dependencies and creates a new Xcode workspace.
+<strong><em>Note:</em></strong> Always open a new Xcode workspace instead of the existing xcode project file:</p>
+<pre class="highlight plaintext"><code>MyApp.xcworkspace
+</code></pre>
+
+<hr>
+<h3 id='carthage-coming-soon' class='heading'>Carthage (coming soon)</h3>
+
+<p>Add AppLaunch to your Cartfile in order to install using Carthage.</p>
+<pre class="highlight plaintext"><code>github "ibm-bluemix-mobile-services/bms-clientsdk-swift-applaunch"
+</code></pre>
+
+<p>Run the carthage update command. Once built, drag <code>AppLaunch.framework</code> and <code>BMSCore.framework</code> into your Xcode project.</p>
+
+<p>To complete the integration, follow the instructions <a href="https://github.com/Carthage/Carthage#getting-started">here</a>.</p>
+
+<hr>
+<h2 id='enabling-ios-applications-to-use-ibm-app-launch' class='heading'>Enabling iOS applications to use IBM App Launch</h2>
+<h3 id='import-the-app-launch-sdk-in-your-code' class='heading'>Import the App launch SDK in your code.</h3>
+<pre class="highlight plaintext"><code>import IBMAppLaunch
+</code></pre>
+<h3 id='initializing-the-applaunch-sdk' class='heading'>Initializing the AppLaunch SDK</h3>
+<h5 id='1-build-configuration-object' class='heading'>1. Build Configuration Object</h5>
+<pre class="highlight plaintext"><code>let config =   AppLaunchConfig.Builder().cacheExpiration(30).eventFlushInterval(60).fetchPolicy(.REFRESH_ON_EXPIRY).build()
+</code></pre>
+
+<p>The AppLaunchConfig builder is used to customize the following:</p>
+
+<ul>
+<li><p><code>eventFlushInterval</code> : Sets/Decide the time interval on when the events should be sent to the server. The default value is 30 minutes.</p></li>
+<li><p><code>cacheExpiration</code> : Sets/Decide the time interval until when the actions should be valid for. The default value is 30 minutes.</p>
+
+<p><strong>Note</strong> : This parameter is effective only if the <code>fetchPolicy</code> is set to <code><a href="Enums/RefreshPolicy.html#/s:9AppLaunch13RefreshPolicyO17REFRESH_ON_EXPIRYA2CmF">RefreshPolicy.REFRESH_ON_EXPIRY</a></code> or <code><a href="Enums/RefreshPolicy.html#/s:9AppLaunch13RefreshPolicyO18BACKGROUND_REFRESHA2CmF">RefreshPolicy.BACKGROUND_REFRESH</a></code>. </p></li>
+<li><p><code>fetchPolicy</code> : This parameter decides on how frequently the actions should be fetched from the server. The values can be one of the following:</p>
+
+<p>-<code><a href="Enums/RefreshPolicy.html#/s:9AppLaunch13RefreshPolicyO22REFRESH_ON_EVERY_STARTA2CmF">RefreshPolicy.REFRESH_ON_EVERY_START</a></code></p>
+
+<p>-<code><a href="Enums/RefreshPolicy.html#/s:9AppLaunch13RefreshPolicyO17REFRESH_ON_EXPIRYA2CmF">RefreshPolicy.REFRESH_ON_EXPIRY</a></code></p>
+
+<p>-<code><a href="Enums/RefreshPolicy.html#/s:9AppLaunch13RefreshPolicyO18BACKGROUND_REFRESHA2CmF">RefreshPolicy.BACKGROUND_REFRESH</a></code></p>
+
+<p>The default value is <code><a href="Enums/RefreshPolicy.html#/s:9AppLaunch13RefreshPolicyO22REFRESH_ON_EVERY_STARTA2CmF">RefreshPolicy.REFRESH_ON_EVERY_START</a></code>.</p></li>
+<li><p><code>deviceId</code>: This parameter must be unique. If not specified, default deviceID generation mechanism is used by SDK.</p>
+
+<p><strong>Note</strong>: Do not rely on the default implementation of the deviceID generation  mechanism as it is not guarenteed to be unique.</p></li>
+</ul>
+<h5 id='2-build-user-object' class='heading'>2. Build User Object</h5>
+<pre class="highlight plaintext"><code>let user = AppLaunchUser.Builder(userId: "vittal").custom(key: "email", value: "vittalpai@xyz.com").build()
+</code></pre>
+
+<p>The AppLaunchUser builder is used to provide the following information:</p>
+
+<ul>
+<li><p><code>userId</code>: The user to be registered</p></li>
+<li><p><code>custom</code>: This can be used to pass any optional custom user attributes. </p></li>
+</ul>
+<h5 id='3-initialize-app-launch-sdk' class='heading'>3. Initialize App Launch SDK</h5>
+<pre class="highlight plaintext"><code>AppLaunch.sharedInstance.initialize(region: .US_SOUTH, appId: "appGUID", clientSecret: "clientSecret", config: AppLaunchConfig, user: AppLaunchUser, completionHandler: AppLaunchCompletionHandler)
+</code></pre>
+
+<p>Where <code>region</code> parameter specifies the location where the app is hosted. You can use any of the following values:</p>
+
+<ul>
+<li><code><a href="Enums/ICRegion.html#/s:9AppLaunch8ICRegionO8US_SOUTHA2CmF">ICRegion.US_SOUTH</a></code></li>
+<li><code><a href="Enums/ICRegion.html#/s:9AppLaunch8ICRegionO14UNITED_KINGDOMA2CmF">ICRegion.UNITED_KINGDOM</a></code></li>
+<li><code><a href="Enums/ICRegion.html#/s:9AppLaunch8ICRegionO6SYDNEYA2CmF">ICRegion.SYDNEY</a></code></li>
+<li><code><a href="Enums/ICRegion.html#/s:9AppLaunch8ICRegionO16US_SOUTH_STAGINGA2CmF">ICRegion.US_SOUTH_STAGING</a></code></li>
+<li><code><a href="Enums/ICRegion.html#/s:9AppLaunch8ICRegionO22UNITED_KINGDOM_STAGINGA2CmF">ICRegion.UNITED_KINGDOM_STAGING</a></code></li>
+</ul>
+
+<p>The <code>appGUID</code> is the app launch app GUID value, while <code>clientSecret</code> is the appLaunch client secret value which can be obtained from the service console.</p>
+
+<p><code><a href="Enumerators and TypeAlias.html#/s:9AppLaunch0aB17CompletionHandlera">AppLaunchCompletionHandler</a></code> is the completion handler which will be used to notify in case of success and failure events.</p>
+<h3 id='feature-toggle' class='heading'>Feature Toggle</h3>
+
+<ul>
+<li><p>Use the <code>AppLaunch.sharedInstance.isFeatureEnabled(featureCode: &quot;feature code&quot;)</code> to check if the feature is enabled for the app.</p></li>
+<li><p>Use the <code>AppLaunch.sharedInstance.getPropertyofFeature(featureCode: &quot;feature code&quot;, propertyCode: &quot;property code&quot;)</code> to get the value of the particular property in a feature.</p></li>
+</ul>
+
+<p><strong>Note</strong> :The above two APIs throws <code>applaunchNotIntialized</code> error if <code>isFeatureEnabled</code> or <code>getPropertyofFeature</code> is invoked before <code>initialize</code> API.  </p>
+<h3 id='metrics' class='heading'>Metrics</h3>
+
+<p>To send metrics to the server use the <code>AppLaunch.sharedInstance.sendMetrics()</code> API. This API call sends the metrics information to the server.</p>
+<pre class="highlight plaintext"><code>AppLaunch.sharedInstance.sendMetrics(code: ["metricCodes"])
+</code></pre>
+
+<p><strong>Note</strong> : The above API throws <code>applaunchNotIntialized</code> error if <code>sendMetrics</code> is invoked before <code>initialize</code> API.</p>
+<h3 id='inapp-messages' class='heading'>InApp Messages</h3>
+
+<p>To display InApp messages invoke the following API.</p>
+<pre class="highlight plaintext"><code> AppLaunch.sharedInstance.displayInAppMessages()
+</code></pre>
+<h3 id='destroy' class='heading'>Destroy</h3>
+
+<p>This method unregisters the user from AppLaunch Service and clears the cache</p>
+<pre class="highlight plaintext"><code>AppLaunch.sharedInstance.destroy(completionHandler: AppLaunchCompletionHandler)
+</code></pre>
+<h3 id='samples-and-videos' class='heading'>Samples and Videos</h3>
+
+<ul>
+<li>For samples, visit - <a href="https://github.com/ibm-cloud-applaunch/sample-swift-poll">Github Sample</a></li>
+</ul>
+<h3 id='learn-more' class='heading'>Learn More</h3>
+
+<ul>
+<li>Visit the <strong><a href="https://developer.ibm.com/bluemix/">IBM Cloud Developers Community</a></strong>.</li>
+</ul>
+<h3 id='connect-with-ibm-cloud' class='heading'>Connect with IBM Cloud</h3>
+
+<p><a href="https://twitter.com/ibmbluemix">Twitter</a>|
+<a href="https://www.youtube.com/watch?v=dQ1WcY_Ill4">YouTube</a> |
+<a href="https://developer.ibm.com/bluemix/blog/">Blog</a> |
+<a href="https://www.facebook.com/ibmbluemix">Facebook</a> |
+<a href="http://www.meetup.com/bluemix/">Meetup</a></p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-applaunch" target="_blank" rel="external">IBM</a>. All rights reserved. (Last updated: 2018-02-07)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
