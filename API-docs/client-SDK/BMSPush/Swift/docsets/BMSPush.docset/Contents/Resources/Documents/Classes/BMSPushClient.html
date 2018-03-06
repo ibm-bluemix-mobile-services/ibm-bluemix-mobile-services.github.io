@@ -14,7 +14,7 @@
     <a title="BMSPushClient Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">BMSPush Docs</a> (70% documented)</p>
+        <p><a href="../index.html">BMSPush Docs</a> (66% documented)</p>
         <p class="header-right"><a href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -59,6 +59,14 @@
             </ul>
           </li>
           <li class="nav-group-name">
+            <a href="../Other Classes.html">Other Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Other Classes.html#/c:@M@BMSPush@objc(cs)BMSPushUtils">BMSPushUtils</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="../Other Extensions.html">Other Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
@@ -74,7 +82,7 @@
             <h1>BMSPushClient</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">BMSPushClient</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">BMSPushClient</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
 
                 </div>
               </div>
@@ -111,7 +119,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">sharedInstance</span> <span class="o">=</span> <span class="kt">BMSPushClient</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">sharedInstance</span> <span class="o">=</span> <span class="kt">BMSPushClient</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -151,7 +159,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">initializeWithAppGUID</span> <span class="p">(</span><span class="nv">appGUID</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">clientSecret</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">initializeWithAppGUID</span> <span class="p">(</span><span class="nv">appGUID</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">clientSecret</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -211,7 +219,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">initializeWithAppGUID</span> <span class="p">(</span><span class="nv">appGUID</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">clientSecret</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt"><a href="../Classes/BMSPushClientOptions.html">BMSPushClientOptions</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">initializeWithAppGUID</span> <span class="p">(</span><span class="nv">appGUID</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">clientSecret</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt"><a href="../Classes/BMSPushClientOptions.html">BMSPushClientOptions</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -295,7 +303,7 @@ Notification Service .</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">registerWithDeviceToken</span><span class="p">(</span><span class="nv">deviceToken</span><span class="p">:</span><span class="kt">Data</span> <span class="p">,</span> <span class="kt">WithUserId</span><span class="p">:</span><span class="kt">String</span><span class="p">?,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping(_ response:String?, _ statusCode:Int?, _ error:String)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">registerWithDeviceToken</span><span class="p">(</span><span class="nv">deviceToken</span><span class="p">:</span><span class="kt">Data</span> <span class="p">,</span> <span class="kt">WithUserId</span><span class="p">:</span><span class="kt">String</span><span class="p">?,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping(_ response:String?, _ statusCode:Int?, _ error:String)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -368,7 +376,7 @@ Notification Service .</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">registerWithDeviceToken</span> <span class="p">(</span><span class="nv">deviceToken</span><span class="p">:</span><span class="kt">Data</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping(_ response:String?, _ statusCode:Int?, _ error:String)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">registerWithDeviceToken</span> <span class="p">(</span><span class="nv">deviceToken</span><span class="p">:</span><span class="kt">Data</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping(_ response:String?, _ statusCode:Int?, _ error:String)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -428,7 +436,7 @@ Notification Service .</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">retrieveAvailableTagsWithCompletionHandler</span> <span class="p">(</span><span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping(_ response:NSMutableArray?, _ statusCode:Int?, _ error:String)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">retrieveAvailableTagsWithCompletionHandler</span> <span class="p">(</span><span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping(_ response:NSMutableArray?, _ statusCode:Int?, _ error:String)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -476,7 +484,7 @@ Notification Service .</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">subscribeToTags</span> <span class="p">(</span><span class="nv">tagsArray</span><span class="p">:</span><span class="kt">NSArray</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">response</span><span class="p">:</span><span class="kt">NSMutableDictionary</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">statusCode</span><span class="p">:</span><span class="kt">Int</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span><span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">subscribeToTags</span> <span class="p">(</span><span class="nv">tagsArray</span><span class="p">:</span><span class="kt">NSArray</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">response</span><span class="p">:</span><span class="kt">NSMutableDictionary</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">statusCode</span><span class="p">:</span><span class="kt">Int</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span><span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -536,7 +544,7 @@ Notification Service .</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">retrieveSubscriptionsWithCompletionHandler</span>  <span class="p">(</span><span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">response</span><span class="p">:</span><span class="kt">NSMutableArray</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">statusCode</span><span class="p">:</span><span class="kt">Int</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span><span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">retrieveSubscriptionsWithCompletionHandler</span>  <span class="p">(</span><span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">response</span><span class="p">:</span><span class="kt">NSMutableArray</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">statusCode</span><span class="p">:</span><span class="kt">Int</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span><span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -584,7 +592,7 @@ Notification Service .</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">unsubscribeFromTags</span> <span class="p">(</span><span class="nv">tagsArray</span><span class="p">:</span><span class="kt">NSArray</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">response</span><span class="p">:</span><span class="kt">NSMutableDictionary</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">statusCode</span><span class="p">:</span><span class="kt">Int</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span><span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">unsubscribeFromTags</span> <span class="p">(</span><span class="nv">tagsArray</span><span class="p">:</span><span class="kt">NSArray</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">response</span><span class="p">:</span><span class="kt">NSMutableDictionary</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">statusCode</span><span class="p">:</span><span class="kt">Int</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span><span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -642,7 +650,7 @@ Notification Service .</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">unregisterDevice</span>  <span class="p">(</span><span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">response</span><span class="p">:</span><span class="kt">String</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">statusCode</span><span class="p">:</span><span class="kt">Int</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span><span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">unregisterDevice</span>  <span class="p">(</span><span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">response</span><span class="p">:</span><span class="kt">String</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">statusCode</span><span class="p">:</span><span class="kt">Int</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span><span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -673,8 +681,8 @@ Notification Service .</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2017 <a class="link" href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push" target="_blank" rel="external">IBM</a>. All rights reserved. (Last updated: 2017-12-12)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2018 <a class="link" href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push" target="_blank" rel="external">IBM</a>. All rights reserved. (Last updated: 2018-03-06)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

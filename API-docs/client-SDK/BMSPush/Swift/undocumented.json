@@ -44,13 +44,6 @@
     },
     {
       "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/Source/BMSPushClient.swift",
-      "line": 83,
-      "symbol": "BMSPushClient.notificationOptions",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/Source/BMSPushClient.swift",
       "line": 102,
       "symbol": "BMSPushClient.delegate",
       "symbol_kind": "source.lang.swift.decl.var.instance",
@@ -58,8 +51,15 @@
     },
     {
       "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/Source/BMSPushClient.swift",
-      "line": 932,
+      "line": 959,
       "symbol": "BMSPushClient.sendMessageDeliveryStatus(messageId:completionHandler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/Source/BMSPushClient.swift",
+      "line": 1023,
+      "symbol": "BMSPushClient.didReciveBMSPushNotification(userInfo:completionHandler:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -75,6 +75,27 @@
       "line": 22,
       "symbol": "BMSPushNotificationActionCategory.sharedInstance",
       "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/Source/BMSPushUtils.swift",
+      "line": 28,
+      "symbol": "BMSPushUtils.saveValueToNSUserDefaults(value:key:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/Source/BMSPushUtils.swift",
+      "line": 35,
+      "symbol": "BMSPushUtils.getValueToNSUserDefaults(key:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/Source/BMSPushUtils.swift",
+      "line": 45,
+      "symbol": "BMSPushUtils.getPushOptionsNSUserDefaults(key:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
       "warning": "undocumented"
     }
   ],
