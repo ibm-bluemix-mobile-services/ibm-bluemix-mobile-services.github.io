@@ -58,14 +58,28 @@
     },
     {
       "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/Source/Analytics/BMSAnalytics.swift",
-      "line": 132,
+      "line": null,
+      "symbol": "BMSAnalytics",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/Source/Analytics/BMSAnalytics.swift",
+      "line": 149,
       "symbol": "BMSAnalytics",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
+      "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/Source/Feedback/Feedback.swift",
+      "line": 23,
+      "symbol": "Feedback",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/Source/Logger/BMSLogger.swift",
-      "line": 198,
+      "line": 197,
       "symbol": "BMSLogger",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
