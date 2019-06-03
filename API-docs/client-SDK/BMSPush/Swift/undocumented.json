@@ -51,14 +51,14 @@
     },
     {
       "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/Source/BMSPushClient.swift",
-      "line": 967,
+      "line": 972,
       "symbol": "BMSPushClient.sendMessageDeliveryStatus(messageId:completionHandler:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/Source/BMSPushClient.swift",
-      "line": 1031,
+      "line": 1036,
       "symbol": "BMSPushClient.didReciveBMSPushNotification(userInfo:completionHandler:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
