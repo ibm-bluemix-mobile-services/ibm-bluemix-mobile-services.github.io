@@ -34,11 +34,17 @@
               <li class="nav-group-task">
                 <a href="../Classes/BMSPushClient.html">BMSPushClient</a>
               </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BMSPushClient.html">BMSPushClient</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
             <a href="../Options.html">Options</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/BMSPushClientOptions.html">BMSPushClientOptions</a>
+              </li>
               <li class="nav-group-task">
                 <a href="../Classes/BMSPushClientOptions.html">BMSPushClientOptions</a>
               </li>
@@ -51,7 +57,7 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../iOS 10 Rich Push.html">iOS 10 Rich Push</a>
+            <a href="../iOS%2010%20Rich%20Push.html">iOS 10 Rich Push</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Classes/BMSPushRichPushNotificationOptions.html">BMSPushRichPushNotificationOptions</a>
@@ -59,15 +65,23 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Other Classes.html">Other Classes</a>
+            <a href="../Other%20Classes.html">Other Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Other Classes.html#/c:@M@BMSPush@objc(cs)BMSPushUtils">BMSPushUtils</a>
+                <a href="../Other%20Classes.html#/c:@M@BMSPush@objc(cs)BMSPushUtils">BMSPushUtils</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Other Extensions.html">Other Extensions</a>
+            <a href="../Other%20Enums.html">Other Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/IMFPushErrorvalues.html">IMFPushErrorvalues</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other%20Extensions.html">Other Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Extensions/Response.html">Response</a>
@@ -80,12 +94,6 @@
         <section>
           <section class="section">
             <h1>BMSPushClientOptions</h1>
-              <div class="declaration">
-                <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">BMSPushClientOptions</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
-
-                </div>
-              </div>
             <p>This class is to set options for push notifications.</p>
 
           </section>
@@ -102,9 +110,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@BMSPush@objc(cs)BMSPushClientOptions(im)init"></a>
+                    <a name="/"></a>
                     <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@BMSPush@objc(cs)BMSPushClientOptions(im)init">init()</a>
+                    <a class="token" href="#/">init()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -112,16 +120,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Initialze Method .</p>
+                        <p>Initialze Method.</p>
 
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="nf">init</span><span class="p">()</span></code></pre>
-
-                        </div>
                       </div>
                     </section>
                   </div>
@@ -129,56 +129,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7BMSPush0A13ClientOptionsC12categoryNameACSayAA0A26NotificationActionCategoryCG_tcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(categoryName:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7BMSPush0A13ClientOptionsC12categoryNameACSayAA0A26NotificationActionCategoryCG_tcfc">init(categoryName:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Initialze Method -  Deprecated.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@available(*, deprecated, message: "This method was deprecated , please use init(categoryName:_  withDeviceId:_ ﹚")</span>
-<span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">categoryName</span> <span class="nv">category</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/BMSPushNotificationActionCategory.html">BMSPushNotificationActionCategory</a></span><span class="p">])</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>categoryName</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>An array of <code><a href="../Classes/BMSPushNotificationActionCategory.html">BMSPushNotificationActionCategory</a></code>.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7BMSPush0A13ClientOptionsC11setDeviceId06deviceF0ySS_tF"></a>
-                    <a name="//apple_ref/swift/Method/setDeviceId(deviceId:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7BMSPush0A13ClientOptionsC11setDeviceId06deviceF0ySS_tF">setDeviceId(deviceId:)</a>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/setDeviceIdValue(deviceId:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">setDeviceIdValue(deviceId:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -189,42 +142,15 @@
                         <p>set DeviceId Method</p>
 
                       </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setDeviceId</span><span class="p">(</span><span class="nv">deviceId</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>withDeviceId</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>(Optional) The DeviceId for applications.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
                     </section>
                   </div>
                 </li>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7BMSPush0A13ClientOptionsC36setInteractiveNotificationCategories12categoryNameySayAA0aF14ActionCategoryCG_tF"></a>
+                    <a name="/"></a>
                     <a name="//apple_ref/swift/Method/setInteractiveNotificationCategories(categoryName:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7BMSPush0A13ClientOptionsC36setInteractiveNotificationCategories12categoryNameySayAA0aF14ActionCategoryCG_tF">setInteractiveNotificationCategories(categoryName:)</a>
+                    <a class="token" href="#/">setInteractiveNotificationCategories(categoryName:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -235,79 +161,6 @@
                         <p>set Interactive Notification Categories Method</p>
 
                       </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setInteractiveNotificationCategories</span><span class="p">(</span><span class="n">categoryName</span> <span class="nv">category</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/BMSPushNotificationActionCategory.html">BMSPushNotificationActionCategory</a></span><span class="p">])</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>categoryName</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>An array of <code><a href="../Classes/BMSPushNotificationActionCategory.html">BMSPushNotificationActionCategory</a></code>.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7BMSPush0A13ClientOptionsC16setPushVariables04pushF0ySDyS2SG_tF"></a>
-                    <a name="//apple_ref/swift/Method/setPushVariables(pushVariables:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7BMSPush0A13ClientOptionsC16setPushVariables04pushF0ySDyS2SG_tF">setPushVariables(pushVariables:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>set Push Variables for template based push Notification.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setPushVariables</span><span class="p">(</span><span class="n">pushVariables</span> <span class="nv">variables</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">])</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>pushVariables</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>a [String:String] values.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
                     </section>
                   </div>
                 </li>
@@ -316,8 +169,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push" target="_blank" rel="external">IBM</a>. All rights reserved. (Last updated: 2019-06-03)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push" target="_blank" rel="external">IBM</a>. All rights reserved. (Last updated: 2019-10-14)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.11.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
