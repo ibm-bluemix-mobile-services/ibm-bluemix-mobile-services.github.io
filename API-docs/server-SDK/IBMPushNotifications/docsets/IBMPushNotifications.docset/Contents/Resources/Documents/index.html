@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>IBMPushNotifications  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="IBMPushNotifications  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">IBMPushNotifications Docs</a> (48% documented)</p>
+        <p class="header-right"><a href="https://github.com/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-swift.git"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">IBMPushNotifications Reference</a>
+        <img id="carat" src="img/carat.png" />
+        IBMPushNotifications  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Notification.html">Notification</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/Notification.html">Notification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Notification/Message.html">– Message</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Notification/Target.html">– Target</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Notification/Settings.html">– Settings</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="PushNotifications.html">PushNotifications</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/PushNotifications.html">PushNotifications</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/PushNotifications.html#/s:20IBMPushNotifications04PushB0C6RegionV">– Region</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="PushNotificationsError.html">PushNotificationsError</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/PushNotificationsError.html">PushNotificationsError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Other%20Enums.html">Other Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Other%20Enums.html#/s:20IBMPushNotifications8ApnsTypeO">ApnsType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Other%20Enums.html#/s:20IBMPushNotifications7FCMTypeO">FCMType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Other%20Enums.html#/s:20IBMPushNotifications6GcmLEDO">GcmLED</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Other%20Enums.html#/s:20IBMPushNotifications11GcmPriorityO">GcmPriority</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Other%20Enums.html#/s:20IBMPushNotifications13GcmStyleTypesO">GcmStyleTypes</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Other%20Enums.html#/s:20IBMPushNotifications13GcmVisibilityO">GcmVisibility</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Other%20Enums.html#/s:20IBMPushNotifications14TargetPlatformO">TargetPlatform</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Other%20Typealiases.html">Other Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Other%20Typealiases.html#/s:20IBMPushNotifications04PushB17CompletionHandlera">PushNotificationsCompletionHandler</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='ibm-cloud-mobile-services-server-side-swift-sdk-for-ibm-cloud-push-notifications-service' class='heading'>IBM Cloud Mobile Services - Server side Swift SDK for IBM Cloud Push Notifications Service</h1>
+
+<p><a href="https://swift.org"><img src="https://img.shields.io/badge/Swift-3.0-orange.svg" alt="Swift"></a>
+<a href="https://swift.org"><img src="https://img.shields.io/badge/Platforms-OS%20X%20--%20Linux-lightgray.svg" alt="Platform"></a>
+<a href="https://travis-ci.org/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-swift"><img src="https://travis-ci.org/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-swift.svg" alt="Build Status"></a>
+<a href="https://www.codacy.com/app/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-swift?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-swift&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/51d26cb37b4d474887087d455a311a43" alt="Codacy Badge"></a>
+<a href="https://coveralls.io/github/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-swift?branch=development"><img src="https://coveralls.io/repos/github/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-swift/badge.svg?branch=development" alt="Coverage Status"></a></p>
+
+<p>The <a href="https://cloud.ibm.com/catalog/services/push-notifications">IBM Cloud Push Notifications service</a> provides a unified push service to send real-time notifications to mobile and web applications. The Swift server-side SDK for sending push notifications through the IBM Cloud Push Notifications services.</p>
+
+<p>Ensure that you go through <a href="https://cloud.ibm.com/docs/services/mobilepush?topic=mobile-pushnotification-gettingstartedtemplate#gettingstartedtemplate">IBM Cloud Push Notifications service documentation</a> before you start.</p>
+<h2 id='contents' class='heading'>Contents</h2>
+
+<ul>
+<li><a href="#installation">Installation</a>
+
+<ul>
+<li><a href="#swift-package-manager">Swift Package Manager</a></li>
+<li><a href="#build-on-linux">Build on Linux</a></li>
+</ul></li>
+<li><a href="#usage">Usage</a>
+
+<ul>
+<li><a href="#simple-notification">Simple notification</a></li>
+<li><a href="#send-bulk-push-notifications">Send Bulk push notifications</a></li>
+<li><a href="#notification-options">Notification options</a></li>
+</ul></li>
+<li><a href="#samples-and-videos">Samples and videos</a></li>
+</ul>
+<h2 id='installation' class='heading'>Installation</h2>
+<h4 id='swift-package-manager' class='heading'>Swift Package Manager</h4>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">PackageDescription</span>
+<span class="k">let</span> <span class="nv">package</span> <span class="o">=</span> <span class="kt">Package</span><span class="p">(</span>
+    <span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
+        <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/ibm-bluemix-mobile-services/bluemix-pushnotifications-swift-sdk.git"</span><span class="p">,</span> <span class="o">.</span><span class="nf">upToNextMajor</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="s">"1.6.0"</span><span class="p">))</span>
+    <span class="p">]</span>
+<span class="p">)</span>
+</code></pre>
+<h4 id='build-on-linux' class='heading'>Build on Linux</h4>
+<pre class="highlight shell"><code><span class="nb">sudo </span>apt-get update // not required on Mac
+swift build <span class="nt">-Xcc</span> <span class="nt">-fblocks</span> <span class="nt">-Xlinker</span> <span class="nt">-rpath</span> <span class="nt">-Xlinker</span> <span class="si">$(</span><span class="nb">pwd</span><span class="si">)</span>/.build/debug/
+</code></pre>
+<h2 id='usage' class='heading'>Usage</h2>
+<h3 id='simple-notification' class='heading'>Simple notification</h3>
+
+<p>Complete the following steps:</p>
+
+<ol>
+<li><p>Import the <code>IBMPushNotifications</code> framework.</p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">IBMPushNotifications</span>
+</code></pre>
+
+<blockquote>
+<p><strong>Note</strong>: For Syndicated use the <code>overrideServerHost</code> param of <code><a href="Classes/PushNotifications.html">PushNotifications</a></code> before initliazong the <code><a href="Classes/PushNotifications.html">PushNotifications</a></code> .  Eg: <code>PushNotifications.overrideServerHost = &quot;https://syndicated.region.net&quot;</code></p>
+</blockquote></li>
+<li><p>Initialize with details about your IBM Cloud Push Notifications service.</p></li>
+</ol>
+
+<ul>
+<li><p>Initialize with ApiKey</p>
+<pre class="highlight swift"><code>
+<span class="c1">//Initialize PushNotifications</span>
+<span class="k">let</span> <span class="nv">myPushNotifications</span> <span class="o">=</span> <span class="kt">PushNotifications</span><span class="p">(</span><span class="nv">pushApiKey</span><span class="p">:</span><span class="s">"your-push-service-apiKey"</span><span class="p">,</span> <span class="nv">pushAppGuid</span><span class="p">:</span> <span class="s">"your-push-service-app_guid"</span><span class="p">,</span> <span class="nv">pushRegion</span><span class="p">:</span> <span class="kt">PushNotifications</span><span class="o">.</span><span class="kt">Region</span><span class="o">.</span><span class="kt">US_SOUTH</span><span class="p">)</span>
+
+<span class="c1">// GET AUTH TOKEN</span>
+<span class="n">myPushNotifications</span><span class="p">?</span><span class="o">.</span><span class="nf">getAuthToken</span><span class="p">(</span><span class="nv">completionHandler</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">hasToken</span><span class="p">,</span> <span class="n">tokenString</span><span class="p">)</span> <span class="k">in</span>
+    <span class="k">if</span> <span class="n">hasToken</span><span class="o">!</span> <span class="p">{</span>
+        <span class="c1">// Send push notifications</span>
+    <span class="p">}</span>
+<span class="p">})</span>
+</code></pre></li>
+<li><p>Initialize with AppSecret</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">myPushNotifications</span> <span class="o">=</span> <span class="kt">PushNotifications</span><span class="p">(</span><span class="nv">pushRegion</span><span class="p">:</span> <span class="kt">PushNotifications</span><span class="o">.</span><span class="kt">Region</span><span class="o">.</span><span class="kt">US_SOUTH</span><span class="p">,</span> <span class="nv">pushAppGuid</span><span class="p">:</span> <span class="s">"your-push-service-guid"</span><span class="p">,</span> <span class="nv">pushAppSecret</span><span class="p">:</span> <span class="s">"your-push-service-appSecret"</span><span class="p">)</span>
+</code></pre></li>
+</ul>
+
+<ol>
+<li><p>Create a simple push notification that will broadcast to all devices.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">messageExample</span> <span class="o">=</span> <span class="kt">Notification</span><span class="o">.</span><span class="kt">Message</span><span class="p">(</span><span class="nv">alert</span><span class="p">:</span> <span class="s">"Testing IBMPushNotifications"</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">notificationExample</span> <span class="o">=</span> <span class="kt">Notification</span><span class="p">(</span><span class="nv">message</span><span class="p">:</span> <span class="n">messageExample</span><span class="p">)</span>
+</code></pre></li>
+<li><p>Send the Push notification using the method:</p>
+<pre class="highlight swift"><code><span class="n">myPushNotifications</span><span class="o">.</span><span class="nf">send</span><span class="p">(</span><span class="nv">notification</span><span class="p">:</span> <span class="n">notificationExample</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">status</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+  <span class="k">if</span> <span class="n">error</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"Failed to send push notification. Error: </span><span class="se">\(</span><span class="n">error</span><span class="o">!</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<blockquote>
+<p><strong>Note</strong>: If you are using the APIKEY for Initialisation kindly call <code>getAuthToken()</code> , before sending any notification. This will add an Authorization header for the request.</p>
+</blockquote></li>
+</ol>
+
+<p>To create a more selective push notification with specified settings that is only sent to certain devices either by <code>deviceIds</code> or <code>userIds</code> or by device platforms or based on tag-subscriptions, or to set GCM and APNs features - there are optional parameters that you can use in the corresponding initializers.</p>
+<h3 id='send-bulk-push-notifications' class='heading'>Send Bulk push notifications</h3>
+
+<p>To send the bulk push notifications of the following,</p>
+<pre class="highlight swift"><code><span class="n">myPushNotifications</span><span class="o">.</span><span class="nf">sendBulk</span><span class="p">(</span><span class="nv">notification</span><span class="p">:</span> <span class="p">[</span><span class="n">notificationExample</span><span class="p">,</span><span class="n">notificationExample1</span><span class="p">,</span><span class="n">notificationExample2</span><span class="p">])</span> <span class="p">{</span> <span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">status</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+    <span class="k">if</span> <span class="n">error</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"Failed to send push notification. Error: </span><span class="se">\(</span><span class="n">error</span><span class="o">!</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<h3 id='notification-options' class='heading'>Notification options</h3>
+<h4 id='target' class='heading'>Target</h4>
+
+<p>In <code>Target</code>, you pass the following values:</p>
+
+<ul>
+<li><strong>deviceIds</strong> - Array of device IDs.</li>
+<li><strong>userIds</strong> - Array of user IDs.</li>
+<li><strong>platforms</strong> - Array of platforms.</li>
+<li><p><strong>tagNames</strong> - Array of tag names.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">targetExample</span> <span class="o">=</span> <span class="kt">Notification</span><span class="o">.</span><span class="kt">Target</span><span class="p">(</span><span class="nv">deviceIds</span><span class="p">:</span> <span class="p">[</span><span class="s">"device1"</span><span class="p">,</span><span class="s">"device2"</span><span class="p">],</span>
+         <span class="nv">userIds</span><span class="p">:</span> <span class="p">[</span><span class="s">"userId1"</span><span class="p">,</span> <span class="s">"userId2"</span><span class="p">],</span>
+         <span class="nv">platforms</span><span class="p">:</span> <span class="p">[</span><span class="kt">TargetPlatform</span><span class="o">.</span><span class="kt">Apple</span><span class="p">,</span><span class="kt">TargetPlatform</span><span class="o">.</span><span class="kt">Google</span><span class="p">,</span><span class="kt">TargetPlatform</span><span class="o">.</span><span class="kt">ChromeExtApp</span><span class="p">,</span>
+<span class="kt">TargetPlatform</span><span class="o">.</span><span class="kt">WebChrome</span><span class="p">,</span><span class="kt">TargetPlatform</span><span class="o">.</span><span class="n">webFirefox</span><span class="p">,</span><span class="kt">TargetPlatform</span><span class="o">.</span><span class="kt">WebSafari</span><span class="p">],</span> <span class="nv">tagNames</span><span class="p">:</span> <span class="p">[</span><span class="s">"tag1"</span><span class="p">,</span> <span class="s">"tag2"</span><span class="p">])</span>
+</code></pre>
+
+<blockquote>
+<p><strong>Note</strong>: Do not use userIds, tagNames, platforms and deviceIds together.</p>
+</blockquote></li>
+</ul>
+<h4 id='settings' class='heading'>Settings</h4>
+
+<p>Settings can contain any of the following types:</p>
+
+<ul>
+<li>APNs</li>
+<li>GCM</li>
+<li>FirefoxWeb</li>
+<li>ChromeWeb</li>
+<li>SafariWeb</li>
+<li><p>ChromeAppExt</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">notificationExample</span> <span class="o">=</span> <span class="kt">Notification</span><span class="p">(</span><span class="nv">message</span><span class="p">:</span> <span class="n">messageExample</span><span class="p">,</span>
+   <span class="nv">apnsSettings</span><span class="p">:</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">gcmSettings</span><span class="p">:</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">firefoxWebSettings</span><span class="p">:</span> <span class="kc">nil</span><span class="p">,</span>
+   <span class="nv">chromeWebSettings</span><span class="p">:</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">safariWebSettings</span><span class="p">:</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">chromeAppExtSettings</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+</code></pre></li>
+</ul>
+<h5 id='apns' class='heading'>APNs</h5>
+
+<p>APNs settings can have the following parameters:</p>
+
+<ul>
+<li><strong>badge</strong> - The number to display as the badge of the application icon</li>
+<li><strong>interactiveCategory</strong> - The category identifier to be used for the interactive push notifications</li>
+<li><strong>iosActionKey</strong> - The title for the Action key</li>
+<li><strong>sound</strong> - The name of the sound file in the application bundle. The sound of this file is played as an alert.</li>
+<li><strong>type</strong> - Notification type: DEFAULT, MIXED or SILENT</li>
+<li><strong>payload</strong> -  Custom JSON payload that will be sent as part of the notification message</li>
+<li><strong>titleLocKey</strong> -  The key to a title string in the <code>Localizable.strings</code> file for the current localization. The key string can be formatted with %@ and %n$@ specifiers to take the variables specified in the titleLocArgs array.</li>
+<li><strong>locKey</strong> - A key to an alert-message string in a Localizable.strings file for the current localization (which is set by the user’s language preference). The key string can be formatted with %@ and %n$@ specifiers to take the variables specified in the locArgs array</li>
+<li><strong>launchImage</strong> - The filename of an image file in the app bundle, with or without the filename extension. The image is used as the launch image when users tap the action button or move the action slider</li>
+<li><strong>titleLocArgs</strong> - Variable string values to appear in place of the format specifiers in title-loc-key</li>
+<li><strong>locArgs</strong> - Variable string values to appear in place of the format specifiers in locKey.</li>
+<li><strong>title</strong> - The title of Rich Push notifications (Supported only on iOS 10 and above)</li>
+<li><strong>subtitle</strong> - The subtitle of the Rich Notifications. (Supported only on iOS 10 and above)</li>
+<li><p><strong>attachmentUrl</strong> - The link to the iOS notifications media (video, audio, GIF, images - Supported only on iOS 10 and above) ,</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">apnsSetting</span> <span class="o">=</span> <span class="kt">Notification</span><span class="o">.</span><span class="kt">Settings</span><span class="o">.</span><span class="kt">Apns</span><span class="p">(</span><span class="nv">badge</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">interactiveCategory</span><span class="p">:</span> <span class="s">"Category"</span><span class="p">,</span>
+     <span class="nv">iosActionKey</span><span class="p">:</span> <span class="s">"VIEW"</span><span class="p">,</span> <span class="nv">sound</span><span class="p">:</span> <span class="s">"Newtune.wav"</span><span class="p">,</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">ApnsType</span><span class="o">.</span><span class="kt">DEFAULT</span><span class="p">,</span>
+     <span class="nv">payload</span><span class="p">:</span> <span class="p">[</span><span class="s">"key1"</span><span class="p">:</span><span class="s">"value1"</span><span class="p">],</span> <span class="nv">titleLocKey</span><span class="p">:</span> <span class="s">"TITLE1"</span><span class="p">,</span> <span class="nv">locKey</span><span class="p">:</span> <span class="s">"LOCKEY1"</span><span class="p">,</span>
+     <span class="nv">launchImage</span><span class="p">:</span> <span class="s">"launchImage1.png"</span><span class="p">,</span> <span class="nv">titleLocArgs</span><span class="p">:</span> <span class="p">[</span><span class="s">"arg1"</span><span class="p">,</span><span class="s">"arg2"</span><span class="p">],</span>
+     <span class="nv">locArgs</span><span class="p">:</span> <span class="p">[</span><span class="s">"arg3"</span><span class="p">,</span><span class="s">"arg4"</span><span class="p">],</span> <span class="nv">title</span><span class="p">:</span> <span class="s">"welcome to IBM Cloud Push service"</span><span class="p">,</span>
+     <span class="nv">subtitle</span><span class="p">:</span> <span class="s">"Push Notifications"</span><span class="p">,</span> <span class="nv">attachmentUrl</span><span class="p">:</span> <span class="s">"https://IBMCloud.net/image.png"</span><span class="p">)</span>
+</code></pre></li>
+</ul>
+<h5 id='gcm' class='heading'>GCM</h5>
+
+<p>GCM settings can have the following parameters:</p>
+
+<ul>
+<li><strong>collapseKey</strong> -  This parameter identifies a group of messages.</li>
+<li><strong>delayWhileIdle</strong> - When this parameter is set to true, it indicates that the message should not be sent until the device becomes active.</li>
+<li><strong>payload</strong> -  Custom JSON payload that will be sent as part of the notification message.</li>
+<li><strong>priority</strong> - A string value that indicates the priority of this notification. Allowed values are &lsquo;max&rsquo;, &lsquo;high&rsquo;, &lsquo;default&rsquo;, &lsquo;low&rsquo; and &lsquo;min&rsquo;. High/Max priority notifications along with &lsquo;sound&rsquo; field may be used for Heads up notification in Android 5.0 or higher. sampleval=&lsquo;low&rsquo;.</li>
+<li><strong>sound</strong> - The sound file (on device) that will be attempted to play when the notification arrives on the device.</li>
+<li><strong>timeToLive</strong> - This parameter specifies duration (in seconds) the message should be kept in GCM storage if the device is offline.</li>
+<li><strong>interactiveCategory</strong> - The category identifier to be used for the interactive push notifications.</li>
+<li><strong>icon</strong> - Specify the name of the icon to be displayed for the notification. Ensure that the icon is already packaged with the client application.</li>
+<li><strong>sync</strong> - Device group messaging makes it possible for every app instance in a group to reflect the latest messaging state.</li>
+<li><strong>visibility</strong> - private/public - Visibility of this notification, which affects how and when the notifications are revealed on a secure locked screen.</li>
+<li><strong>lights</strong> - Allows setting the notification LED color on receiving push notification.</li>
+<li><strong>style</strong> - Options to specify for Android expandable notifications. The types of expandable notifications are <code>picture_notification</code>, <code>bigtext_notification</code>, <code>inbox_notification</code>.
+
+<ul>
+<li><strong>type</strong> - Notification type: DEFAULT or SILENT</li>
+</ul></li>
+<li><p><strong>androidTitle</strong> - The title of Push notifications </p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">lights</span> <span class="o">=</span> <span class="kt">Notification</span><span class="o">.</span><span class="kt">Settings</span><span class="o">.</span><span class="kt">GcmLights</span><span class="p">(</span><span class="nv">ledArgb</span><span class="p">:</span> <span class="kt">GcmLED</span><span class="o">.</span><span class="kt">Green</span><span class="p">,</span> <span class="nv">ledOnMs</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="nv">ledOffMs</span><span class="p">:</span> <span class="mi">3</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">style</span> <span class="o">=</span> <span class="kt">Notification</span><span class="o">.</span><span class="kt">Settings</span><span class="o">.</span><span class="kt">GcmStyle</span><span class="p">(</span><span class="nv">type</span><span class="p">:</span> <span class="kt">GcmStyleTypes</span><span class="o">.</span><span class="n">inbox_notification</span><span class="p">,</span>
+              <span class="nv">title</span><span class="p">:</span> <span class="s">"inbox notification"</span><span class="p">,</span> <span class="nv">url</span><span class="p">:</span> <span class="s">"https://IBMCloud.net/image.png"</span><span class="p">,</span>
+              <span class="nv">text</span><span class="p">:</span> <span class="s">"some big text"</span><span class="p">,</span> <span class="nv">lines</span><span class="p">:</span> <span class="p">[</span><span class="s">"line 1"</span><span class="p">,</span><span class="s">"line 2"</span><span class="p">])</span>
+<span class="k">let</span> <span class="nv">gcmSettings</span> <span class="o">=</span> <span class="kt">Notification</span><span class="o">.</span><span class="kt">Settings</span><span class="o">.</span><span class="kt">Gcm</span><span class="p">(</span><span class="nv">androidTitle</span><span class="p">:</span><span class="s">"title"</span><span class="p">,</span> <span class="nv">collapseKey</span><span class="p">:</span> <span class="s">"collapseKey1"</span><span class="p">,</span> <span class="nv">delayWhileIdle</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+                        <span class="nv">payload</span><span class="p">:</span> <span class="p">[</span><span class="s">"key1"</span><span class="p">:</span><span class="s">"value1"</span><span class="p">],</span> <span class="nv">priority</span><span class="p">:</span> <span class="kt">GcmPriority</span><span class="o">.</span><span class="kt">DEFAULT</span><span class="p">,</span>
+                        <span class="nv">sound</span><span class="p">:</span> <span class="s">"sound.wav"</span><span class="p">,</span> <span class="nv">timeToLive</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+                        <span class="nv">interactiveCategory</span><span class="p">:</span> <span class="s">"category1"</span><span class="p">,</span> <span class="nv">icon</span><span class="p">:</span> <span class="s">"icon.png"</span><span class="p">,</span>
+                        <span class="nv">sync</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span> <span class="nv">visibility</span><span class="p">:</span> <span class="kt">GcmVisibility</span><span class="o">.</span><span class="kt">Public</span><span class="p">,</span>
+                        <span class="nv">lights</span><span class="p">:</span> <span class="n">lights</span><span class="p">,</span> <span class="nv">style</span><span class="p">:</span> <span class="n">style</span><span class="p">,</span><span class="nv">type</span><span class="p">:</span> <span class="kt">FCMType</span><span class="o">.</span><span class="kt">DEFAULT</span><span class="p">)</span>
+</code></pre></li>
+</ul>
+<h5 id='firefoxweb' class='heading'>FirefoxWeb</h5>
+
+<p><code>FirefoxWeb</code> settings can have the following parameters:</p>
+
+<ul>
+<li><strong>title</strong> - Specifies the title to be set for the WebPush notification.</li>
+<li><strong>iconUrl</strong> - The URL of the icon to be set for the WebPush notification.</li>
+<li><strong>payload</strong> - Custom JSON payload that will be sent as part of the notification message.</li>
+<li><p><strong>timeToLive</strong> - This parameter specifies the duration (in seconds) the message should be kept in GCM storage if the device is offline.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">firefoxSetttings</span> <span class="o">=</span> <span class="kt">Notification</span><span class="o">.</span><span class="kt">Settings</span><span class="o">.</span><span class="kt">FirefoxWeb</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="s">"IBM Cloud Push Notifications"</span><span class="p">,</span>
+                              <span class="nv">iconUrl</span><span class="p">:</span> <span class="s">"https://IBM Cloud.net/icon.png"</span><span class="p">,</span>
+                              <span class="nv">payload</span><span class="p">:</span> <span class="p">[</span><span class="s">"key1"</span><span class="p">:</span><span class="s">"value1"</span><span class="p">],</span> <span class="nv">timeToLive</span><span class="p">:</span> <span class="mi">3</span><span class="p">)</span>
+</code></pre></li>
+</ul>
+<h5 id='chromeweb' class='heading'>ChromeWeb</h5>
+
+<p>ChromeWeb settings can have the following parameters:</p>
+
+<ul>
+<li><strong>title</strong> - Specifies the title to be set for the WebPush notification.</li>
+<li><strong>iconUrl</strong> - The URL of the icon to be set for the WebPush notification.</li>
+<li><strong>payload</strong> - Custom JSON payload that will be sent as part of the notification message.</li>
+<li><p><strong>timeToLive</strong> - This parameter specifies the duration (in seconds) the message should be kept in GCM storage if the device is offline.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">chromeSetttings</span> <span class="o">=</span> <span class="kt">Notification</span><span class="o">.</span><span class="kt">Settings</span><span class="o">.</span><span class="kt">ChromeWeb</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="s">"IBM Cloud Push Notifications"</span><span class="p">,</span>
+                              <span class="nv">iconUrl</span><span class="p">:</span> <span class="s">"https://IBMCloud.net/icon.png"</span><span class="p">,</span>
+                              <span class="nv">payload</span><span class="p">:</span> <span class="p">[</span><span class="s">"key1"</span><span class="p">:</span><span class="s">"value1"</span><span class="p">],</span> <span class="nv">timeToLive</span><span class="p">:</span> <span class="mi">3</span><span class="p">)</span>
+</code></pre></li>
+</ul>
+<h5 id='safariweb' class='heading'>SafariWeb</h5>
+
+<p>SafariWeb settings can have the following parameters:</p>
+
+<ul>
+<li><strong>title</strong> - Specifies the title to be set for the Safari Push Notifications.</li>
+<li><strong>urlArgs</strong> - The URL arguments that need to be used with this notification. This has to provided in the form of a JSON Array.</li>
+<li><strong>action</strong> - The label of the action button.</li>
+</ul>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">safariSettings</span> <span class="o">=</span> <span class="kt">Notification</span><span class="o">.</span><span class="kt">Settings</span><span class="o">.</span><span class="kt">SafariWeb</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="s">"IBM Cloud Push Notifications"</span><span class="p">,</span> <span class="nv">urlArgs</span><span class="p">:</span> <span class="p">[</span><span class="s">"https://IBMCloud.net"</span><span class="p">],</span> <span class="nv">action</span><span class="p">:</span> <span class="s">"View"</span><span class="p">)</span>
+</code></pre>
+<h5 id='chromeappext' class='heading'>ChromeAppExt</h5>
+
+<p>ChromeAppExt settings can have the following parameters:</p>
+
+<ul>
+<li><strong>collapseKey</strong> - This parameter identifies a group of messages.</li>
+<li><strong>delayWhileIdle</strong> - When this parameter is set to true, it indicates that the message should not be sent until the device becomes active.</li>
+<li><strong>title</strong> - Specifies the title to be set for the WebPush Notification.</li>
+<li><strong>iconUrl</strong> - The URL of the icon to be set for the WebPush Notification.</li>
+<li><strong>timeToLive</strong> - This parameter specifies how long (in seconds) the message should be kept in GCM storage if the device is offline.</li>
+<li><p><strong>payload</strong> - Custom JSON payload that will be sent as part of the notification message.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">chromeAppExtSettings</span> <span class="o">=</span> <span class="kt">Notification</span><span class="o">.</span><span class="kt">Settings</span><span class="o">.</span><span class="kt">ChromeAppExt</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="s">"IBM Cloud Push Notifications"</span><span class="p">,</span> <span class="nv">iconUrl</span><span class="p">:</span> <span class="s">"https://IBMCloud.net/icon.png"</span><span class="p">,</span> <span class="nv">collapseKey</span><span class="p">:</span> <span class="s">"collapseKey1"</span><span class="p">,</span> <span class="nv">delayWhileIdle</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span> <span class="nv">payload</span><span class="p">:</span> <span class="p">[</span><span class="s">"key1"</span><span class="p">:</span><span class="s">"value1"</span><span class="p">],</span> <span class="nv">timeToLive</span><span class="p">:</span> <span class="mi">4</span><span class="p">)</span>
+</code></pre></li>
+</ul>
+<h2 id='samples-and-videos' class='heading'>Samples and videos</h2>
+
+<ul>
+<li><p>For samples, visit - <a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-hellopush">Github Sample</a></p></li>
+<li><p>For video tutorials visit - <a href="https://www.youtube.com/playlist?list=PLTroxxTPN9dIZYn9IU-IOcQePO-u5r0r4">IBM Cloud Push Notifications</a></p></li>
+</ul>
+<h3 id='learning-more' class='heading'>Learning more</h3>
+
+<ul>
+<li><p>Visit the <strong><a href="https://developer.ibm.com/depmodels/cloud/">IBM Cloud Developers Community</a></strong>.</p></li>
+<li><p><a href="https://cloud.ibm.com/docs/mobile">Getting started with IBM MobileFirst Platform for iOS</a></p></li>
+</ul>
+<h3 id='connect-with-ibm-cloud' class='heading'>Connect with IBM Cloud</h3>
+
+<p><a href="https://twitter.com/IBMCloud">Twitter</a> |
+<a href="https://www.youtube.com/watch?v=AVPoBWScRQc">YouTube</a> |
+<a href="https://developer.ibm.com/depmodels/cloud/">Blog</a> |
+<a href="https://www.facebook.com/ibmcloud">Facebook</a> |</p>
+
+<p>=======================
+Copyright 2020-21 IBM Corp.</p>
+
+<p>Licensed under the Apache License, Version 2.0 (the &ldquo;License&rdquo;);
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at</p>
+
+<p><a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></p>
+
+<p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an &ldquo;AS IS&rdquo; BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external">IBM</a>. All rights reserved. (Last updated: 2020-04-30)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

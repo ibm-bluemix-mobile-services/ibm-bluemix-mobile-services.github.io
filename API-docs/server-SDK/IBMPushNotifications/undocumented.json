@@ -1,0 +1,306 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/ananthakrishnankg/Downloads/android /bms-pushnotifications-serversdk-swift/Sources/Notification.swift",
+      "line": 446,
+      "symbol": "Notification.Settings.Gcm.jsonFormat",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ananthakrishnankg/Downloads/android /bms-pushnotifications-serversdk-swift/Sources/Notification.swift",
+      "line": 477,
+      "symbol": "Notification.Settings.GcmLights",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ananthakrishnankg/Downloads/android /bms-pushnotifications-serversdk-swift/Sources/Notification.swift",
+      "line": 519,
+      "symbol": "Notification.Settings.GcmStyle",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ananthakrishnankg/Downloads/android /bms-pushnotifications-serversdk-swift/Sources/Notification.swift",
+      "line": 804,
+      "symbol": "TargetPlatform.Apple",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ananthakrishnankg/Downloads/android /bms-pushnotifications-serversdk-swift/Sources/Notification.swift",
+      "line": 805,
+      "symbol": "TargetPlatform.Google",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ananthakrishnankg/Downloads/android /bms-pushnotifications-serversdk-swift/Sources/Notification.swift",
+      "line": 806,
+      "symbol": "TargetPlatform.WebChrome",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ananthakrishnankg/Downloads/android /bms-pushnotifications-serversdk-swift/Sources/Notification.swift",
+      "line": 807,
+      "symbol": "TargetPlatform.webFirefox",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ananthakrishnankg/Downloads/android /bms-pushnotifications-serversdk-swift/Sources/Notification.swift",
+      "line": 808,
+      "symbol": "TargetPlatform.WebSafari",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ananthakrishnankg/Downloads/android /bms-pushnotifications-serversdk-swift/Sources/Notification.swift",
+      "line": 809,
+      "symbol": "TargetPlatform.ChromeExtApp",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ananthakrishnankg/Downloads/android /bms-pushnotifications-serversdk-swift/Sources/Notification.swift",
+      "line": 818,
+      "symbol": "GcmVisibility.Private",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ananthakrishnankg/Downloads/android /bms-pushnotifications-serversdk-swift/Sources/Notification.swift",
+      "line": 819,
+      "symbol": "GcmVisibility.Public",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ananthakrishnankg/Downloads/android /bms-pushnotifications-serversdk-swift/Sources/Notification.swift",
+      "line": 827,
+      "symbol": "GcmStyleTypes.picture_notification",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ananthakrishnankg/Downloads/android /bms-pushnotifications-serversdk-swift/Sources/Notification.swift",
+      "line": 828,
+      "symbol": "GcmStyleTypes.bigtext_notification",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ananthakrishnankg/Downloads/android /bms-pushnotifications-serversdk-swift/Sources/Notification.swift",
+      "line": 829,
+      "symbol": "GcmStyleTypes.inbox_notification",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ananthakrishnankg/Downloads/android /bms-pushnotifications-serversdk-swift/Sources/Notification.swift",
+      "line": 837,
+      "symbol": "GcmLED.Black",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ananthakrishnankg/Downloads/android /bms-pushnotifications-serversdk-swift/Sources/Notification.swift",
+      "line": 838,
+      "symbol": "GcmLED.DarkGray",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ananthakrishnankg/Downloads/android /bms-pushnotifications-serversdk-swift/Sources/Notification.swift",
+      "line": 839,
+      "symbol": "GcmLED.Gray",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ananthakrishnankg/Downloads/android /bms-pushnotifications-serversdk-swift/Sources/Notification.swift",
+      "line": 840,
+      "symbol": "GcmLED.LightGray",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ananthakrishnankg/Downloads/android /bms-pushnotifications-serversdk-swift/Sources/Notification.swift",
+      "line": 841,
+      "symbol": "GcmLED.White",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ananthakrishnankg/Downloads/android /bms-pushnotifications-serversdk-swift/Sources/Notification.swift",
+      "line": 842,
+      "symbol": "GcmLED.Red",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ananthakrishnankg/Downloads/android /bms-pushnotifications-serversdk-swift/Sources/Notification.swift",
+      "line": 843,
+      "symbol": "GcmLED.Green",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ananthakrishnankg/Downloads/android /bms-pushnotifications-serversdk-swift/Sources/Notification.swift",
+      "line": 844,
+      "symbol": "GcmLED.Blue",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ananthakrishnankg/Downloads/android /bms-pushnotifications-serversdk-swift/Sources/Notification.swift",
+      "line": 845,
+      "symbol": "GcmLED.Yellow",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ananthakrishnankg/Downloads/android /bms-pushnotifications-serversdk-swift/Sources/Notification.swift",
+      "line": 846,
+      "symbol": "GcmLED.Cyan",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ananthakrishnankg/Downloads/android /bms-pushnotifications-serversdk-swift/Sources/Notification.swift",
+      "line": 847,
+      "symbol": "GcmLED.Magneta",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ananthakrishnankg/Downloads/android /bms-pushnotifications-serversdk-swift/Sources/Notification.swift",
+      "line": 848,
+      "symbol": "GcmLED.Transparent",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ananthakrishnankg/Downloads/android /bms-pushnotifications-serversdk-swift/Sources/Notification.swift",
+      "line": 856,
+      "symbol": "ApnsType.DEFAULT",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ananthakrishnankg/Downloads/android /bms-pushnotifications-serversdk-swift/Sources/Notification.swift",
+      "line": 857,
+      "symbol": "ApnsType.MIXED",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ananthakrishnankg/Downloads/android /bms-pushnotifications-serversdk-swift/Sources/Notification.swift",
+      "line": 858,
+      "symbol": "ApnsType.SILENT",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ananthakrishnankg/Downloads/android /bms-pushnotifications-serversdk-swift/Sources/Notification.swift",
+      "line": 866,
+      "symbol": "FCMType.DEFAULT",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ananthakrishnankg/Downloads/android /bms-pushnotifications-serversdk-swift/Sources/Notification.swift",
+      "line": 867,
+      "symbol": "FCMType.SILENT",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ananthakrishnankg/Downloads/android /bms-pushnotifications-serversdk-swift/Sources/Notification.swift",
+      "line": 875,
+      "symbol": "GcmPriority.DEFAULT",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ananthakrishnankg/Downloads/android /bms-pushnotifications-serversdk-swift/Sources/Notification.swift",
+      "line": 876,
+      "symbol": "GcmPriority.MIN",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ananthakrishnankg/Downloads/android /bms-pushnotifications-serversdk-swift/Sources/Notification.swift",
+      "line": 877,
+      "symbol": "GcmPriority.LOW",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ananthakrishnankg/Downloads/android /bms-pushnotifications-serversdk-swift/Sources/Notification.swift",
+      "line": 878,
+      "symbol": "GcmPriority.HIGH",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ananthakrishnankg/Downloads/android /bms-pushnotifications-serversdk-swift/Sources/Notification.swift",
+      "line": 879,
+      "symbol": "GcmPriority.MAX",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ananthakrishnankg/Downloads/android /bms-pushnotifications-serversdk-swift/Sources/PushNotifications.swift",
+      "line": 34,
+      "symbol": "PushNotifications.Region.US_SOUTH",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ananthakrishnankg/Downloads/android /bms-pushnotifications-serversdk-swift/Sources/PushNotifications.swift",
+      "line": 35,
+      "symbol": "PushNotifications.Region.UK",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ananthakrishnankg/Downloads/android /bms-pushnotifications-serversdk-swift/Sources/PushNotifications.swift",
+      "line": 36,
+      "symbol": "PushNotifications.Region.SYDNEY",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ananthakrishnankg/Downloads/android /bms-pushnotifications-serversdk-swift/Sources/PushNotifications.swift",
+      "line": 37,
+      "symbol": "PushNotifications.Region.FRANKFURT",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ananthakrishnankg/Downloads/android /bms-pushnotifications-serversdk-swift/Sources/PushNotifications.swift",
+      "line": 38,
+      "symbol": "PushNotifications.Region.US_EAST",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ananthakrishnankg/Downloads/android /bms-pushnotifications-serversdk-swift/Sources/PushNotifications.swift",
+      "line": 39,
+      "symbol": "PushNotifications.Region.JP_TOK",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ananthakrishnankg/Downloads/android /bms-pushnotifications-serversdk-swift/Sources/PushNotifications.swift",
+      "line": 50,
+      "symbol": "PushNotifications.overrideServerHost",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/ananthakrishnankg/Downloads/android /bms-pushnotifications-serversdk-swift"
+}
