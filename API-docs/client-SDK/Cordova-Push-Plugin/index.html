@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Home</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Home</h1>
+
+    
+
+
+
+    
+
+
+    <h3>bms-push 4.0.0</h3>
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+    <section>
+        <article><h1>IBM Cloud Push Notifications Cordova SDK</h1>
+<p><a href="https://bluemix.net"><img src="https://img.shields.io/badge/bluemix-powered-blue.svg" alt=""></a>
+<a href="https://travis-ci.org/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push"><img src="https://travis-ci.org/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push.svg?branch=master" alt="Build Status"></a>
+<a href="https://www.npmjs.com/package/bms-push"><img src="https://img.shields.io/npm/v/bms-push.svg" alt="npm"></a>
+<a href="https://www.npmjs.com/package/bms-push"><img src="https://img.shields.io/npm/dm/bms-push.svg" alt="npm"></a></p>
+<p><a href="https://nodei.co/npm/bms-push/"><img src="https://nodei.co/npm/bms-push.png?downloads=true&amp;downloadRank=true&amp;stars=true" alt="npm package"></a></p>
+<p>The <a href="https://cloud.ibm.com/catalog/services/push-notifications">IBM Cloud Push Notifications service</a> provides a unified push service to send real-time notifications to mobile and web applications. The Push Notifications Cordova Plugin Push SDK enables Cordova apps to receive notifications sent from the service.</p>
+<p>Ensure that you go through <a href="https://cloud.ibm.com/docs/services/mobilepush?topic=mobile-pushnotification-gettingstartedtemplate#gettingstartedtemplate">IBM Cloud Push Notifications service documentation</a> before you start.</p>
+<h2>Contents</h2>
+<ul>
+<li><a href="#prerequisites">Prerequisites</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#initialize-sdk">Initialize SDK</a>
+<ul>
+<li><a href="#initialize-the-core-plugin">Initialize the core plugin</a></li>
+<li><a href="#initialize-the-push-plugin">Initialize the Push plugin</a></li>
+</ul>
+</li>
+<li><a href="#register-for-notifications">Register for notifications</a>
+<ul>
+<li><a href="#receiving-notifications">Receiving notifications</a></li>
+</ul>
+</li>
+<li><a href="#push-notification-service-tags">Push Notification service tags</a>
+<ul>
+<li><a href="#retrieve-available-tags">Retrieve available tags</a></li>
+<li><a href="#subscribe-to-tags">Subscribe to tags</a></li>
+<li><a href="#retrieve-subscribed-tags">Retrieve subscribed tags</a></li>
+<li><a href="#unsubscribing-from-tags">Unsubscribing from tags</a></li>
+</ul>
+</li>
+<li><a href="#notification-options">Notification Options</a>
+<ul>
+<li><a href="#interactive-notifications">Interactive notifications</a>
+<ul>
+<li><a href="#handling-interactive-notifications-click">Handling interactive notifications click</a></li>
+</ul>
+</li>
+<li><a href="#adding-custom-deviceid-for-registration">Adding custom DeviceId for registration</a></li>
+</ul>
+</li>
+<li><a href="#usage">Methods usage</a></li>
+<li><a href="#samples-and-videos">Samples and Videos</a></li>
+</ul>
+<h2>Prerequisites</h2>
+<ul>
+<li><a href="https://developer.android.com/studio/index.html">Android Studio</a></li>
+<li>Xcode</li>
+<li><a href="https://cordova.apache.org/docs/en/latest/guide/cli/">Cordova CLI</a>)</li>
+<li><a href="https://docs.npmjs.com/getting-started/installing-node">Node.js/npm</a>)</li>
+</ul>
+<h2>Installation</h2>
+<p>You need to create a Cordova project and add platforms before adding the IBM Cloud Push Notifications Cordova Plugin Push SDK. Complete the following steps:</p>
+<ol>
+<li>
+<p>Create a Cordova application:</p>
+<ol>
+<li>Run the following commands to create a new Cordova application. Alternatively, you can use an existing application as well.<pre class="prettyprint source lang-Bash"><code>cordova create {your_app_name}
+cd {your_app_name}
+</code></pre>
+</li>
+<li>Edit <code>config.xml</code> file and set the desired application name in the <code>&lt;name&gt;</code> element instead of a default <code>HelloCordova</code>.</li>
+<li>In the <code>config.xml</code> file, update the <code>&lt;platform name=&quot;ios&quot;&gt;</code> element with a deployment target declaration. See the code snippet.<pre class="prettyprint source lang-XML"><code>&lt;platform name=&quot;ios&quot;>
+	&lt;preference name=&quot;deployment-target&quot; value=&quot;8.0&quot; />
+	&lt;!-- add deployment target declaration -->
+&lt;/platform>
+</code></pre>
+</li>
+<li>In the <code>config.xml</code> file update the <code>&lt;platform name=&quot;android&quot;&gt;</code> element with a minimum and target SDK versions as shown in the code snippet below.</li>
+</ol>
+<pre class="prettyprint source lang-XML"><code>	&lt;platform name=&quot;android&quot;>
+		&lt;preference name=&quot;android-minSdkVersion&quot; value=&quot;15&quot; />
+		&lt;preference name=&quot;android-targetSdkVersion&quot; value=&quot;26&quot; />
+		&lt;!-- add minimum and target Android API level declaration -->
+	&lt;/platform>
+	```
+
+>**Note**: The minSdkVersion should be above 15 and the targetSdkVersion should always reflect the latest Android SDK available from Google.
+
+</code></pre>
+</li>
+<li>
+<p>Add the Cordova platforms. Run either of the following commands, based on your platform:</p>
+<ul>
+<li>For iOS: <code>cordova platform add ios</code></li>
+<li>For Android: <code>cordova platform add android</code></li>
+</ul>
+<p>Ensure that you use the iOS version specified through this command for the Cordova platform. It is required to build the Cordova app.</p>
+</li>
+<li>
+<p>Add the Cordova IBM Cloud Push plugin. From your Cordova application root directory, enter the following command to install the Cordova Push plugin.</p>
+<pre class="prettyprint source lang-XML"><code>cordova plugin add bms-push
+</code></pre>
+<p>This also installs the <code>Cordova Core plug-in</code>, which initializes your connection to IBM Cloud.</p>
+</li>
+<li>
+<p>From your app root folder, verify that the Cordova <code>Core plugin</code> and <code>Push plugin</code> were installed successfully, using the command:</p>
+<pre class="prettyprint source lang-XML"><code>cordova plugin list
+</code></pre>
+</li>
+</ol>
+<blockquote>
+<p><strong>Note</strong>: Existing vendor-acquired Push Notification plugins (e.g., phonegap) may interfere with bms-push. Remove these plugins to ensure proper functionality.</p>
+</blockquote>
+<h2>Initialize SDK</h2>
+<p>Choose either of the following steps, based on your platform:</p>
+<ul>
+<li>
+<p>For iOS:</p>
+<ol>
+<li>In the Capabilities, enable <code>push notifications</code> and <code>Background modes</code>. Under <code>Background modes</code> enable the <code>Remote notification</code> and <code>background fetch</code>.</li>
+<li>Add signing certificates</li>
+</ol>
+</li>
+<li>
+<p>For Android App</p>
+<ol>
+<li>Download your Firebase google-services.json for android, and place them in the root folder of your cordova project -<code>[your-app-name]/platforms/android</code>.</li>
+</ol>
+</li>
+</ul>
+<p>For <code>Android Studion 3.+</code> users, update the build.gradle file with the folowing -</p>
+<p>Change the,</p>
+<pre class="prettyprint source lang-XML"><code>debugCompile project(path: 'CordovaLib', configuration: 'debug') 
+releaseCompile project(path: 'CordovaLib', configuration: 'release')
+</code></pre>
+<p>to</p>
+<pre class="prettyprint source lang-XML"><code>compile project(':CordovaLib')
+</code></pre>
+<h3>Initialize the core plugin</h3>
+<p>Initialize the <code>bms-core</code> plugin. Run the following snippet:</p>
+<pre class="prettyprint source lang-JS"><code>onDeviceReady: function() {
+  app.receivedEvent('deviceready');
+  BMSClient.initialize(&quot;YOUR APP REGION&quot;);
+}
+</code></pre>
+<p>For the region, pass any of the following:</p>
+<ul>
+<li><code>REGION_US_SOUTH</code> // &quot;.ng.bluemix.net&quot;;</li>
+<li><code>REGION_UK</code> //&quot;.eu-gb.bluemix.net&quot;;</li>
+<li><code>REGION_SYDNEY</code> // &quot;.au-syd.bluemix.net&quot;;</li>
+<li><code>REGION_GERMANY</code> // &quot;.eu-de.bluemix.net&quot;</li>
+<li><code>REGION_TOKYO</code> // &quot;.jp-tok.bluemix.net&quot;</li>
+<li><code>REGION_US_EAST</code> // &quot;.us-east.bluemix.net&quot;</li>
+</ul>
+<p>For example:</p>
+<pre class="prettyprint source"><code>  BMSClient.initialize(BMSClient.REGION_US_SOUTH);
+</code></pre>
+<h3>Initialize the Push plugin</h3>
+<p>Initialize the <code>BMSPush</code>. Run the following snippet:</p>
+<ul>
+<li>
+<p>Initialize without options</p>
+<pre class="prettyprint source lang-JS"><code>
+  // Initialize for normal push notifications
+  var options =  {};
+  BMSPush.initialize(appGUID,clientSecret,options);
+</code></pre>
+</li>
+<li>
+<p>Initialize with options</p>
+<pre class="prettyprint source lang-JS"><code>  // Initialize for iOS actionable push notifications, custom deviceId and varibales for Parameterize Push Notifications 
+  var options = {&quot;categories&quot;:{
+              &quot;Category_Name1&quot;:[
+                  { &quot;IdentifierName&quot;:&quot;IdentifierName_1&quot;,
+                    &quot;actionName&quot;:&quot;actionName_1&quot;,
+                    &quot;IconName&quot;:&quot;IconName_1&quot;
+                  },
+                  { &quot;IdentifierName&quot;:&quot;IdentifierName_2&quot;,
+                    &quot;actionName&quot;:&quot;actionName_2&quot;,
+                    &quot;IconName&quot;:&quot;IconName_2&quot;
+                  }
+              ]},
+              &quot;deviceId&quot;:&quot;mydeviceId&quot;,
+              &quot;variables&quot;:{&quot;username&quot;:&quot;UserName&quot;,&quot;accountNumber&quot;:&quot;536475869765475869&quot;}
+          };
+
+  BMSPush.initialize(appGUID, clientSecret, options);
+</code></pre>
+</li>
+</ul>
+<p>Where <code>appGUID</code> is the Push service instance Id value, clientSecret<code>is the Push service instance client secret value and</code>options`can be notification options such as interactive notifiaction and custom deviceId.</p>
+<h2>Register for notifications</h2>
+<p>Use the <code>BMSPush.registerDevice()</code> API to register the device with Push Notifications service.</p>
+<p>The following options are supported:</p>
+<ul>
+<li>
+<p>Register without UserId</p>
+<p>To register without userId, use the following pattern:</p>
+<pre class="prettyprint source lang-JS"><code>    var success = function(response) { console.log(&quot;Success: &quot; + response); };
+    var failure = function(response) { console.log(&quot;Error: &quot; + response); };
+    var options = {};
+    BMSPush.registerDevice(options, success, failure);
+</code></pre>
+</li>
+<li>
+<p>Register with UserId</p>
+<p>The <code>userId</code> can be specified while registering the device with Push Notifications service. The register method will accept one more parameter - <code>userId</code></p>
+<pre class="prettyprint source lang-JS"><code>  var success = function(response) { console.log(&quot;Success: &quot; + response); };
+  var failure = function(response) { console.log(&quot;Error: &quot; + response); };
+  var options = {&quot;userId&quot;: &quot;Your User Id value&quot;};
+  BMSPush.registerDevice(options, success, failure);
+</code></pre>
+<p>Where UserId is the user identifier value you want to register the device in the push service instance.</p>
+<blockquote>
+<p><strong>Note</strong>: If userId is provided, the client secret value must be provided.</p>
+</blockquote>
+</li>
+<li>
+<p>Unregister from notifications</p>
+<p>Use the following code snippet to unregister the device from push notification service instance:</p>
+<pre class="prettyprint source lang-JS"><code>  	var success = function(response) { console.log(&quot;Success: &quot; + response); };
+  	var failure = function(response) { console.log(&quot;Error: &quot; + response); };
+  	BMSPush.unregisterDevice(options, success, failure);
+</code></pre>
+</li>
+<li>
+<p>Unregister the device from UserId</p>
+<p>To unregister from the <code>UserId</code> based registration you have to call the registration method - without userId.</p>
+</li>
+</ul>
+<h3>Receiving notifications</h3>
+<p>To receive push notification call back, add the following code snippet:</p>
+<pre class="prettyprint source lang-JS"><code>  var handleNotificationCallback = function(notification) {
+  	// notification is a JSON object
+  	alert(notification.message);
+  }
+  BMSPush.registerNotificationsCallback(handleNotificationCallback);
+</code></pre>
+<h2>Push Notification service tags</h2>
+<h3>Retrieve available tags</h3>
+<p>The <code>retrieveAvailableTags()</code> API returns the list of tags to which the device
+can subscribe. After the device is subscribes to a particular tag, the device can receive notifications that are sent for that tag.</p>
+<p>Add the following code snippets to your Swift mobile application to get a list of tags to which the device can subscribe:</p>
+<pre class="prettyprint source lang-JS"><code>  var failure = function(response) { console.log(&quot;Error: &quot; + response); };
+  BMSPush.retrieveAvailableTags(function(tags) {
+  	alert(tags);
+  }, failure);
+</code></pre>
+<h3>Subscribe to tags</h3>
+<p>The <code>subscribe()</code> API will subscribe the iOS device for the list of given tags. After the device is subscribed to a particular tag, the device can receive push notifications that are sent for that tag.</p>
+<p>Add the following code snippets to your Swift mobile application to subscribe to a list of tags:</p>
+<pre class="prettyprint source lang-JS"><code>  var success = function(response) { console.log(&quot;Success: &quot; + response); };
+  var failure = function(response) { console.log(&quot;Error: &quot; + response); };
+  var tag = &quot;YourTag&quot;;
+  BMSPush.subscribe(tag, success, failure);
+</code></pre>
+<h3>Retrieve subscribed tags</h3>
+<p>The <code>retrieveSubscriptions()</code> API will return the list of tags to which the device is subscribed.</p>
+<p>Add the following code snippets to your Swift mobile application to get the  subscription list:</p>
+<pre class="prettyprint source lang-JS"><code>  var failure = function(response) { console.log(&quot;Error: &quot; + response); };
+  BMSPush.retrieveSubscriptions(function(tags) {
+  	alert(tags);
+  }, failure);
+</code></pre>
+<h3>Unsubscribing from tags</h3>
+<p>The <code>unsubscribe()</code> API will remove the device subscription from the list tags.</p>
+<p>Use the following code snippets to unsubsribe from tags:</p>
+<pre class="prettyprint source lang-JS"><code>  var success = function(response) { console.log(&quot;Success: &quot; + response); };
+  var failure = function(response) { console.log(&quot;Error: &quot; + response); };
+  var tag = &quot;YourTag&quot;;
+  BMSPush.unsubscribe(tag, success, failure);
+</code></pre>
+<h2>Notification options</h2>
+<p>The following notification options are supported.</p>
+<h3>Interactive notifications</h3>
+<p>To enable interactive push notifications, the notification action parameters must be passed in as part of the notification object. For example:</p>
+<pre class="prettyprint source lang-JS"><code>  var options ={&quot;categories&quot;:{
+                &quot;Category_Name1&quot;:[
+                  {
+                    &quot;IdentifierName&quot;:&quot;IdentifierName_1&quot;,
+                    &quot;actionName&quot;:&quot;actionName_1&quot;,
+                    &quot;IconName&quot;:&quot;IconName_1&quot;
+                 },
+                {
+                   &quot;IdentifierName&quot;:&quot;IdentifierName_2&quot;,
+                   &quot;actionName&quot;:&quot;actionName_2&quot;,
+                   &quot;IconName&quot;:&quot;IconName_2&quot;
+                }
+              ]};
+  BMSPush.initialize(appGUID, clientSecret, options);
+</code></pre>
+<h3>Handling interactive notifications click</h3>
+<p>To identify which action clicked use the following,</p>
+<pre class="prettyprint source lang-JS"><code>var showNotification = function(notif) {
+    var identifierName = notif[&quot;identifierName&quot;];
+    alert(identifierName);
+};
+</code></pre>
+<h3>Adding custom DeviceId for registration</h3>
+<p>To send <code>DeviceId</code>, use the <code>options</code> parameter in <code>initialize method</code> of <code>BMSPush</code> class. For example:</p>
+<pre class="prettyprint source lang-JS"><code>  var options = {
+    &quot;devieID&quot;:&quot;mydeviceId&quot;
+  };
+  BMSPush.initialize(appGUID, clientSecret, options);
+</code></pre>
+<h2>Usage</h2>
+<p>The following BMSPush Javascript functions are available:</p>
+<table>
+<thead>
+<tr>
+<th>Javascript Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>initialize(pushAppGUID, clientSecret,category)</td>
+<td>Initialize the Push SDK.</td>
+</tr>
+<tr>
+<td>registerDevice(options, success, failure)</td>
+<td>Registers the device with the Push Notifications Service.</td>
+</tr>
+<tr>
+<td>unregisterDevice(success, failure)</td>
+<td>Unregisters the device from the Push Notifications Service</td>
+</tr>
+<tr>
+<td>retrieveSubscriptions(success, failure)</td>
+<td>Retrieves the tags device is currently subscribed to</td>
+</tr>
+<tr>
+<td>retrieveAvailableTags(success, failure)</td>
+<td>Retrieves all the tags available in a push notification service instance.</td>
+</tr>
+<tr>
+<td>subscribe(tag, success, failure)</td>
+<td>Subscribes to a particular tag.</td>
+</tr>
+<tr>
+<td>unsubscribe(tag, success, failure)</td>
+<td>Unsubscribes from a particular tag.</td>
+</tr>
+<tr>
+<td>registerNotificationsCallback(callback)</td>
+<td>Registers a callback for when a notification arrives on the device.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Android (Native)</strong>
+The following native Android function is available.</p>
+<table>
+<thead>
+<tr>
+<th>Android function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CDVBMSPush. setIgnoreIncomingNotifications(boolean ignore)</td>
+<td>By default, push notifications plugin handles all incoming Push Notification by tunnelling them to JavaScript callback. Use this method to override the plugin's default behavior in case you want to manually handle incoming push notifications in native code.</td>
+</tr>
+</tbody>
+</table>
+<h2>Samples and Videos</h2>
+<ul>
+<li>
+<p>For samples, visit - <a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-hellopush">Github Sample</a></p>
+</li>
+<li>
+<p>For video tutorials, visit - <a href="https://www.youtube.com/playlist?list=PLTroxxTPN9dIZYn9IU-IOcQePO-u5r0r4">IBM Cloud Push Notifications</a></p>
+</li>
+</ul>
+<p>=======================</p>
+<p>Copyright 2020-21 IBM Corp.</p>
+<p>Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at</p>
+<p>http://www.apache.org/licenses/LICENSE-2.0</p>
+<p>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.</p></article>
+    </section>
+
+
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#initialize">initialize</a></li><li><a href="global.html#registerDevice">registerDevice</a></li><li><a href="global.html#registerNotificationsCallback">registerNotificationsCallback</a></li><li><a href="global.html#retrieveAvailableTags">retrieveAvailableTags</a></li><li><a href="global.html#retrieveSubscriptions">retrieveSubscriptions</a></li><li><a href="global.html#setNotificationStatusListener">setNotificationStatusListener</a></li><li><a href="global.html#subscribe">subscribe</a></li><li><a href="global.html#unregisterDevice">unregisterDevice</a></li><li><a href="global.html#unsubscribe">unsubscribe</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.4</a> on Tue May 05 2020 18:51:58 GMT+0530 (India Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
