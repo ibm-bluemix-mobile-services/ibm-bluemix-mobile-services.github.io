@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Home</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Home</h1>
+
+    
+
+
+
+    
+
+
+    <h3>bmd-push-react-native 1.3.0</h3>
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+    <section>
+        <article><h1>react-native-bmd-push-react</h1>
+<p>IBM Cloud Mobile Services - Client SDK React Native for Push Notifications service</p>
+<p>The <a href="https://cloud.ibm.com/catalog/services/push-notifications">IBM Cloud Push Notifications service</a> provides a unified push service to send real-time notifications to mobile and web applications. The SDK enables react-native apps to receive push notifications sent from the service.</p>
+<p>Ensure that you go through <a href="https://cloud.ibm.com/docs/services/mobilepush?topic=mobile-pushnotification-gettingstartedtemplate#gettingstartedtemplate">IBM Cloud Push Notifications service documentation</a> before you start.</p>
+<h2>Contents</h2>
+<ul>
+<li><a href="#version-history">Version History</a></li>
+<li><a href="#prerequisites">Prerequisites</a></li>
+<li><a href="#installation">Installation</a>
+<ul>
+<li><a href="#mostly-automatic-installation">Automatic installation</a></li>
+<li><a href="#manual-installation">Manual installation</a></li>
+</ul>
+</li>
+<li><a href="#dependencies">Dependencies</a>
+<ul>
+<li><a href="#ios">iOS</a></li>
+<li><a href="#android-fcm">Android FCM</a></li>
+</ul>
+</li>
+<li><a href="#set-up-sdks">Set up SDKs</a>
+<ul>
+<li><a href="#set-up-ios">iOS</a></li>
+<li><a href="#set-up-android">Android</a></li>
+</ul>
+</li>
+<li><a href="#initialize-sdk">Initialize SDK</a></li>
+<li><a href="#register-for-notifications">Register for notifications</a></li>
+<li><a href="#unregister-from-push">UnRegister from push</a></li>
+<li><a href="#push-notification-service-tags">Push Notification service tags</a>
+<ul>
+<li><a href="#retrieve-tags">Retrieve tags</a></li>
+<li><a href="#subscribe-to-a-tag">Subscribe to a tag</a></li>
+<li><a href="#retrieve-subscriptions">Retrieve subscriptions</a></li>
+<li><a href="#unsubscribing-from-tag">Unsubscribing from tag</a></li>
+</ul>
+</li>
+<li><a href="#samples-and-videos">Samples and videos</a></li>
+</ul>
+<h2>Version History</h2>
+<ul>
+<li>1.3.0 - Added support for CocoaPods and tokyo region</li>
+<li>1.2.0 - Added Android title</li>
+</ul>
+<h2>Prerequisites</h2>
+<ul>
+<li>Xcode 10+</li>
+<li>Android: minSdkVersion 16+, compileSdkVersion 28+</li>
+<li>React Native &gt;= 0.57.8</li>
+<li>React Native CLI &gt;= 2.0.1</li>
+</ul>
+<h2>Installation</h2>
+<h3>Mostly automatic installation</h3>
+<p>Install the <code>bmd-push-react-native</code> using ,</p>
+<pre class="prettyprint source lang-JS"><code>$ react-native install bmd-push-react-native
+</code></pre>
+<p>You can link the package like this,</p>
+<pre class="prettyprint source lang-JS"><code>$ react-native link bmd-push-react-native
+</code></pre>
+<h3>Manual installation</h3>
+<p>If you want to link it manually ,</p>
+<ul>
+<li>iOS</li>
+</ul>
+<ol>
+<li>In XCode, in the project navigator, right click <code>Libraries</code> ➜ <code>Add Files to [your project's name]</code></li>
+<li>Go to <code>node_modules</code> ➜ <code>bmd-push-react-native</code> and add <code>RNBmdPushReact.xcodeproj</code></li>
+<li>In XCode, in the project navigator, select your project. Add <code>libRNBmdPushReact.a</code> to your project's <code>Build Phases</code> ➜ <code>Link Binary With Libraries</code></li>
+</ol>
+<ul>
+<li>Android</li>
+</ul>
+<ol>
+<li>Open up <code>android/app/src/main/java/[...]/MainActivity.java</code></li>
+</ol>
+<ul>
+<li>Add <code>import com.bmdpush.react.RNBmdPushReactPackage;</code> to the imports at the top of the file</li>
+<li>Add <code>new RNBmdPushReactPackage()</code> to the list returned by the <code>getPackages()</code> method</li>
+</ul>
+<ol start="2">
+<li>Append the following lines to <code>android/settings.gradle</code>:</li>
+</ol>
+<pre class="prettyprint source"><code>include ':bmd-push-react-native'
+project(':bmd-push-react-native').projectDir = new File(rootProject.projectDir,     '../node_modules/bmd-push-react-native/android')
+</code></pre>
+<ol start="3">
+<li>Insert the following lines inside the dependencies block in <code>android/app/build.gradle</code>:</li>
+</ol>
+<pre class="prettyprint source"><code>compile project(':bmd-push-react-native')
+</code></pre>
+<h2>Dependencies</h2>
+<h3>iOS</h3>
+<h4>CocoaPods</h4>
+<ol>
+<li>Open the <code>ios</code> directory and add <code>use_frameworks!</code> and <code>Swift version</code> in the <code>Podfile</code>.</li>
+</ol>
+<pre class="prettyprint source lang-Swift"><code>  use_frameworks!
+  ENV['SWIFT_VERSION'] = '5.0'
+</code></pre>
+<p>OR</p>
+<pre class="prettyprint source lang-Swift"><code>use_frameworks!
+
+  target 'Your Target Name' do
+	  pod 'RNBmdPushReact', :path => '../node_modules/bmd-push-react-native'
+  end
+  post_install do |installer|
+    installer.pods_project.targets.each do |target|
+      if ['BMSPush', 'BMSCore', 'BMSAnalyticsAPI'].include? target.name
+        target.build_configurations.each do |config|
+          config.build_settings['SWIFT_VERSION'] = '5.0'
+        end
+      end
+    end
+  end
+</code></pre>
+<ol start="2">
+<li>run <code>pod install</code> and open your <code>&lt;your-app&gt;.xcworkspace</code> in Xcode.</li>
+<li>You need to add an empty Swift file in the app to build it successfully. This is for the swift bridging header.
+<img src="./images/rct_ios.png" alt="image"></li>
+</ol>
+<h3>Android FCM</h3>
+<p>Create a <a href="https://console.firebase.google.com">firebase project</a> and add the following bundle ids for android,</p>
+<ol>
+<li>
+<p>Add <code>your bundle Id</code> and <code>com.ibm.mobilefirstplatform.clientsdk.android.push</code> . Download the <code>google-services.json</code> and add inside the <code>android</code> ➜ <code>app</code>.</p>
+</li>
+<li>
+<p>In the root <code>build.gradle</code> ➜  <code>buildscript</code> add the following ,</p>
+</li>
+</ol>
+<pre class="prettyprint source lang-XML"><code> repositories {
+      google()
+      jcenter()
+  }
+  dependencies {
+      classpath 'com.android.tools.build:gradle:3.2.1'
+      classpath 'com.google.gms:google-services:4.0.1'
+  }
+</code></pre>
+<ol start="3">
+<li>
+<p>Go to <code>android</code> ➜  <code>app</code> ➜ <code>build.gradle</code> and add the following after <code>dependencies {....}</code>,</p>
+<pre class="prettyprint source lang-XML"><code>  apply plugin: 'com.google.gms.google-services'
+</code></pre>
+</li>
+</ol>
+<h2>Set up SDKs</h2>
+<h3>Set up iOS</h3>
+<p>Open the iOS app in XCode and do the following ,</p>
+<ol>
+<li>
+<p>Under the Capabilities section enable the <code>Push Notifications</code></p>
+</li>
+<li>
+<p>Enable the <code>Background modes</code> for <code>Remote notifications</code> and <code>Background fetch</code></p>
+</li>
+<li>
+<p>Go to <code>Build Settings</code> and make the following changes</p>
+<p>a. locate <code>Other Linker Flags</code> and add <code>-lc++</code> , <code>-ObjC</code> and <code>$(inherited)</code></p>
+</li>
+</ol>
+<p>Now you can build and run the iOS app from Xcode or using the <code>react-native run-ios</code> command.</p>
+<h3>Set up Android</h3>
+<p>Add the following inside the <code>AndroidManifest.xml</code> file .</p>
+<ol>
+<li>Add  <code>xmlns:tools=&quot;http://schemas.android.com/tools&quot;</code> in the <code>&lt;manifest ...&gt; </code> tag</li>
+</ol>
+<p>For example</p>
+<pre class="prettyprint source lang-XML"><code>&lt;manifest xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+xmlns:tools=&quot;http://schemas.android.com/tools&quot; package=&quot;com.pushsample&quot;>
+</code></pre>
+<ol start="2">
+<li>Add the following permissions,</li>
+</ol>
+<pre class="prettyprint source lang-XML"><code>&lt;uses-permission android:name=&quot;android.permission.WAKE_LOCK&quot; />
+&lt;uses-permission android:name=&quot;android.permission.GET_ACCOUNTS&quot; />
+&lt;uses-permission android:name=&quot;android.permission.USE_CREDENTIALS&quot; />
+&lt;uses-permission android:name=&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot; />
+&lt;uses-permission android:name=&quot;android.permission.ACCESS_WIFI_STATE&quot;/>
+</code></pre>
+<ol start="3">
+<li>Add <code>tools:replace=&quot;android:allowBackup&quot;</code> inside the <code>&lt;application ..&gt;</code> tag</li>
+</ol>
+<p>For example</p>
+<pre class="prettyprint source lang-XML"><code>&lt;application
+android:name=&quot;.MainApplication&quot;
+android:label=&quot;@string/app_name&quot;
+android:icon=&quot;@mipmap/ic_launcher&quot;
+android:allowBackup=&quot;false&quot;
+android:launchMode=&quot;singleTask&quot;
+android:theme=&quot;@style/AppTheme&quot;
+tools:replace=&quot;android:allowBackup&quot;>
+</code></pre>
+<ol start="4">
+<li>Add the following inside the <code>&lt;activity android:name=&quot;.MainActivity&quot; ....&gt;</code>,</li>
+</ol>
+<pre class="prettyprint source lang-XML"><code>&lt;intent-filter>
+&lt;action android:name=&quot;yourapp.bundle.IBMPushNotification&quot; />
+&lt;category android:name=&quot;android.intent.category.DEFAULT&quot; />
+&lt;/intent-filter>
+</code></pre>
+<ol start="5">
+<li>Add the following lines,</li>
+</ol>
+<pre class="prettyprint source lang-XML"><code>&lt;activity android:name=&quot;com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationHandler&quot; android:theme=&quot;@android:style/Theme.NoDisplay&quot;/>
+
+&lt;service android:exported=&quot;true&quot; android:name=&quot;com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushIntentService&quot;>
+&lt;intent-filter>
+&lt;action android:name=&quot;com.google.firebase.MESSAGING_EVENT&quot;/>
+&lt;/intent-filter>
+&lt;/service>
+&lt;service android:exported=&quot;true&quot; android:name=&quot;com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPush&quot;>
+&lt;intent-filter>
+&lt;action android:name=&quot;com.google.firebase.INSTANCE_ID_EVENT&quot;/>
+&lt;/intent-filter>
+&lt;/service>
+</code></pre>
+<p>Now you can build and run the android app from android studio or using the <code>react-native run-android</code> command.</p>
+<h2>Initialize SDK</h2>
+<p>Import the following dependecnice ,</p>
+<pre class="prettyprint source lang-JS"><code>import {Push} from 'bmd-push-react-native';
+import { DeviceEventEmitter } from 'react-native';
+</code></pre>
+<p>To initialize Push use the following code,</p>
+<ul>
+<li>Initialize without additional options</li>
+</ul>
+<pre class="prettyprint source lang-JS"><code>
+// Initialize for push notifications without passing options
+Push.init({
+    &quot;appGUID&quot;:&quot;xxxxxx-xxxx-41xxxx67-xxxxx-xxxxx&quot;,
+    &quot;clientSecret&quot;:&quot;xxxxx-xxxxx-xxxx-xxxxx-xxxxxxx&quot;,
+    &quot;region&quot;:&quot;.ng.bluemix.net&quot;
+}).then(function(response) {
+
+    alert(&quot;InitSuccess: &quot; + response);
+
+}).catch(function(e) {
+
+    alert(&quot;Init Error: &quot; + e);
+
+});
+</code></pre>
+<ul>
+<li>Initialize with additional options</li>
+</ul>
+<pre class="prettyprint source lang-JS"><code>// Initialize for push notifications by passing options
+// Initialize for iOS actionable push notifications, custom deviceId and varibales for Parameterize Push Notifications 
+
+var optionsJson = {
+    &quot;categories&quot;: { 
+        &quot;Category_Name1&quot;:[{
+            &quot;IdentifierName&quot;:&quot;IdentifierName_1&quot;,
+            &quot;actionName&quot;:&quot;actionName_1&quot;,
+            &quot;IconName&quot;:&quot;IconName_1&quot;
+            },{
+            &quot;IdentifierName&quot;:&quot;IdentifierName_2&quot;,
+            &quot;actionName&quot;:&quot;actionName_2&quot;,
+            &quot;IconName&quot;:&quot;IconName_2&quot;
+            }
+        ]},
+        &quot;deviceId&quot;:&quot;mydeviceId&quot;,
+        &quot;variables&quot;:{&quot;username&quot;:&quot;ananth&quot;,&quot;accountNumber&quot;:&quot;536475869765475869&quot;}
+    };
+
+Push.init({
+    &quot;appGUID&quot;:&quot;xxxxxx-xxxx-41xxxx67-xxxxx-xxxxx&quot;,
+    &quot;clientSecret&quot;:&quot;xxxxx-xxxxx-xxxx-xxxxx-xxxxxxx&quot;,
+    &quot;region&quot;:&quot;.ng.bluemix.net&quot;,
+    &quot;options&quot;: optionsJson
+}).then(function(response) {
+
+    alert(&quot;Init Success: &quot; + response);
+
+}).catch(function(e) {
+
+    alert(&quot;Init Error: &quot; + e);
+});
+
+</code></pre>
+<p>**IMPORTANT: These are the following supported <code>regions</code> - <code>&quot;.ng.bluemix.net&quot;, &quot;.eu-gb.bluemix.net&quot; , &quot;.au-syd.bluemix.net&quot;, &quot;.eu-de.bluemix.net&quot;, &quot;.us-east.bluemix.net&quot;, and &quot;.jp-tok.bluemix.net&quot;</code></p>
+<h2>Register for notifications</h2>
+<p>The following options are supported:</p>
+<ul>
+<li>
+<p>Register without UserId</p>
+<pre class="prettyprint source lang-JS"><code>
+// Register device for push notification without UserId
+var options = {};
+Push.register(options).then(function(response) {
+  alert(&quot;Success: &quot; + response);
+}).catch(function(e) {
+    alert(&quot;Register Error: &quot; + e);
+});
+</code></pre>
+</li>
+<li>
+<p>Register with UserId</p>
+<pre class="prettyprint source lang-JS"><code>// Register device for push notification with UserId
+
+var options = {&quot;userId&quot;:&quot;ananthreact&quot;};
+    Push.register(options).then(function(response) {
+    alert(&quot;Success: &quot; + response);
+}).catch(function(e) {
+    alert(&quot;Register Error: &quot; + e);
+});
+</code></pre>
+</li>
+</ul>
+<h2>UnRegister from push</h2>
+<pre class="prettyprint source lang-JS"><code>push.unregisterDevice().then(function(response) {
+    alert(&quot;Success unregisterDevice : &quot; + response);
+}).catch(function(e) {
+    alert(&quot;UnRegister error : &quot; + e);
+});
+</code></pre>
+<h2>Push Notification service tags</h2>
+<h3>Retrieve tags</h3>
+<pre class="prettyprint source lang-JS"><code>Push.retrieveAvailableTags().then(function(response) {
+    alert(&quot;get tags : &quot; + response);
+}).catch(function(e) {
+    alert(&quot;get tags error : &quot; + e);
+});
+</code></pre>
+<h3>Subscribe to a tag</h3>
+<pre class="prettyprint source lang-JS"><code>Push.subscribe(response[0]).then(function(response) {
+    alert(&quot;subscribe tags : &quot; + response);
+}).catch(function(e) {
+    alert(&quot;subscribe tags error : &quot; + e);
+});
+</code></pre>
+<h3>Retrieve subscriptions</h3>
+<pre class="prettyprint source lang-JS"><code>
+Push.retrieveSubscriptions().then(function(response) {
+    alert(&quot;retrieveSubscriptions tags : &quot; + response);
+}).catch(function(e){
+    alert(&quot;error retrieveSubscriptions : &quot; + e);
+});
+</code></pre>
+<h3>Unsubscribing from tag</h3>
+<pre class="prettyprint source lang-JS"><code>var tag = &quot;tag1&quot;;
+Push.unsubscribe(tag).then(function(response) {
+    alert(&quot;unsubscribe tag : &quot; + response);
+}).catch(function(e) {
+    alert(&quot;Error : &quot; + e);
+});
+</code></pre>
+<h2>Samples and videos</h2>
+<ul>
+<li>
+<p>For samples, visit - <a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-hellopush">Github Sample</a></p>
+</li>
+<li>
+<p>For video tutorials visit - <a href="https://www.youtube.com/playlist?list=PLTroxxTPN9dIZYn9IU-IOcQePO-u5r0r4">IBM Cloud Push Notifications</a></p>
+</li>
+</ul>
+<h3>Learning more</h3>
+<ul>
+<li>
+<p>Visit the <strong><a href="https://developer.ibm.com/depmodels/cloud/">IBM Cloud Developers Community</a></strong>.</p>
+</li>
+<li>
+<p><a href="https://cloud.ibm.com/docs/mobile">Getting started with IBM MobileFirst Platform for iOS</a></p>
+</li>
+</ul>
+<h3>Connect with IBM Cloud</h3>
+<p><a href="https://twitter.com/IBMCloud">Twitter</a> |
+<a href="https://www.youtube.com/watch?v=AVPoBWScRQc">YouTube</a> |
+<a href="https://developer.ibm.com/depmodels/cloud/">Blog</a> |
+<a href="https://www.facebook.com/ibmcloud">Facebook</a> |</p>
+<p>=======================
+Copyright 2020-21 IBM Corp.</p>
+<p>Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at</p>
+<p>http://www.apache.org/licenses/LICENSE-2.0</p>
+<p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.</p></article>
+    </section>
+
+
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-PushNotification.html">PushNotification</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.4</a> on Tue May 05 2020 18:38:43 GMT+0530 (India Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
