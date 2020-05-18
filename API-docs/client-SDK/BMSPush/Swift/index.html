@@ -13,7 +13,7 @@
     <a title="BMSPush  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">BMSPush Docs</a> (66% documented)</p>
+        <p><a href="index.html">BMSPush 3.6.0 Docs</a> (67% documented)</p>
         <p class="header-right"><a href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -33,17 +33,11 @@
               <li class="nav-group-task">
                 <a href="Classes/BMSPushClient.html">BMSPushClient</a>
               </li>
-              <li class="nav-group-task">
-                <a href="Classes/BMSPushClient.html">BMSPushClient</a>
-              </li>
             </ul>
           </li>
           <li class="nav-group-name">
             <a href="Options.html">Options</a>
             <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="Classes/BMSPushClientOptions.html">BMSPushClientOptions</a>
-              </li>
               <li class="nav-group-task">
                 <a href="Classes/BMSPushClientOptions.html">BMSPushClientOptions</a>
               </li>
@@ -72,14 +66,6 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Other%20Enums.html">Other Enumerations</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="Enums/IMFPushErrorvalues.html">IMFPushErrorvalues</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
             <a href="Other%20Extensions.html">Other Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
@@ -96,464 +82,379 @@
             <h1 id='ibm-cloud-mobile-services-client-sdk-swift-push' class='heading'>IBM Cloud Mobile Services - Client SDK Swift Push</h1>
 
 <p><a href="https://travis-ci.org/ibm-bluemix-mobile-services/bms-clientsdk-swift-push"><img src="https://travis-ci.org/ibm-bluemix-mobile-services/bms-clientsdk-swift-push.svg?branch=master" alt="Build Status"></a>
-<a href="https://www.codacy.com/app/AnanthaKrish/bms-clientsdk-swift-push?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ibm-bluemix-mobile-services/bms-clientsdk-swift-push&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/7a8222746ad84415812c0bfdf9ada631" alt="Codacy Badge"></a>
+<a href="https://www.codacy.com/gh/ibm-bluemix-mobile-services/bms-clientsdk-swift-push?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ibm-bluemix-mobile-services/bms-clientsdk-swift-push&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/e77ce09404264d40991865b33b8cf0bf" alt="Codacy Badge"></a>
 <a href="https://coveralls.io/github/ibm-bluemix-mobile-services/bms-clientsdk-swift-push?branch=development"><img src="https://coveralls.io/repos/github/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/badge.svg?branch=development" alt="Coverage Status"></a>
-<a href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push.git"><img src="https://img.shields.io/cocoapods/v/BMSPush.svg" alt="CocoaPods Compatible"></a>
-<a href="https://bluemix.net"><img src="https://img.shields.io/badge/bluemix-powered-blue.svg" alt=""></a>
-<a href="https://cocoapods.org/pods/BMSPush"><img src="https://img.shields.io/cocoapods/dt/BMSPush.svg" alt="CocoaPods"></a></p>
+<a href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push.git"><img src="https://img.shields.io/cocoapods/v/BMSPush.svg" alt="CocoaPods Compatible"></a></p>
 
-<p>This is the Push component of the Swift SDK for <a href="https://console.ng.net/docs/mobile/index.html">IBM Cloud Mobile Services</a>.</p>
+<p>The <a href="https://cloud.ibm.com/catalog/services/push-notifications">IBM Cloud Push Notifications service</a> provides a unified push service to send real-time notifications to mobile and web applications. The SDK enables iOS apps to receive push notifications sent from the service. </p>
+
+<p>Ensure that you go through <a href="https://cloud.ibm.com/docs/services/mobilepush?topic=mobile-pushnotification-gettingstartedtemplate#gettingstartedtemplate">IBM Cloud Push Notifications service documentation</a> before you start.</p>
 <h2 id='contents' class='heading'>Contents</h2>
 
-<p>This package contains the Push components of the Swift SDK.</p>
+<ul>
+<li><a href="#prerequisites">Prerequisites</a></li>
+<li><a href="#installation">Installation</a>
 
 <ul>
-<li>Push Registration and Un-register</li>
-<li>Subscribing and Unsubscribing for Tags</li>
+<li><a href="#cocoapods">Cocoapods</a></li>
+<li><a href="#carthage">Carthage</a></li>
+</ul></li>
+<li><a href="#initialize-sdk">Initialize SDK</a></li>
+<li><a href="#register-for-notifications">Register for notifications</a></li>
+<li><a href="#push-notification-service-tags">Push Notification service tags</a>
+
+<ul>
+<li><a href="#retrieve-tags">Retrieve tags</a></li>
+<li><a href="#subscribe-to-tags">Subscribe to tags</a></li>
+<li><a href="#retrieve-subscribed-tags">Retrieve subscribed tags</a></li>
+<li><a href="#unsubscribing-from-tags">Unsubscribing from tags</a></li>
+</ul></li>
+<li><a href="#receiving-push-notifications-on-ios-devices">Receiving push notifications on iOS devices</a></li>
+<li><a href="#notification-options">Notification options</a>
+
+<ul>
+<li><a href="#silent-notification">Silent notification</a></li>
+<li><a href="#interactive-notifications">Interactive notifications</a></li>
+<li><a href="#handling-interactive-push-notifications">Handling interactive push notifications</a></li>
+<li><a href="#adding-custom-deviceid-for-registration">Adding custom DeviceId for registration</a></li>
+<li><a href="#enabling-rich-media-notifications">Enabling rich media notifications</a></li>
+</ul></li>
+<li><a href="#advanced-options">Advanced options</a>
+
+<ul>
+<li><a href="#ios-badge">iOS badge</a></li>
+<li><a href="#custom-sound">Custom sound</a></li>
+</ul></li>
+<li><a href="#enable-monitoring">Enable monitoring</a></li>
+<li><a href="#open-url-by-clicking-push-notifications">Open URL by clicking push notifications</a></li>
+<li><a href="#parameterize-push-notifications">Parameterize Push Notifications</a></li>
+<li><a href="#api-documentation">API documentation</a></li>
+<li><a href="#samples-and-videos">Samples and videos</a></li>
 </ul>
-<h2 id='requirements' class='heading'>Requirements</h2>
+<h2 id='prerequisites' class='heading'>Prerequisites</h2>
 
 <ul>
-<li>iOS 8.0+</li>
-<li>Xcode 7.3, 8.0</li>
-<li>Swift 2.3 - 4.0</li>
-<li>CocoaPods or Carthage</li>
+<li>iOS 8.0 or later</li>
+<li>Xcode 8.0 or later</li>
+<li>Swift 3.0 or later</li>
+<li><a href="https://github.com/CocoaPods/CocoaPods-app/releases">Cocoapods latest version</a></li>
+<li>Carthage</li>
 </ul>
 <h2 id='installation' class='heading'>Installation</h2>
 
-<p>The IBM Cloud Mobile Services Swift SDKs are available via <a href="http://cocoapods.org/">CocoaPods</a> and <a href="https://github.com/Carthage/Carthage">Carthage</a>.</p>
-<h3 id='cocoapods' class='heading'>CocoaPods</h3>
+<p>The <code>IBM Cloud Push Notifications iOS SDK</code> is available through <a href="http://cocoapods.org/">Cocoapods</a> and <a href="https://github.com/Carthage/Carthage">Carthage</a>. </p>
+<h3 id='cocoapods' class='heading'>Cocoapods</h3>
 
-<p>To install BMSPush using CocoaPods, add it to your Podfile:</p>
-<pre class="highlight ruby"><code><span class="n">use_frameworks!</span>
-
-<span class="n">target</span> <span class="s1">'MyApp'</span> <span class="k">do</span>
-    <span class="n">platform</span> <span class="ss">:ios</span><span class="p">,</span> <span class="s1">'8.0'</span>
-    <span class="n">pod</span> <span class="s1">'BMSCore'</span><span class="p">,</span> <span class="s1">'~&gt; 2.0'</span>
-    <span class="n">pod</span> <span class="s1">'BMSPush'</span><span class="p">,</span> <span class="s1">'~&gt; 3.0'</span>
-<span class="k">end</span>
+<p>If your project does not have a <code>Podfile</code> yet, use the <code>pod init</code> command to create one. To install <code>IBM Cloud Push Notifications iOS SDK</code> using Cocoapods, add the following to your Podfile:</p>
+<pre class="highlight plaintext"><code>use_frameworks!
+target 'MyApp' do
+    platform :ios, '8.0'
+    pod 'BMSCore', '~&gt; 2.0'
+    pod 'BMSPush', '~&gt; 3.0'
+end
 </code></pre>
 
-<p>From the Terminal, go to your project folder and install the dependencies with the following command:</p>
-<pre class="highlight plaintext"><code>pod install
-</code></pre>
-<h4 id='swift-2-3' class='heading'>Swift 2.3</h4>
+<p>From the terminal, go to your project folder and install the dependencies with the <code>pod install</code> command.</p>
 
-<p>Before running the <code>pod install</code> command, make sure to use Cocoapods version <a href="https://github.com/CocoaPods/CocoaPods/releases/tag/1.1.0.beta.1">1.1.0.beta.1</a>.</p>
-<h4 id='swift-3-swift-4' class='heading'>Swift 3/ Swift 4</h4>
+<p>For apps built with Swift 3.0, you may receive a prompt saying &ldquo;Convert to Current Swift Syntax?&rdquo; when opening your project in Xcode 8 (following the installation of BMSCore). Do not convert BMSPush, BMSCore or BMSAnalyticsAPI.</p>
 
-<p>Before running the <code>pod install</code> command, make sure to use CocoaPods version <a href="https://github.com/CocoaPods/CocoaPods/releases/tag/1.1.0.beta.1">1.1.0.beta.1</a>.</p>
+<p>This will install the required dependencies and create a new Xcode workspace.</p>
 
-<p>For apps built with Swift 3.0/Swift 4.0, you may receive a prompt saying <q>Convert to Current Swift Syntax?</q> when opening your project in XCode 8 (following the installation of BMSCore) do not convert BMSPush, BMSCore or BMSAnalyticsAPI</p>
-
-<p>This will installs your dependencies and creates a new Xcode workspace.
-<strong><em>Note:</em></strong> Ensure that you always open the new Xcode workspace, instead of the original Xcode project file:</p>
-<pre class="highlight plaintext"><code>MyApp.xcworkspace
-</code></pre>
+<blockquote>
+<p><strong>Note</strong>: Ensure that you always open the new Xcode workspace, instead of the original Xcode project file: <strong>MyApp.xcworkspace</strong>.</p>
+</blockquote>
 <h3 id='carthage' class='heading'>Carthage</h3>
 
-<p>To install BMSPush using Carthage, add it to your Cartfile:</p>
-<pre class="highlight plaintext"><code>github "ibm-bluemix-mobile-services/bms-clientsdk-swift-push"
-</code></pre>
+<p>To install BMSPush using Carthage, complete the following steps:</p>
 
-<p>Then run the <code>carthage update</code> command. Once the build is finished, drag <code>BMSPush.framework</code>,<code>BMSCore.framework</code> and <code>BMSAnalyticsAPI.framework</code> into your Xcode project.</p>
+<ol>
+<li>Add it to your Cartfile:
+<code>
+github &quot;ibm-bluemix-mobile-services/bms-clientsdk-swift-push&quot;
+</code></li>
+<li>Run the <code>carthage update</code> command.</li>
+<li>Upon a successful build, add <code>BMSPush.framework</code>,<code>BMSCore.framework</code> and <code>BMSAnalyticsAPI.framework</code> into your Xcode project.</li>
+</ol>
 
 <p>To complete the integration, follow the instructions <a href="https://github.com/Carthage/Carthage#getting-started">here</a>.</p>
 <h4 id='xcode-8' class='heading'>Xcode 8</h4>
 
-<p>For apps built with Swift 2.3, use the command <code>carthage update --toolchain com.apple.dt.toolchain.Swift_2_3.</code> Otherwise, use <code>carthage update</code></p>
-<h2 id='enabling-ios-applications-to-receive-push-notifications' class='heading'>Enabling iOS applications to receive push notifications</h2>
-<h3 id='reference-the-sdk-in-your-code' class='heading'>Reference the SDK in your code.</h3>
-<pre class="highlight plaintext"><code>import BMSPush
-import BMSCore
-</code></pre>
-<h3 id='initializing-the-core-sdk' class='heading'>Initializing the Core SDK</h3>
-<pre class="highlight plaintext"><code>let myBMSClient = BMSClient.sharedInstance
-
-//Swift 3/Swift 4.0
-
-myBMSClient.initialize(bluemixRegion: "Location where your app Hosted")
-
-//Swift 2.3 or Older
-
-myBMSClient.initialize(bluemixRegion: "Location where your app Hosted")
-
-</code></pre>
-<h5 id='bluemixregion' class='heading'>bluemixRegion</h5>
+<p>Choose either of the following options:</p>
 
 <ul>
-<li>Specifies the location where the app hosted. You can either use one of three values - <code>BMSClient.Region.usSouth</code>, <code>BMSClient.Region.unitedKingdom</code>, <code>BMSClient.Region.germany</code>, <code>BMSClient.Region.sydney</code> and <code>BMSClient.Region.jpTok</code> OR specify the region manually .</li>
+<li>For <code>Swift 3.+</code> apps, use <code>carthage update</code>.</li>
 </ul>
+<h2 id='initialize-sdk' class='heading'>Initialize SDK</h2>
 
-<blockquote>
-<p><strong>Note</strong>:  If you are using dedicated service please use <code>overrideServerHost</code> and add <code>bluemixRegion</code> any value.</p>
-</blockquote>
-<h3 id='initializing-the-push-sdk' class='heading'>Initializing the Push SDK</h3>
-
-<p>initialize the <code><a href="Classes/BMSPushClient.html">BMSPushClient</a></code>  using the following code.</p>
-<pre class="highlight plaintext"><code>let push =  BMSPushClient.sharedInstance
-
-//Swift 3/ Swift 4.0
-
-push.initializeWithAppGUID(appGUID: "your push appGUID", clientSecret:"your push client secret")
-
-//Swift Older
-
-push.initializeWithAppGUID(appGUID:"your push appGUID", clientSecret:"your push client secret")
-
-</code></pre>
-<h5 id='appguid' class='heading'>appGUID</h5>
-
-<ul>
-<li>The Push app GUID value.</li>
-</ul>
-<h5 id='clientsecret' class='heading'>clientSecret</h5>
-
-<ul>
-<li>The Push client secret value.</li>
-</ul>
-
-<blockquote>
-<p><strong>Note</strong>: If you are using Xcode8 beta, add <code>yourApp.entitlements</code>. To do this, go to Targets -&gt; Capabilities and enable Push Notifications capability.</p>
-</blockquote>
-<h3 id='bmspushobserver-for-initialize-callback' class='heading'>BMSPushObserver for initialize callback</h3>
-
-<p>To get the <code>initializeWithAppGUID(..)</code> callback , use the following;</p>
+<p>Complete the following steps to enable iOS applications to receive notifications.</p>
 
 <ol>
-<li><p>Add the <code>BMSPushObserver</code> <code>protocol</code> in your AppDelegate</p>
-<pre class="highlight plaintext"><code> class AppDelegate: UIResponder, UIApplicationDelegate, BMSPushObserver
+<li><p>Add the <code>import</code> statements in your <code>.swift</code> file.</p>
+<pre class="highlight plaintext"><code>  import BMSCore
+  import BMSPush
 </code></pre></li>
-<li><p>Set the delegate for  <code>BMSPushObserver</code></p>
-<pre class="highlight plaintext"><code>let push =  BMSPushClient.sharedInstance
-push.delegate = self
+<li><p>Initialize the Core SDK and Push SDK</p>
+<pre class="highlight plaintext"><code>BMSClient.sharedInstance.initialize(bluemixRegion: "Location where your app Hosted")
+BMSPushClient.sharedInstance.initializeWithAppGUID(appGUID: "your push appGUID", clientSecret:"your push client secret")
 </code></pre></li>
-<li><p>Implement the <code>BMSPushObserver</code> function</p></li>
 </ol>
-<pre class="highlight plaintext"><code>   func onChangePermission(status: Bool) {
-     print("Push Notification is enabled:  \(status)" as NSString)
-    }
-</code></pre>
-<h3 id='registering-ios-applications-and-devices-with-userid' class='heading'>Registering iOS applications and devices with userId</h3>
 
-<p>For <code>userId</code> based notification, the register method will accept one more parameter - <code>userId</code></p>
-<pre class="highlight plaintext"><code>//Swift3/Swift 4.0
-
-func application (_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data){
-
-   let push =  BMSPushClient.sharedInstance
-   push.registerWithDeviceToken(deviceToken: deviceToken, WithUserId: "your userId") { (response, statusCode, error) -&gt; Void in
-    if error.isEmpty {
-      print( "Response during device registration : \(response)")
-      print( "status code during device registration : \(statusCode)")
-    } else{
-      print( "Error during device registration \(error) ")
-      Print( "Error during device registration \n  - status code: \(statusCode) \n Error :\(error) \n")
-    }  
-}
-
-//Swift2.3 and Older
-
-func application (application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData){
-
-    let push =  BMSPushClient.sharedInstance
-    push.registerWithDeviceToken(deviceToken, WithUserId: "your userId") { (response, statusCode, error) -&gt; Void in
-        if error.isEmpty {
-            print( "Response during device registration : \(response)")
-            print( "status code during device registration : \(statusCode)")
-        }else{
-            print( "Error during device registration \(error) ")
-            Print( "Error during device registration \n  - status code: \(statusCode) \n Error :\(error) \n")
-        }
-    }
-}
-</code></pre>
-<h5 id='withuserid' class='heading'>WithUserId</h5>
+<p>Where <code>bluemixRegion</code> specifies the location where the application is hosted. You can use following values:</p>
 
 <ul>
-<li>The User Id value you want to register in the push service</li>
+<li><code>BMSClient.Region.usSouth</code></li>
+<li><code>BMSClient.Region.unitedKingdom</code></li>
+<li><code>BMSClient.Region.sydney</code></li>
+<li><code>BMSClient.Region.germany</code></li>
+<li><code>BMSClient.Region.jpTok</code></li>
+<li><code>BMSClient.Region.usEast</code></li>
 </ul>
 
+<p>The <code>appGUID</code> is the Push service instance Id value, and <code>clientSecret</code> is the Push service instance client secret value.</p>
+
 <blockquote>
-<p><strong>Note</strong>: If userId is provided the client secret value must be provided.</p>
+<p><strong>Note</strong>: If you are using Xcode8 beta, add <code>yourApp.entitlements</code>. To do this, go to Targets &gt; Capabilities and enable Push Notifications capability.</p>
 </blockquote>
-<h3 id='retrieve-available-tags-and-subscribe-for-tags-based-notifications' class='heading'>Retrieve Available Tags and subscribe for Tags based Notifications</h3>
-<h5 id='retrieve-available-tags' class='heading'>Retrieve Available tags</h5>
+<h2 id='register-for-notifications' class='heading'>Register for notifications</h2>
 
-<p>The <code>retrieveAvailableTagsWithCompletionHandler</code> API returns the list of available tags to which the device
-can subscribe. After the device is subscribed to a particular tag, the device can receive any push notifications
-that are sent for that tag.Call the push service to get subscriptions for a tag.</p>
+<p>Upon successful initialization, Apple Push Notification service (APNs) will give a token in <code>didRegisterForRemoteNotificationsWithDeviceToken</code> method. Pass the token to Push Notifications service register API.</p>
 
-<p>Copy the following code snippets into your Swift mobile application to get a list of available tags to which the
-device can subscribe.</p>
-<pre class="highlight plaintext"><code>
-//Swift3/Swift 4.0
+<p>The following options are supported:</p>
 
-push.retrieveAvailableTagsWithCompletionHandler(completionHandler: { (response, statusCode, error) -&gt; Void in
+<ul>
+<li><p>Register without UserId</p>
 
-  if error.isEmpty {
-    print( "Response during retrieve tags : \(response)")
-    print( "status code during retrieve tags : \(statusCode)")
-  }else{
-    print( "Error during retrieve tags \(error) ")
-    Print( "Error during retrieve tags \n  - status code: \(statusCode) \n Error :\(error) \n")
-  }
-}
+<p>To register without userId use the following pattern:</p>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">application</span> <span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span> <span class="n">didRegisterForRemoteNotificationsWithDeviceToken</span> <span class="nv">deviceToken</span><span class="p">:</span> <span class="kt">Data</span><span class="p">){</span>
 
-//Swift2.3 and Older
+  <span class="kt">BMSPushClient</span><span class="o">.</span><span class="n">sharedInstance</span><span class="o">.</span><span class="nf">registerWithDeviceToken</span><span class="p">(</span><span class="nv">deviceToken</span><span class="p">:</span> <span class="n">deviceToken</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="n">statusCode</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span> <span class="k">in</span>
 
-push.retrieveAvailableTagsWithCompletionHandler({ (response, statusCode, error) -&gt; Void in
+   <span class="k">if</span> <span class="n">error</span><span class="o">.</span><span class="n">isEmpty</span> <span class="p">{</span>
+       <span class="nf">print</span><span class="p">(</span> <span class="s">"Response during device registration: </span><span class="se">\(</span><span class="n">response</span><span class="se">)</span><span class="s"> and status code is:</span><span class="se">\(</span><span class="n">statusCode</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+   <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+       <span class="nf">print</span><span class="p">(</span> <span class="s">"Error during device registration: </span><span class="se">\(</span><span class="n">error</span><span class="se">)</span><span class="s"> and status code is: </span><span class="se">\(</span><span class="n">statusCode</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+   <span class="p">}</span>  
+ <span class="p">}</span>
+</code></pre></li>
+<li><p>Register with UserId</p>
 
-    if error.isEmpty {
-        print( "Response during retrieve tags : \(response)")
-        print( "status code during retrieve tags : \(statusCode)")
-    }else{
-        print( "Error during retrieve tags \(error) ")
-        Print( "Error during retrieve tags \n  - status code: \(statusCode) \n Error :\(error) \n")
-    }
-}
+<p>The <code>userId</code> can be specified while registering the device with Push Notifications service. The register method will accept one more parameter - <code>userId</code></p>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">application</span> <span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span> <span class="n">didRegisterForRemoteNotificationsWithDeviceToken</span> <span class="nv">deviceToken</span><span class="p">:</span> <span class="kt">Data</span><span class="p">){</span>
+
+   <span class="kt">BMSPushClient</span><span class="o">.</span><span class="n">sharedInstance</span><span class="o">.</span><span class="nf">registerWithDeviceToken</span><span class="p">(</span><span class="nv">deviceToken</span><span class="p">:</span> <span class="n">deviceToken</span><span class="p">,</span> <span class="kt">WithUserId</span><span class="p">:</span> <span class="s">"your userId"</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="n">statusCode</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span> <span class="k">in</span>
+
+    <span class="k">if</span> <span class="n">error</span><span class="o">.</span><span class="n">isEmpty</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span> <span class="s">"Response during device registration : </span><span class="se">\(</span><span class="n">response</span><span class="se">)</span><span class="s"> and status code is:</span><span class="se">\(</span><span class="n">statusCode</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span> <span class="s">"Error during device registration </span><span class="se">\(</span><span class="n">error</span><span class="se">)</span><span class="s"> and status code is:</span><span class="se">\(</span><span class="n">statusCode</span><span class="se">)</span><span class="s"> "</span><span class="p">)</span>
+    <span class="p">}</span>  
+<span class="p">}</span>
 </code></pre>
-<h5 id='subscribe-to-available-tags' class='heading'>Subscribe to Available tags</h5>
-<pre class="highlight plaintext"><code>
-//Swift3/Swift 4.0
 
- push.subscribeToTags(tagsArray: response!, completionHandler: { (response, statusCode, error) -&gt; Void in
+<p>Where <code>WithUserId</code> is the user identifier value you want to register the device in the push service instance.</p>
 
-   if error.isEmpty {
-       print( "Response during Subscribing to tags : \(response?.description)")     
-       print( "status code during Subscribing tags : \(statusCode)")
-     }else{
-       print( "Error during subscribing tags \(error) ")
-       Print( "Error during subscribing tags \n  - status code: \(statusCode) \n Error :\(error) \n")
-     }
- }
+<blockquote>
+<p><strong>Note</strong>: If userId is provided, the client secret value must be provided during initialization.</p>
+</blockquote></li>
+<li><p>Unregister device from notifications</p>
 
-//Swift2.3 and Older
-
-push.subscribeToTags(response, completionHandler: { (response, statusCode, error) -&gt; Void in
-
-    if error.isEmpty {
-        print( "Response during Subscribing to tags : \(response?.description)")
-        print( "status code during Subscribing tags : \(statusCode)")
-    }else {
-        print( "Error during subscribing tags \(error) ")
-        Print( "Error during subscribing tags \n  - status code: \(statusCode) \n Error :\(error) \n")
-    }
-}
+<p>Use the following code snippets to unregister the device from Push Notification service instance:</p>
+<pre class="highlight swift"><code><span class="kt">BMSPushClient</span><span class="o">.</span><span class="n">sharedInstance</span><span class="o">.</span><span class="nf">unregisterDevice</span><span class="p">(</span><span class="nv">completionHandler</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="n">statusCode</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span> <span class="k">in</span>
+   <span class="k">if</span> <span class="n">error</span><span class="o">.</span><span class="n">isEmpty</span> <span class="p">{</span>
+       <span class="nf">print</span><span class="p">(</span> <span class="s">"Response during unregistering device : </span><span class="se">\(</span><span class="n">response</span><span class="se">)</span><span class="s">  and status code is:</span><span class="se">\(</span><span class="n">statusCode</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span> <span class="s">"Error during unregistering device </span><span class="se">\(</span><span class="n">error</span><span class="se">)</span><span class="s"> and status code is:</span><span class="se">\(</span><span class="n">statusCode</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </code></pre>
-<h5 id='retrieve-subscribed-tags' class='heading'>Retrieve Subscribed tags</h5>
-<pre class="highlight plaintext"><code>
-//Swift3/Swift 4.0
- push.retrieveSubscriptionsWithCompletionHandler(completionHandler: { (response, statusCode, error) -&gt; Void in
 
-   if error.isEmpty {                                     
-     print( "Response during retrieving subscribed tags : \(response?.description)")
-     print( "status code during retrieving subscribed tags : \(statusCode)")
-   }else{
-     print( "Error during retrieving subscribed tags \(error) ")
-     Print( "Error during retrieving subscribed tags \n  - status code: \(statusCode) \n Error :\(error) \n")
-   }
- }
+<blockquote>
+<p><strong>Note</strong>:To unregister from the <code>UserId</code> based registration, you have to call the registration method <a href="#register-without-userid">without userId</a>.</p>
+</blockquote></li>
+</ul>
+<h2 id='push-notification-service-tags' class='heading'>Push Notification service tags</h2>
+<h3 id='retrieve-tags' class='heading'>Retrieve tags</h3>
 
-//Swift2.3 and Older
-push.retrieveSubscriptionsWithCompletionHandler { (response, statusCode, error) -&gt; Void in
+<p>The <code>retrieveAvailableTagsWithCompletionHandler</code> API returns the list of tags to which the device can subscribe. After the device is subscribed to a particular tag, the device can receive notifications that are sent for that tag.</p>
 
-    if error.isEmpty {
-        print( "Response during retrieving subscribed tags : \(response?.description)")
-        print( "status code during retrieving subscribed tags : \(statusCode)")
-    }else {
-        print( "Error during retrieving subscribed tags \(error) ")
-        Print( "Error during retrieving subscribed tags \n  - status code: \(statusCode) \n Error :\(error) \n")
-    }
-}
+<p>Use the following code snippets into your Swift mobile application to get a list of tags to which the device can subscribe.</p>
+<pre class="highlight swift"><code><span class="kt">BMSPushClient</span><span class="o">.</span><span class="n">sharedInstance</span><span class="o">.</span><span class="nf">retrieveAvailableTagsWithCompletionHandler</span><span class="p">(</span><span class="nv">completionHandler</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="n">statusCode</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span> <span class="k">in</span>
+
+    <span class="k">if</span> <span class="n">error</span><span class="o">.</span><span class="n">isEmpty</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span> <span class="s">"Response during retrieve tags : </span><span class="se">\(</span><span class="n">response</span><span class="se">)</span><span class="s">  and status code is:</span><span class="se">\(</span><span class="n">statusCode</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span> <span class="s">"Error during retrieve tags </span><span class="se">\n</span><span class="s">  - status code: </span><span class="se">\(</span><span class="n">statusCode</span><span class="se">)</span><span class="s"> </span><span class="se">\n</span><span class="s"> Error :</span><span class="se">\(</span><span class="n">error</span><span class="se">)</span><span class="s"> </span><span class="se">\n</span><span class="s">"</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </code></pre>
-<h3 id='unsubscribing-from-tags-based-notifications' class='heading'>Unsubscribing from tags based notifications</h3>
+<h3 id='subscribe-to-tags' class='heading'>Subscribe to tags</h3>
 
-<p>Use the following code snippets to allow your devices to get unsubscribe
-from a tag.</p>
-<pre class="highlight plaintext"><code>
-//Swift3/Swift 4.0
-push.unsubscribeFromTags(tagsArray: response!, completionHandler: { (response, statusCode, error) -&gt; Void in
+<p>The <code>subscribeToTags</code> API will subscribe the iOS device for the list of given tags. After the device is subscribed to a particular tag, the device can receive any push notifications that are sent for that tag.</p>
 
-  if error.isEmpty {
-    print( "Response during unsubscribed tags : \(response?.description)")
-    print( "status code during unsubscribed tags : \(statusCode)")
-  }else{
-    print( "Error during  unsubscribed tags \(error) ")
-  }
-}
+<p>Add the following code snippets to your Swift mobile application to subscribe a list of tags.</p>
+<pre class="highlight swift"><code><span class="kt">BMSPushClient</span><span class="o">.</span><span class="n">sharedInstance</span><span class="o">.</span><span class="nf">subscribeToTags</span><span class="p">(</span><span class="nv">tagsArray</span><span class="p">:</span> <span class="n">response</span><span class="o">!</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="n">statusCode</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span> <span class="k">in</span>
 
-//Swift2.3 and Older
-
-push.unsubscribeFromTags(response, completionHandler: { (response, statusCode, error) -&gt; Void in
-
-    if error.isEmpty {
-
-        print( "Response during unsubscribed tags : \(response?.description)")
-
-        print( "status code during unsubscribed tags : \(statusCode)")
-    }
-    else {
-        print( "Error during  unsubscribed tags \(error) ")
-
-        print( "Error during unsubscribed tags \n  - status code: \(statusCode) \n Error :\(error) \n")
-    }
-}
+    <span class="k">if</span> <span class="n">error</span><span class="o">.</span><span class="n">isEmpty</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span> <span class="s">"Response during Subscribing to tags : </span><span class="se">\(</span><span class="n">response</span><span class="p">?</span><span class="o">.</span><span class="n">description</span><span class="se">)</span><span class="s"> and status code is:</span><span class="se">\(</span><span class="n">statusCode</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>     
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span> <span class="s">"Error during subscribing tags </span><span class="se">\n</span><span class="s">  - status code: </span><span class="se">\(</span><span class="n">statusCode</span><span class="se">)</span><span class="s"> </span><span class="se">\n</span><span class="s"> Error :</span><span class="se">\(</span><span class="n">error</span><span class="se">)</span><span class="s"> </span><span class="se">\n</span><span class="s">"</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </code></pre>
-<h3 id='unregistering-the-device-from-ibm-cloud-push-notification' class='heading'>Unregistering the Device from IBM Cloud Push Notification</h3>
+<h3 id='retrieve-subscribed-tags' class='heading'>Retrieve subscribed tags</h3>
 
-<p>Use the following code snippets to Unregister the device from IBM Cloud Push Notification</p>
-<pre class="highlight plaintext"><code>
-//Swift3/Swift 4.0
+<p>The <code>retrieveSubscriptionsWithCompletionHandler</code> API will return the list of tags to which the device is subscribed.</p>
 
-push.unregisterDevice(completionHandler: { (response, statusCode, error) -&gt; Void in
+<p>Add the following code snippets to your Swift mobile application to get the  subscription list.</p>
+<pre class="highlight swift"><code><span class="kt">BMSPushClient</span><span class="o">.</span><span class="n">sharedInstance</span><span class="o">.</span><span class="nf">retrieveSubscriptionsWithCompletionHandler</span><span class="p">(</span><span class="nv">completionHandler</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="n">statusCode</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span> <span class="k">in</span>
 
-  if error.isEmpty {                 
-     print( "Response during unregistering device : \(response)")
-     print( "status code during unregistering device : \(statusCode)")
-   }else{
-     print( "Error during unregistering device \(error) ")
-   }
-}
-
-//Swift2.3 and Older
-
-push.unregisterDevice({ (response, statusCode, error) -&gt; Void in
-
-    if error.isEmpty {
-        print( "Response during unregistering device : \(response)")
-        print( "status code during unregistering device : \(statusCode)")
-    }else{
-        print( "Error during unregistering device \(error) ")
-        print( "Error during unregistering device \n  - status code: \(statusCode) \n Error :\(error) \n")
-    }
-}
+    <span class="k">if</span> <span class="n">error</span><span class="o">.</span><span class="n">isEmpty</span> <span class="p">{</span>                                     
+        <span class="nf">print</span><span class="p">(</span> <span class="s">"Response during retrieving subscribed tags : </span><span class="se">\(</span><span class="n">response</span><span class="p">?</span><span class="o">.</span><span class="n">description</span><span class="se">)</span><span class="s"> and status code is:</span><span class="se">\(</span><span class="n">statusCode</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span> <span class="s">"Error during retrieving subscribed tags </span><span class="se">\n</span><span class="s">  - status code: </span><span class="se">\(</span><span class="n">statusCode</span><span class="se">)</span><span class="s"> </span><span class="se">\n</span><span class="s"> Error :</span><span class="se">\(</span><span class="n">error</span><span class="se">)</span><span class="s"> </span><span class="se">\n</span><span class="s">"</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </code></pre>
-<h3 id='enabling-interactive-push-notifications' class='heading'>Enabling interactive push notifications</h3>
+<h3 id='unsubscribing-from-tags' class='heading'>Unsubscribing from tags</h3>
 
-<p>To enable interactive push notifications, the notification action parameters must be passed in as part of the notification object.  The following is a sample code to enable interactive notifications.</p>
-<pre class="highlight plaintext"><code>let actionOne = BMSPushNotificationAction(identifierName: "FIRST", buttonTitle: "Accept", isAuthenticationRequired: false, defineActivationMode: UIUserNotificationActivationMode.background)
+<p>The <code>unsubscribeFromTags</code> API will remove the device subscription from the list tags.</p>
 
-let actionTwo = BMSPushNotificationAction(identifierName: "SECOND", buttonTitle: "Reject", isAuthenticationRequired: false, defineActivationMode: UIUserNotificationActivationMode.background)
+<p>Use the following code snippets to unsubsribe from tags:</p>
+<pre class="highlight swift"><code><span class="kt">BMSPushClient</span><span class="o">.</span><span class="n">sharedInstance</span><span class="o">.</span><span class="nf">unsubscribeFromTags</span><span class="p">(</span><span class="nv">tagsArray</span><span class="p">:</span> <span class="n">response</span><span class="o">!</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="n">statusCode</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span> <span class="k">in</span>
 
-let category = BMSPushNotificationActionCategory(identifierName: "category", buttonActions: [actionOne, actionTwo])
+    <span class="k">if</span> <span class="n">error</span><span class="o">.</span><span class="n">isEmpty</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span> <span class="s">"Response during unsubscribed tags : </span><span class="se">\(</span><span class="n">response</span><span class="p">?</span><span class="o">.</span><span class="n">description</span><span class="se">)</span><span class="s"> and status code is:</span><span class="se">\(</span><span class="n">statusCode</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span> <span class="s">"Error during  unsubscribed tags </span><span class="se">\(</span><span class="n">error</span><span class="se">)</span><span class="s">and status code is:</span><span class="se">\(</span><span class="n">statusCode</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<h2 id='receiving-push-notifications-on-ios-devices' class='heading'>Receiving push notifications on iOS devices</h2>
 
+<p>To receive push notifications on iOS devices, add the following Swift method to the <code>appDelegate.swift</code> of your application:</p>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span> <span class="n">didReceiveRemoteNotification</span> <span class="nv">userInfo</span><span class="p">:</span> <span class="p">[</span><span class="kt">AnyHashable</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">],</span> <span class="n">fetchCompletionHandler</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">UIBackgroundFetchResult</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="c1">//UserInfo dictionary will contain data sent from the server</span>
+<span class="p">}</span>
+</code></pre>
+<h2 id='notification-options' class='heading'>Notification options</h2>
+<h3 id='silent-notification' class='heading'>Silent notification</h3>
+
+<p>Silent notifications do not appear on the device screen. These notifications are received by the application in the background, which wakes up the application for up to 30 seconds to perform the specified background task. A user might not be aware of the notification arrival.</p>
+
+<p>To handle silent push notifications, use the <code>didReceiveRemoteNotification_fetchCompletionHandler</code> method.</p>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span> <span class="n">didReceiveRemoteNotification</span> <span class="nv">userInfo</span><span class="p">:</span> <span class="p">[</span><span class="kt">NSObject</span> <span class="p">:</span> <span class="kt">AnyObject</span><span class="p">],</span> <span class="n">fetchCompletionHandler</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="p">(</span><span class="kt">UIBackgroundFetchResult</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="p">{</span>
+
+   <span class="k">let</span> <span class="nv">contentAPS</span> <span class="o">=</span> <span class="n">userInfo</span><span class="p">[</span><span class="s">"aps"</span><span class="p">]</span> <span class="k">as</span> <span class="p">[</span><span class="kt">NSObject</span> <span class="p">:</span> <span class="kt">AnyObject</span><span class="p">]</span>
+   <span class="k">if</span> <span class="k">let</span> <span class="nv">contentAvailable</span> <span class="o">=</span> <span class="n">contentAPS</span><span class="p">[</span><span class="s">"content-available"</span><span class="p">]</span> <span class="k">as?</span> <span class="kt">Int</span> <span class="p">{</span>
+
+       <span class="c1">//silent or mixed push</span>
+       <span class="k">if</span> <span class="n">contentAvailable</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">{</span>
+           <span class="nf">completionHandler</span><span class="p">(</span><span class="kt">UIBackgroundFetchResult</span><span class="o">.</span><span class="kt">NewData</span><span class="p">)</span>
+       <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+           <span class="nf">completionHandler</span><span class="p">(</span><span class="kt">UIBackgroundFetchResult</span><span class="o">.</span><span class="kt">NoData</span><span class="p">)</span>
+       <span class="p">}</span>
+   <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+
+       <span class="c1">//Default notification</span>
+       <span class="nf">completionHandler</span><span class="p">(</span><span class="kt">UIBackgroundFetchResult</span><span class="o">.</span><span class="kt">NoData</span><span class="p">)</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<h3 id='interactive-notifications' class='heading'>Interactive notifications</h3>
+
+<p>To enable interactive push notifications, the notification action objects must be passed during initialization. The following is a sample code to enable interactive notifications:</p>
+<pre class="highlight plaintext"><code>let acceptButton = BMSPushNotificationAction(identifierName: "Accept", buttonTitle: "Accept", isAuthenticationRequired: false, defineActivationMode: UIUserNotificationActivationMode.background)
+let rejectButton = BMSPushNotificationAction(identifierName: "Reject", buttonTitle: "Reject", isAuthenticationRequired: false, defineActivationMode: UIUserNotificationActivationMode.background)
+let category = BMSPushNotificationActionCategory(identifierName: "category", buttonActions: [acceptButton, rejectButton])
 let notificationOptions = BMSPushClientOptions()
-notifOptions.setInteractiveNotificationCategories(categoryName: [category])
-
-let push = BMSPushClient.sharedInstance.initializeWithAppGUID(appGUID: "APP-GUID-HERE", clientSecret:"CLIENT-SECRET-HERE", options: notificationOptions)
-
+notificationOptions.setInteractiveNotificationCategories(categoryName: [category])
+BMSPushClient.sharedInstance.initializeWithAppGUID(appGUID: "your push appGUID", clientSecret:"your push client secret", options: notificationOptions)
 </code></pre>
-<h3 id='enabling-rich-push-notification-support-in-ios-10-audio-video-gif-and-images' class='heading'>Enabling Rich Push notification support in iOS 10 (Audio, Video, GIF and Images)</h3>
+<h4 id='handling-interactive-push-notifications' class='heading'>Handling interactive push notifications</h4>
 
-<p>To receive rich push notifications with iOS10, implement <code>UNNotificationServiceExtension</code>.  The extension will intercept the rich push notification and it needs to be handled here.  While sending the notification from the server, all the four fields, alert, title, subtitle, attachmentURL must be specified.</p>
+<p>Implement the callback method on <code>AppDelegate.swift</code>:</p>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">userNotificationCenter</span><span class="p">(</span><span class="n">_</span> <span class="nv">center</span><span class="p">:</span> <span class="kt">UNUserNotificationCenter</span><span class="p">,</span>
+    <span class="n">didReceive</span> <span class="nv">response</span><span class="p">:</span> <span class="kt">UNNotificationResponse</span><span class="p">,</span>
+    <span class="n">withCompletionHandler</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="p">{</span>
 
-<p>In the didReceive() method of your service extension, add the following code to retrieve the rich notification content.</p>
-<pre class="highlight plaintext"><code>override func didReceive(_ request: UNNotificationRequest, withContentHandler contentHandler: @escaping (UNNotificationContent) -&gt; Void) {
-       self.contentHandler = contentHandler
-        bestAttemptContent = (request.content.mutableCopy() as? UNMutableNotificationContent)
-
-        BMSPushRichPushNotificationOptions.didReceive(request, withContentHandler: contentHandler)
-        }
-</code></pre>
-<h2 id='enable-monitoring' class='heading'>Enable Monitoring.</h2>
-
-<p>To see the push notification monitoring status for iOS you have add the following code snippets. </p>
-
-<p><strong>Swift 3/Swift 4.0</strong></p>
-<pre class="highlight plaintext"><code>// Send notification status when app is opened by clicking the notifications
-func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {
-
-     let push =  BMSPushClient.sharedInstance
-     let respJson = (userInfo as NSDictionary).value(forKey: "payload") as! String
-     let data = respJson.data(using: String.Encoding.utf8)
-
-     let jsonResponse:NSDictionary = try! JSONSerialization.jsonObject(with: data! , options: JSONSerialization.ReadingOptions.allowFragments) as! NSDictionary
-
-     let messageId:String = jsonResponse.value(forKey: "nid") as! String
-     push.sendMessageDeliveryStatus(messageId: messageId) { (res, ss, ee) in
-         print("Send message status to the Push server")
-     }
-}
-
-
-// Send notification status when the app is in background mode.
-func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -&gt; Void) {
-
-   let payLoad = ((((userInfo as NSDictionary).value(forKey: "aps") as! NSDictionary).value(forKey: "alert") as! NSDictionary).value(forKey: "body") as! NSString)
-
-   self.showAlert(title: "Recieved Push notifications", message: payLoad)
-
-   let push =  BMSPushClient.sharedInstance
-
-   let respJson = (userInfo as NSDictionary).value(forKey: "payload") as! String
-   let data = respJson.data(using: String.Encoding.utf8)
-
-   let jsonResponse:NSDictionary = try! JSONSerialization.jsonObject(with: data! , options: JSONSerialization.ReadingOptions.allowFragments) as! NSDictionary
-
-   let messageId:String = jsonResponse.value(forKey: "nid") as! String
-   push.sendMessageDeliveryStatus(messageId: messageId) { (res, ss, ee) in
-       completionHandler(UIBackgroundFetchResult.newData)
-   }
-}
+         <span class="k">switch</span> <span class="n">response</span><span class="o">.</span><span class="n">actionIdentifier</span> <span class="p">{</span>
+         <span class="k">case</span> <span class="s">"Accept"</span><span class="p">:</span>
+           <span class="nf">print</span><span class="p">(</span><span class="s">"Clicked Accept"</span><span class="p">)</span>
+         <span class="k">case</span> <span class="s">"Reject"</span><span class="p">:</span>
+           <span class="nf">print</span><span class="p">(</span><span class="s">"Clicked Reject"</span><span class="p">)</span>  
+         <span class="k">default</span><span class="p">:</span>
+         <span class="p">}</span>
+        <span class="nf">completionHandler</span><span class="p">()</span>
+ <span class="p">}</span>
 </code></pre>
 
-<p><strong>Swift 2.3</strong></p>
-<pre class="highlight plaintext"><code>func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
+<p>This callback method is invoked when user clicks the action button. The implementation of this method must perform tasks associated with the specified identifier and execute the block in the completionHandler parameter.</p>
+<h4 id='adding-custom-deviceid-for-registration' class='heading'>Adding custom DeviceId for registration</h4>
 
-  let respJson = (userInfo as NSDictionary).valueForKey("payload") as! String
-  let data = respJson.dataUsingEncoding(NSUTF8StringEncoding)
-
-  do {
-      let responseObject:NSDictionary = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as! NSDictionary
-      let nid = responseObject.valueForKey("nid") as! String
-      print(nid)
-
-      let push =  BMSPushClient.sharedInstance
-
-      push.sendMessageDeliveryStatus(nid, completionHandler: { (response, statusCode, error) in
-
-          print("Send message status to the Push server")
-      })
-
-  } catch let error as NSError {
-      print("error: \(error.localizedDescription)")
-  }
-}
-
-func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -&gt; Void) {
-
-  let payLoad = ((((userInfo as NSDictionary).valueForKey("aps") as! NSDictionary).valueForKey("alert") as! NSDictionary).valueForKey("body") as! NSString)
-
-  self.showAlert("Recieved Push notifications", message: payLoad)
-
-
-  let respJson = (userInfo as NSDictionary).valueForKey("payload") as! String
-  let data = respJson.dataUsingEncoding(NSUTF8StringEncoding)
-
-  do {
-      let responseObject:NSDictionary = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as! NSDictionary
-      let nid = responseObject.valueForKey("nid") as! String
-      print(nid)
-
-      let push =  BMSPushClient.sharedInstance
-
-      push.sendMessageDeliveryStatus(nid, completionHandler: { (response, statusCode, error) in
-          completionHandler(UIBackgroundFetchResult.NewData)
-      })
-
-  } catch let error as NSError {
-      print("error: \(error.localizedDescription)")
-  }
-}
+<p>To send <code>Device Identifier</code>, use the <code>setDeviceId</code> method of <code><a href="Classes/BMSPushClientOptions.html">BMSPushClientOptions</a></code>.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">notificationOptions</span> <span class="o">=</span> <span class="kt">BMSPushClientOptions</span><span class="p">()</span>
+<span class="n">notificationOptions</span><span class="o">.</span><span class="nf">setDeviceId</span><span class="p">(</span><span class="nv">deviceId</span><span class="p">:</span> <span class="s">"YOUR_DEVICE_ID"</span><span class="p">)</span>
 </code></pre>
 
 <blockquote>
-<p><strong>Note</strong>: To get the message status when the app is in background you have to send either <strong>MIXED</strong> or <strong>SILENT</strong> push notifications. If the app is force quite you will not get any message delivery status.</p>
+<p><strong>Note</strong>: Remember to keep custom Device Identifier <strong>unique</strong> for each device.</p>
 </blockquote>
-<h3 id='open-url-by-clicking-push-notifications' class='heading'>Open Url by clicking push notifications.</h3>
+<h3 id='enabling-rich-media-notifications' class='heading'>Enabling rich media notifications</h3>
 
-<p>To open a url by clicking the push notification you can send a <code>url</code> firld inside the payload.</p>
+<p>Rich media notifications are supported on iOS 10 or later. To receive rich media notifications, implement <strong>UNNotificationServiceExtension</strong>. The extension will intercept and handle the rich media notification.</p>
+
+<p>In the <code>didReceive()</code> method of your service extension, add the following code to retrieve the rich push notification content.</p>
+<pre class="highlight swift"><code><span class="k">override</span> <span class="kd">func</span> <span class="nf">didReceive</span><span class="p">(</span><span class="n">_</span> <span class="nv">request</span><span class="p">:</span> <span class="kt">UNNotificationRequest</span><span class="p">,</span> <span class="n">withContentHandler</span> <span class="nv">contentHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">UNNotificationContent</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">self</span><span class="o">.</span><span class="n">contentHandler</span> <span class="o">=</span> <span class="n">contentHandler</span>
+    <span class="n">bestAttemptContent</span> <span class="o">=</span> <span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="nf">mutableCopy</span><span class="p">()</span> <span class="k">as?</span> <span class="kt">UNMutableNotificationContent</span><span class="p">)</span>
+    <span class="kt">BMSPushRichPushNotificationOptions</span><span class="o">.</span><span class="nf">didReceive</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="nv">withContentHandler</span><span class="p">:</span> <span class="n">contentHandler</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+<h2 id='advanced-options' class='heading'>Advanced options</h2>
+<h3 id='ios-badge' class='heading'>iOS badge</h3>
+
+<p>For iOS devices, the number to display as the badge of the app icon. If this property is absent, the badge is not changed. To remove the badge, set the value of this property to 0.</p>
+<h3 id='custom-sound' class='heading'>Custom sound</h3>
+
+<p>Add a sound file to your iOS application. </p>
+<h2 id='enable-monitoring' class='heading'>Enable monitoring</h2>
+
+<p>To see the notification monitoring status for iOS, you have to add the following code snippets:</p>
+<pre class="highlight swift"><code><span class="c1">//Send notification status when app is opened by clicking notifications</span>
+<span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span> <span class="n">didReceiveRemoteNotification</span> <span class="nv">userInfo</span><span class="p">:</span> <span class="p">[</span><span class="kt">AnyHashable</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">])</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">push</span> <span class="o">=</span>  <span class="kt">BMSPushClient</span><span class="o">.</span><span class="n">sharedInstance</span>
+    <span class="k">let</span> <span class="nv">respJson</span> <span class="o">=</span> <span class="p">(</span><span class="n">userInfo</span> <span class="k">as</span> <span class="kt">NSDictionary</span><span class="p">)</span><span class="o">.</span><span class="nf">value</span><span class="p">(</span><span class="nv">forKey</span><span class="p">:</span> <span class="s">"payload"</span><span class="p">)</span> <span class="k">as!</span> <span class="kt">String</span>
+    <span class="k">let</span> <span class="nv">data</span> <span class="o">=</span> <span class="n">respJson</span><span class="o">.</span><span class="nf">data</span><span class="p">(</span><span class="nv">using</span><span class="p">:</span> <span class="kt">String</span><span class="o">.</span><span class="kt">Encoding</span><span class="o">.</span><span class="n">utf8</span><span class="p">)</span>
+    <span class="k">let</span> <span class="nv">jsonResponse</span><span class="p">:</span><span class="kt">NSDictionary</span> <span class="o">=</span> <span class="k">try!</span> <span class="kt">JSONSerialization</span><span class="o">.</span><span class="nf">jsonObject</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="n">data</span><span class="o">!</span> <span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt">JSONSerialization</span><span class="o">.</span><span class="kt">ReadingOptions</span><span class="o">.</span><span class="n">allowFragments</span><span class="p">)</span> <span class="k">as!</span> <span class="kt">NSDictionary</span>
+    <span class="k">let</span> <span class="nv">messageId</span><span class="p">:</span><span class="kt">String</span> <span class="o">=</span> <span class="n">jsonResponse</span><span class="o">.</span><span class="nf">value</span><span class="p">(</span><span class="nv">forKey</span><span class="p">:</span> <span class="s">"nid"</span><span class="p">)</span> <span class="k">as!</span> <span class="kt">String</span>
+    <span class="n">push</span><span class="o">.</span><span class="nf">sendMessageDeliveryStatus</span><span class="p">(</span><span class="nv">messageId</span><span class="p">:</span> <span class="n">messageId</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">ss</span><span class="p">,</span> <span class="n">ee</span><span class="p">)</span> <span class="k">in</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"Send message status to the Push server"</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Send notification status when the app is in background mode</span>
+<span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span> <span class="n">didReceiveRemoteNotification</span> <span class="nv">userInfo</span><span class="p">:</span> <span class="p">[</span><span class="kt">AnyHashable</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">],</span> <span class="n">fetchCompletionHandler</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">UIBackgroundFetchResult</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="k">let</span> <span class="nv">payLoad</span> <span class="o">=</span> <span class="p">((((</span><span class="n">userInfo</span> <span class="k">as</span> <span class="kt">NSDictionary</span><span class="p">)</span><span class="o">.</span><span class="nf">value</span><span class="p">(</span><span class="nv">forKey</span><span class="p">:</span> <span class="s">"aps"</span><span class="p">)</span> <span class="k">as!</span> <span class="kt">NSDictionary</span><span class="p">)</span><span class="o">.</span><span class="nf">value</span><span class="p">(</span><span class="nv">forKey</span><span class="p">:</span> <span class="s">"alert"</span><span class="p">)</span> <span class="k">as!</span> <span class="kt">NSDictionary</span><span class="p">)</span><span class="o">.</span><span class="nf">value</span><span class="p">(</span><span class="nv">forKey</span><span class="p">:</span> <span class="s">"body"</span><span class="p">)</span> <span class="k">as!</span> <span class="kt">NSString</span><span class="p">)</span>
+    <span class="k">self</span><span class="o">.</span><span class="nf">showAlert</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="s">"Recieved Push notifications"</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="n">payLoad</span><span class="p">)</span>
+    <span class="k">let</span> <span class="nv">push</span> <span class="o">=</span>  <span class="kt">BMSPushClient</span><span class="o">.</span><span class="n">sharedInstance</span>
+    <span class="k">let</span> <span class="nv">respJson</span> <span class="o">=</span> <span class="p">(</span><span class="n">userInfo</span> <span class="k">as</span> <span class="kt">NSDictionary</span><span class="p">)</span><span class="o">.</span><span class="nf">value</span><span class="p">(</span><span class="nv">forKey</span><span class="p">:</span> <span class="s">"payload"</span><span class="p">)</span> <span class="k">as!</span> <span class="kt">String</span>
+    <span class="k">let</span> <span class="nv">data</span> <span class="o">=</span> <span class="n">respJson</span><span class="o">.</span><span class="nf">data</span><span class="p">(</span><span class="nv">using</span><span class="p">:</span> <span class="kt">String</span><span class="o">.</span><span class="kt">Encoding</span><span class="o">.</span><span class="n">utf8</span><span class="p">)</span>
+    <span class="k">let</span> <span class="nv">jsonResponse</span><span class="p">:</span><span class="kt">NSDictionary</span> <span class="o">=</span> <span class="k">try!</span> <span class="kt">JSONSerialization</span><span class="o">.</span><span class="nf">jsonObject</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="n">data</span><span class="o">!</span> <span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt">JSONSerialization</span><span class="o">.</span><span class="kt">ReadingOptions</span><span class="o">.</span><span class="n">allowFragments</span><span class="p">)</span> <span class="k">as!</span> <span class="kt">NSDictionary</span>
+    <span class="k">let</span> <span class="nv">messageId</span><span class="p">:</span><span class="kt">String</span> <span class="o">=</span> <span class="n">jsonResponse</span><span class="o">.</span><span class="nf">value</span><span class="p">(</span><span class="nv">forKey</span><span class="p">:</span> <span class="s">"nid"</span><span class="p">)</span> <span class="k">as!</span> <span class="kt">String</span>
+    <span class="n">push</span><span class="o">.</span><span class="nf">sendMessageDeliveryStatus</span><span class="p">(</span><span class="nv">messageId</span><span class="p">:</span> <span class="n">messageId</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">ss</span><span class="p">,</span> <span class="n">ee</span><span class="p">)</span> <span class="k">in</span>
+        <span class="nf">completionHandler</span><span class="p">(</span><span class="kt">UIBackgroundFetchResult</span><span class="o">.</span><span class="n">newData</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<blockquote>
+<p><strong>Note</strong>: To get the message status when the app is in background, you have to send either <strong>MIXED</strong> or <strong>SILENT</strong> push notifications. No message delivery status would be received if the app was exited forcefully. </p>
+</blockquote>
+<h2 id='open-url-by-clicking-push-notifications' class='heading'>Open URL by clicking push notifications</h2>
+
+<p>To open a url by clicking the push notification, you can send a <code>url</code> field inside the payload.</p>
 <pre class="highlight plaintext"><code>{
   "message": {
     "alert": "Notification alert message",
@@ -562,25 +463,14 @@ func application(application: UIApplication, didReceiveRemoteNotification userIn
 }
 </code></pre>
 
-<p>In your applications, go to <code>AppDelegate</code> file and inside <code>didFinishLaunchingWithOptions</code> check the value for <code>url</code></p>
-<pre class="highlight plaintext"><code>let remoteNotif = launchOptions?[UIApplicationLaunchOptionsKey.remoteNotification] as? NSDictionary
-
-if remoteNotif != nil {
-    let urlField = (remoteNotif?.value(forKey: "url") as! String)
-    application.open(URL(string: urlField)!, options: [:], completionHandler: nil)
-}
+<p>In your applications, go to <code>AppDelegate</code> file and inside <code>didFinishLaunchingWithOptions</code>. check the value for <code>url</code>.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">remoteNotif</span> <span class="o">=</span> <span class="n">launchOptions</span><span class="p">?[</span><span class="kt">UIApplicationLaunchOptionsKey</span><span class="o">.</span><span class="n">remoteNotification</span><span class="p">]</span> <span class="k">as?</span> <span class="kt">NSDictionary</span>
+<span class="k">if</span> <span class="n">remoteNotif</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">urlField</span> <span class="o">=</span> <span class="p">(</span><span class="n">remoteNotif</span><span class="p">?</span><span class="o">.</span><span class="nf">value</span><span class="p">(</span><span class="nv">forKey</span><span class="p">:</span> <span class="s">"url"</span><span class="p">)</span> <span class="k">as!</span> <span class="kt">String</span><span class="p">)</span>
+    <span class="n">application</span><span class="o">.</span><span class="nf">open</span><span class="p">(</span><span class="kt">URL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="n">urlField</span><span class="p">)</span><span class="o">!</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="p">[:],</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+<span class="p">}</span>
 </code></pre>
-<h3 id='adding-custom-deviceid-for-registration' class='heading'>Adding custom DeviceId for registration</h3>
-
-<p>To send <code>DeviceId</code> please use <code><a href="Classes/BMSPushClientOptions.html">BMSPushClientOptions</a></code> class method,</p>
-<pre class="highlight plaintext"><code>let notifOptions = BMSPushClientOptions()
-notifOptions.setDeviceId(deviceId: "YOUR_DEVICE_ID")
-</code></pre>
-
-<blockquote>
-<p><strong>Note</strong>: Remember to keep custom DeviceId <strong>unique</strong> for each device.</p>
-</blockquote>
-<h3 id='parameterize-push-notifications' class='heading'>Parameterize Push Notifications</h3>
+<h2 id='parameterize-push-notifications' class='heading'>Parameterize Push Notifications</h2>
 
 <p>To enable the Parameterize IBM Cloud Push Notifications, do the following ,</p>
 
@@ -618,37 +508,39 @@ notifOptions.setDeviceId(deviceId: "YOUR_DEVICE_ID")
 <blockquote>
 <p><strong>Note</strong>: If the app is force killed , the Template based notifications may not appear in the device.</p>
 </blockquote>
-<h3 id='samples-amp-videos' class='heading'>Samples &amp; videos</h3>
+<h2 id='api-documentation' class='heading'>API documentation</h2>
+
+<p>Find the API documentation here - <a href="http://ibm-bluemix-mobile-services.github.io/API-docs/client-SDK/BMSPush/Swift/index.html">http://ibm-bluemix-mobile-services.github.io/API-docs/client-SDK/BMSPush/Swift/index.html</a></p>
+<h2 id='samples-and-videos' class='heading'>Samples and videos</h2>
 
 <ul>
-<li><p>Please visit for samples - <a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-hellopush">Github Sample</a></p></li>
-<li><p>Video Tutorials Available here - <a href="https://www.youtube.com/channel/UCRr2Wou-z91fD6QOYtZiHGA">IBM Cloud Push Notifications</a></p></li>
+<li><p>For samples, visit - <a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-hellopush">Github Sample</a></p></li>
+<li><p>For video tutorials visit - <a href="https://www.youtube.com/playlist?list=PLTroxxTPN9dIZYn9IU-IOcQePO-u5r0r4">IBM Cloud Push Notifications</a></p></li>
 </ul>
-<h3 id='learning-more' class='heading'>Learning More</h3>
+<h3 id='learning-more' class='heading'>Learning more</h3>
 
 <ul>
-<li><p>Visit the <strong><a href="https://developer.ibm.com/bluemix/">IBM Cloud Developers Community</a></strong>.</p></li>
-<li><p><a href="https://www.ng.bluemix.net/docs/mobile/index.html">Getting started with IBM MobileFirst Platform for iOS</a></p></li>
+<li><p>Visit the <strong><a href="https://developer.ibm.com/depmodels/cloud/">IBM Cloud Developers Community</a></strong>.</p></li>
+<li><p><a href="https://cloud.ibm.com/docs/mobile">Getting started with IBM MobileFirst Platform for iOS</a></p></li>
 </ul>
 <h3 id='connect-with-ibm-cloud' class='heading'>Connect with IBM Cloud</h3>
 
-<p><a href="https://twitter.com/ibmbluemix">Twitter</a> |
-<a href="https://www.youtube.com/playlist?list=PLzpeuWUENMK2d3L5qCITo2GQEt-7r0oqm">YouTube</a> |
-<a href="https://developer.ibm.com/bluemix/blog/">Blog</a> |
-<a href="https://www.facebook.com/ibmbluemix">Facebook</a> |
-<a href="http://www.meetup.com/bluemix/">Meetup</a></p>
+<p><a href="https://twitter.com/IBMCloud">Twitter</a> |
+<a href="https://www.youtube.com/watch?v=AVPoBWScRQc">YouTube</a> |
+<a href="https://developer.ibm.com/depmodels/cloud/">Blog</a> |
+<a href="https://www.facebook.com/ibmcloud">Facebook</a> |</p>
 
 <p>=======================
-Copyright 2016 IBM Corp.</p>
+Copyright 2020-21 IBM Corp.</p>
 
-<p>Licensed under the Apache License, Version 2.0 (the <q>License</q>);
+<p>Licensed under the Apache License, Version 2.0 (the &ldquo;License&rdquo;);
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at</p>
 
 <p><a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></p>
 
 <p>Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an <q>AS IS</q> BASIS,
+distributed under the License is distributed on an &ldquo;AS IS&rdquo; BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.</p>
@@ -656,8 +548,8 @@ limitations under the License.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push" target="_blank" rel="external">IBM</a>. All rights reserved. (Last updated: 2019-11-20)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.12.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push" target="_blank" rel="external">IBM</a>. All rights reserved. (Last updated: 2020-05-18)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

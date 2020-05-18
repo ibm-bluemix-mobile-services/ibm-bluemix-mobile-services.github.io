@@ -14,7 +14,7 @@
     <a title="BMSPushClient Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">BMSPush Docs</a> (66% documented)</p>
+        <p><a href="../index.html">BMSPush 3.6.0 Docs</a> (67% documented)</p>
         <p class="header-right"><a href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -34,17 +34,11 @@
               <li class="nav-group-task">
                 <a href="../Classes/BMSPushClient.html">BMSPushClient</a>
               </li>
-              <li class="nav-group-task">
-                <a href="../Classes/BMSPushClient.html">BMSPushClient</a>
-              </li>
             </ul>
           </li>
           <li class="nav-group-name">
             <a href="../Options.html">Options</a>
             <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Classes/BMSPushClientOptions.html">BMSPushClientOptions</a>
-              </li>
               <li class="nav-group-task">
                 <a href="../Classes/BMSPushClientOptions.html">BMSPushClientOptions</a>
               </li>
@@ -73,14 +67,6 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Other%20Enums.html">Other Enumerations</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Enums/IMFPushErrorvalues.html">IMFPushErrorvalues</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
             <a href="../Other%20Extensions.html">Other Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
@@ -94,7 +80,13 @@
         <section>
           <section class="section">
             <h1>BMSPushClient</h1>
-            <p>A singleton that serves as an entry point to Bluemix client-Push service communication.</p>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">BMSPushClient</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                </div>
+              </div>
+            <p>A singleton that serves as an entry point to IBM Cloud client-Push service communication.</p>
 
           </section>
           <section class="section task-group-section">
@@ -102,17 +94,19 @@
               <div class="task-name-container">
                 <a name="/Properties%20(Public)"></a>
                 <a name="//apple_ref/swift/Section/Properties (Public)" class="dashAnchor"></a>
-                <a href="#/Properties%20(Public)">
-                  <h3 class="section-name">Properties (Public)</h3>
-                </a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Properties%20(Public)"></a>
+                  <h3 class="section-name"><p>Properties (Public)</p>
+</h3>
+                </div>
               </div>
               <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/s:7BMSPush0A6ClientC14sharedInstanceACvpZ"></a>
                     <a name="//apple_ref/swift/Variable/sharedInstance" class="dashAnchor"></a>
-                    <a class="token" href="#/">sharedInstance</a>
+                    <a class="token" href="#/s:7BMSPush0A6ClientC14sharedInstanceACvpZ">sharedInstance</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -123,124 +117,13 @@
                         <p>This singleton should be used for all <code>BMSPushClient</code> activity.</p>
 
                       </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/"></a>
-                    <a name="//apple_ref/swift/Property/notificationOptions" class="dashAnchor"></a>
-                    <a class="token" href="#/">notificationOptions</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/"></a>
-                    <a name="//apple_ref/swift/Property/clientSecret" class="dashAnchor"></a>
-                    <a class="token" href="#/">clientSecret</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/"></a>
-                    <a name="//apple_ref/swift/Property/applicationId" class="dashAnchor"></a>
-                    <a class="token" href="#/">applicationId</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/"></a>
-                    <a name="//apple_ref/swift/Property/bluemixDeviceId" class="dashAnchor"></a>
-                    <a class="token" href="#/">bluemixDeviceId</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/"></a>
-                    <a name="//apple_ref/swift/Variable/overrideServerHost" class="dashAnchor"></a>
-                    <a class="token" href="#/">overrideServerHost</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <div class="task-name-container">
-                <a name="/Properties%20(private)"></a>
-                <a name="//apple_ref/swift/Section/Properties (private)" class="dashAnchor"></a>
-                <a href="#/Properties%20(private)">
-                  <h3 class="section-name">Properties (private)</h3>
-                </a>
-              </div>
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/"></a>
-                    <a name="//apple_ref/swift/Property/delegate" class="dashAnchor"></a>
-                    <a class="token" href="#/">delegate</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">sharedInstance</span><span class="p">:</span> <span class="kt">BMSPushClient</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -251,17 +134,19 @@
               <div class="task-name-container">
                 <a name="/Initializers"></a>
                 <a name="//apple_ref/swift/Section/Initializers" class="dashAnchor"></a>
-                <a href="#/Initializers">
-                  <h3 class="section-name">Initializers</h3>
-                </a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Initializers"></a>
+                  <h3 class="section-name"><p>Initializers</p>
+</h3>
+                </div>
               </div>
               <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/s:7BMSPush0A6ClientC21initializeWithAppGUID03appF012clientSecretySS_SStF"></a>
                     <a name="//apple_ref/swift/Method/initializeWithAppGUID(appGUID:clientSecret:)" class="dashAnchor"></a>
-                    <a class="token" href="#/">initializeWithAppGUID(appGUID:clientSecret:)</a>
+                    <a class="token" href="#/s:7BMSPush0A6ClientC21initializeWithAppGUID03appF012clientSecretySS_SStF">initializeWithAppGUID(appGUID:<wbr>clientSecret:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -274,15 +159,54 @@
 <p>This method will intialize the BMSPushClient with clientSecret based registration.</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">initializeWithAppGUID</span><span class="p">(</span><span class="nv">appGUID</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">clientSecret</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>clientSecret</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The clientSecret of the Push Service</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>appGUID</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The pushAppGUID of the Push Service</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                     </section>
                   </div>
                 </li>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/s:7BMSPush0A6ClientC21initializeWithAppGUID03appF012clientSecret7optionsySS_SSAA0aB7OptionsCtF"></a>
                     <a name="//apple_ref/swift/Method/initializeWithAppGUID(appGUID:clientSecret:options:)" class="dashAnchor"></a>
-                    <a class="token" href="#/">initializeWithAppGUID(appGUID:clientSecret:options:)</a>
+                    <a class="token" href="#/s:7BMSPush0A6ClientC21initializeWithAppGUID03appF012clientSecret7optionsySS_SSAA0aB7OptionsCtF">initializeWithAppGUID(appGUID:<wbr>clientSecret:<wbr>options:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -295,6 +219,57 @@
 <p>This method will intialize the BMSPushClient with clientSecret based registration and take in notificationOptions.</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">initializeWithAppGUID</span><span class="p">(</span><span class="nv">appGUID</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">clientSecret</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt"><a href="../Classes/BMSPushClientOptions.html">BMSPushClientOptions</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>clientSecret</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The clientSecret of the Push Service</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>appGUID</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The pushAppGUID of the Push Service</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>options</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The push notification options</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -304,17 +279,19 @@
               <div class="task-name-container">
                 <a name="/Methods%20(Public)"></a>
                 <a name="//apple_ref/swift/Section/Methods (Public)" class="dashAnchor"></a>
-                <a href="#/Methods%20(Public)">
-                  <h3 class="section-name">Methods (Public)</h3>
-                </a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Methods%20(Public)"></a>
+                  <h3 class="section-name"><p>Methods (Public)</p>
+</h3>
+                </div>
               </div>
               <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/s:7BMSPush0A6ClientC23registerWithDeviceToken06deviceF00D6UserId17completionHandlery10Foundation4DataV_SSSgyAK_SiSgSStctF"></a>
                     <a name="//apple_ref/swift/Method/registerWithDeviceToken(deviceToken:WithUserId:completionHandler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/">registerWithDeviceToken(deviceToken:WithUserId:completionHandler:)</a>
+                    <a class="token" href="#/s:7BMSPush0A6ClientC23registerWithDeviceToken06deviceF00D6UserId17completionHandlery10Foundation4DataV_SSSgyAK_SiSgSStctF">registerWithDeviceToken(deviceToken:<wbr>WithUserId:<wbr>completionHandler:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -322,11 +299,62 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>This Methode used to register the client device to the Bluemix Push service. This is the normal registration, without userId.</p>
+                        <p>This Methode used to register the client device to the IBM Cloud Push service. This is the normal registration, without userId.</p>
 
 <p>Call this methode after successfully registering for remote push notification in the Apple Push
 Notification Service .</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">registerWithDeviceToken</span><span class="p">(</span><span class="nv">deviceToken</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="kt">WithUserId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">response</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">statusCode</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>deviceToken</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>This is the response we get from the push registartion in APNS.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>WithUserId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>This is the userId value.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will be called when this request finishes. The response will contain response (String), StatusCode (Int) and error (string).</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -334,9 +362,9 @@ Notification Service .</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/s:7BMSPush0A6ClientC23registerWithDeviceToken06deviceF017completionHandlery10Foundation4DataV_ySSSg_SiSgSStctF"></a>
                     <a name="//apple_ref/swift/Method/registerWithDeviceToken(deviceToken:completionHandler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/">registerWithDeviceToken(deviceToken:completionHandler:)</a>
+                    <a class="token" href="#/s:7BMSPush0A6ClientC23registerWithDeviceToken06deviceF017completionHandlery10Foundation4DataV_ySSSg_SiSgSStctF">registerWithDeviceToken(deviceToken:<wbr>completionHandler:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -344,11 +372,50 @@ Notification Service .</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>This Methode used to register the client device to the Bluemix Push service. This is the normal registration, without userId.</p>
+                        <p>This Methode used to register the client device to the IBM Cloud Push service. This is the normal registration, without userId.</p>
 
 <p>Call this methode after successfully registering for remote push notification in the Apple Push
 Notification Service .</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">registerWithDeviceToken</span><span class="p">(</span><span class="nv">deviceToken</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">response</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">statusCode</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>deviceToken</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>This is the response we get from the push registartion in APNS.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will be called when this request finishes. The response will contain response (String), StatusCode (Int) and error (string).</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -356,9 +423,9 @@ Notification Service .</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/s:7BMSPush0A6ClientC42retrieveAvailableTagsWithCompletionHandler010completionH0yySo14NSMutableArrayCSg_SiSgSStc_tF"></a>
                     <a name="//apple_ref/swift/Method/retrieveAvailableTagsWithCompletionHandler(completionHandler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/">retrieveAvailableTagsWithCompletionHandler(completionHandler:)</a>
+                    <a class="token" href="#/s:7BMSPush0A6ClientC42retrieveAvailableTagsWithCompletionHandler010completionH0yySo14NSMutableArrayCSg_SiSgSStc_tF">retrieveAvailableTagsWithCompletionHandler(completionHandler:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -366,31 +433,37 @@ Notification Service .</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>This Method used to Retrieve all the available Tags in the Bluemix Push Service.</p>
+                        <p>This Method used to Retrieve all the available Tags in the IBM Cloud Push Service.</p>
 
 <p>This methode will return the list of available Tags in an Array.</p>
 
                       </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/"></a>
-                    <a name="//apple_ref/swift/Method/subscribeToTags(tagsArray:completionHandler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/">subscribeToTags(tagsArray:completionHandler:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>This Methode used to Subscribe to the Tags in the Bluemix Push srvice.</p>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">retrieveAvailableTagsWithCompletionHandler</span><span class="p">(</span><span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">response</span><span class="p">:</span> <span class="kt">NSMutableArray</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">statusCode</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
-<p>This methode will return the list of subscribed tags. If you pass the tags that are not present in the Bluemix App it will be classified under the TAGS NOT FOUND section in the response.</p>
-
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will be called when this request finishes. The response will contain response (NSMutableArray), StatusCode (Int) and error (string).</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -398,9 +471,9 @@ Notification Service .</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
-                    <a name="//apple_ref/swift/Method/retrieveSubscriptionsWithCompletionHandler(completionHandler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/">retrieveSubscriptionsWithCompletionHandler(completionHandler:)</a>
+                    <a name="/s:7BMSPush0A6ClientC15subscribeToTags9tagsArray17completionHandlerySo7NSArrayC_ySo19NSMutableDictionaryCSg_SiSgSStctF"></a>
+                    <a name="//apple_ref/swift/Method/subscribeToTags(tagsArray:completionHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7BMSPush0A6ClientC15subscribeToTags9tagsArray17completionHandlerySo7NSArrayC_ySo19NSMutableDictionaryCSg_SiSgSStctF">subscribeToTags(tagsArray:<wbr>completionHandler:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -408,20 +481,107 @@ Notification Service .</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>This Methode used to Retrieve the Subscribed Tags in the Bluemix Push srvice.</p>
+                        <p>This Methode used to Subscribe to the Tags in the IBM Cloud Push srvice.</p>
+
+<p>This methode will return the list of subscribed tags. If you pass the tags that are not present in the IBM Cloud App it will be classified under the TAGS NOT FOUND section in the response.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">subscribeToTags</span><span class="p">(</span><span class="nv">tagsArray</span><span class="p">:</span> <span class="kt">NSArray</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">response</span><span class="p">:</span> <span class="kt">NSMutableDictionary</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">statusCode</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>tagsArray</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the array that contains name tags.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will be called when this request finishes. The response will contain response (NSMutableDictionary), StatusCode (Int) and error (string).</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7BMSPush0A6ClientC42retrieveSubscriptionsWithCompletionHandler010completionG0yySo14NSMutableArrayCSg_SiSgSStc_tF"></a>
+                    <a name="//apple_ref/swift/Method/retrieveSubscriptionsWithCompletionHandler(completionHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7BMSPush0A6ClientC42retrieveSubscriptionsWithCompletionHandler010completionG0yySo14NSMutableArrayCSg_SiSgSStc_tF">retrieveSubscriptionsWithCompletionHandler(completionHandler:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This Methode used to Retrieve the Subscribed Tags in the IBM Cloud Push srvice.</p>
 
 <p>This methode will return the list of subscribed tags.</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">retrieveSubscriptionsWithCompletionHandler</span><span class="p">(</span><span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">response</span><span class="p">:</span> <span class="kt">NSMutableArray</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">statusCode</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will be called when this request finishes. The response will contain response (NSMutableArray), StatusCode (Int) and error (string).</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                     </section>
                   </div>
                 </li>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
+                    <a name="/s:7BMSPush0A6ClientC19unsubscribeFromTags9tagsArray17completionHandlerySo7NSArrayC_ySo19NSMutableDictionaryCSg_SiSgSStctF"></a>
                     <a name="//apple_ref/swift/Method/unsubscribeFromTags(tagsArray:completionHandler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/">unsubscribeFromTags(tagsArray:completionHandler:)</a>
+                    <a class="token" href="#/s:7BMSPush0A6ClientC19unsubscribeFromTags9tagsArray17completionHandlerySo7NSArrayC_ySo19NSMutableDictionaryCSg_SiSgSStctF">unsubscribeFromTags(tagsArray:<wbr>completionHandler:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -429,29 +589,49 @@ Notification Service .</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>This Methode used to Unsubscribe from the Subscribed Tags in the Bluemix Push srvice.</p>
+                        <p>This Methode used to Unsubscribe from the Subscribed Tags in the IBM Cloud Push srvice.</p>
 
 <p>This methode will return the details of Unsubscription status.</p>
 
                       </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/"></a>
-                    <a name="//apple_ref/swift/Method/unregisterDevice(completionHandler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/">unregisterDevice(completionHandler:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>This Methode used to UnRegister the client App from the Bluemix Push srvice.</p>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">unsubscribeFromTags</span><span class="p">(</span><span class="nv">tagsArray</span><span class="p">:</span> <span class="kt">NSArray</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">response</span><span class="p">:</span> <span class="kt">NSMutableDictionary</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">statusCode</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>tagsArray</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The list of tags that need to be unsubscribed.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will be called when this request finishes. The response will contain response (NSMutableDictionary), StatusCode (Int) and error (string).</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -459,9 +639,9 @@ Notification Service .</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
-                    <a name="//apple_ref/swift/Method/sendMessageDeliveryStatus(messageId:completionHandler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/">sendMessageDeliveryStatus(messageId:completionHandler:)</a>
+                    <a name="/s:7BMSPush0A6ClientC16unregisterDevice17completionHandleryySSSg_SiSgSStc_tF"></a>
+                    <a name="//apple_ref/swift/Method/unregisterDevice(completionHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7BMSPush0A6ClientC16unregisterDevice17completionHandleryySSSg_SiSgSStc_tF">unregisterDevice(completionHandler:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -469,7 +649,35 @@ Notification Service .</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>This Methode used to UnRegister the client App from the IBM Cloud Push srvice.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">unregisterDevice</span><span class="p">(</span><span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">response</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">statusCode</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will be called when this request finishes. The response will contain response (String), StatusCode (Int) and error (string).</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -479,8 +687,8 @@ Notification Service .</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push" target="_blank" rel="external">IBM</a>. All rights reserved. (Last updated: 2019-11-20)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.12.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push" target="_blank" rel="external">IBM</a>. All rights reserved. (Last updated: 2020-05-18)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
